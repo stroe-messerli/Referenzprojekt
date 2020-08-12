@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Referenzprojekt_Gaming_Library
+namespace Gaming_Library
 {
     public partial class Form1 : Form
     {
@@ -16,5 +16,6 @@ namespace Referenzprojekt_Gaming_Library
         {
             InitializeComponent();
         }
+
     }
 }
