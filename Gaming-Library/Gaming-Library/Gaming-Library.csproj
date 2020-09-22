@@ -132,6 +132,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BL\Domain Entity\" />
+    <Folder Include="BL\UseCase\InputPort\" />
+    <Folder Include="BL\UseCase\OutputPort\" />
+    <Folder Include="CR\" />
+    <Folder Include="DA\Adapter\" />
+    <Folder Include="DA\Framework\" />
+    <Folder Include="FE\Adapter\" />
+    <Folder Include="FE\Framework\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
