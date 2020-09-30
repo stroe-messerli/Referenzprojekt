@@ -103,6 +103,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,12 +132,21 @@
       <DependentUpon>LibraryDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="CR\Dialog\MainApp.cs" />
+    <Compile Include="FE\Dialog\Framework\UserInterface\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FE\Dialog\Framework\UserInterface\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\GameProperties.resx">
       <DependentUpon>GameProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\LibraryDialog.resx">
       <DependentUpon>LibraryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

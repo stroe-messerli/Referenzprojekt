@@ -35,8 +35,6 @@ namespace Gaming_Library
             this.spieleAnzeigenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.gToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.spielHinzufügenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spielEntfernenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +45,9 @@ namespace Gaming_Library
             this.eigenschaftenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielEntfernenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.spieleAnzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.gameDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,10 +60,9 @@ namespace Gaming_Library
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spieleAnzeigenToolStripMenuItem1,
             this.gToolStripMenuItem,
-            this.spielHinzufügenToolStripMenuItem,
-            this.spielEntfernenToolStripMenuItem});
+            this.spielHinzufügenToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 54);
             this.contextMenuStrip1.MouseLeave += new System.EventHandler(this.contextMenuStrip1_MouseLeave);
             // 
             // spieleAnzeigenToolStripMenuItem1
@@ -86,27 +85,6 @@ namespace Gaming_Library
             this.spielHinzufügenToolStripMenuItem.Text = "Spiel hinzufügen";
             this.spielHinzufügenToolStripMenuItem.Click += new System.EventHandler(this.spielHinzufügenToolStripMenuItem_Click);
             // 
-            // spielEntfernenToolStripMenuItem
-            // 
-            this.spielEntfernenToolStripMenuItem.Image = global::Gaming_Library.Properties.Resources.delete;
-            this.spielEntfernenToolStripMenuItem.Name = "spielEntfernenToolStripMenuItem";
-            this.spielEntfernenToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.spielEntfernenToolStripMenuItem.Text = "Spiel entfernen";
-            this.spielEntfernenToolStripMenuItem.Click += new System.EventHandler(this.spielEntfernenToolStripMenuItem_Click);
-            // 
-            // button1
-            // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 36);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Spiele";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
-            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
@@ -120,9 +98,9 @@ namespace Gaming_Library
             this.genre,
             this.publicationyear,
             this.image});
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.Location = new System.Drawing.Point(0, 116);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(10);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(408, 152);
@@ -162,18 +140,22 @@ namespace Gaming_Library
             // 
             // spielStartenToolStripMenuItem
             // 
+            this.spielStartenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("spielStartenToolStripMenuItem.Image")));
             this.spielStartenToolStripMenuItem.Name = "spielStartenToolStripMenuItem";
             this.spielStartenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.spielStartenToolStripMenuItem.Text = "Spiel starten";
             // 
             // eigenschaftenToolStripMenuItem
             // 
+            this.eigenschaftenToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("eigenschaftenToolStripMenuItem.Image")));
             this.eigenschaftenToolStripMenuItem.Name = "eigenschaftenToolStripMenuItem";
             this.eigenschaftenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.eigenschaftenToolStripMenuItem.Text = "Eigenschaften";
+            this.eigenschaftenToolStripMenuItem.Click += new System.EventHandler(this.eigenschaftenToolStripMenuItem_Click);
             // 
             // spielEntfernenToolStripMenuItem1
             // 
+            this.spielEntfernenToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("spielEntfernenToolStripMenuItem1.Image")));
             this.spielEntfernenToolStripMenuItem1.Name = "spielEntfernenToolStripMenuItem1";
             this.spielEntfernenToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.spielEntfernenToolStripMenuItem1.Text = "Spiel entfernen";
@@ -184,13 +166,42 @@ namespace Gaming_Library
             this.spieleAnzeigenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.spieleAnzeigenToolStripMenuItem.Text = "Spiele anzeigen";
             // 
-            // groupBox1
+            // button1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(12, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 55);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(9, 9);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 19);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Spiele";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            // 
+            // button2
+            // 
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(136, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 19);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Statistiken";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Location = new System.Drawing.Point(0, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(408, 2);
+            this.label3.TabIndex = 7;
             // 
             // gameDataBindingSource
             // 
@@ -200,14 +211,18 @@ namespace Gaming_Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(408, 268);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(424, 307);
             this.Name = "LibraryDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliothek";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
             this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
@@ -219,8 +234,6 @@ namespace Gaming_Library
         #endregion
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem spielHinzufügenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem spielEntfernenToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource gameDataBindingSource;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
@@ -234,6 +247,8 @@ namespace Gaming_Library
         private DataGridViewTextBoxColumn genre;
         private DataGridViewTextBoxColumn publicationyear;
         private DataGridViewImageColumn image;
-        private GroupBox groupBox1;
+        private Button button1;
+        private Button button2;
+        private Label label3;
     }
 }

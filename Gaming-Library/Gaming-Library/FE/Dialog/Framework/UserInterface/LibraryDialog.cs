@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,64 +20,68 @@ namespace Gaming_Library
             InitializeComponent();
         }
 
-        private void button1_MouseHover(object sender, EventArgs e)
+        private void button1_MouseHover(object sender, EventArgs eventArguments)
         {
             contextMenuStrip1.Show(button1, new Point(0, button1.Height));
         }
 
-        private void contextMenuStrip1_MouseLeave(object sender, EventArgs e)
+        private void contextMenuStrip1_MouseLeave(object sender, EventArgs eventArguments)
         {
             contextMenuStrip1.Hide();
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
+        private void button1_MouseLeave(object sender, EventArgs eventArguments)
         {
             if (!contextMenuStrip1.Bounds.Contains(MousePosition)) {
                 contextMenuStrip1.Hide();
             }
         }
 
-        private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
         {
-
+            //request an controller
         }
 
-        private void spielEntfernenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void spielEntfernenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
         {
-
+            //request an controller
         }
 
-        private void Main_Paint(object sender, PaintEventArgs e)
-        {
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-            e.Graphics.DrawLine(pen, 0, 62, Width, 62);
-        }
-
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs eventArguments)
         {
             //start game
         }
 
-        private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs eventArguments)
         {
             // Ignore if a column or row header is clicked
-            if (e.RowIndex != -1 && e.ColumnIndex != -1) {
-                if (e.Button == MouseButtons.Right) {
-                    this.dataGridView1.CurrentCell = (sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex];
+            if (eventArguments.RowIndex != -1 && eventArguments.ColumnIndex != -1) {
+                if (eventArguments.Button == MouseButtons.Right) {
+                    dataGridView1.CurrentCell = (sender as DataGridView).Rows[eventArguments.RowIndex].Cells[eventArguments.ColumnIndex];
 
                     // Get mouse position relative to the vehicles grid
                     var relativeMousePosition = dataGridView1.PointToClient(Cursor.Position);
 
                     // Show the context menu
-                    this.contextMenuStrip2.Show(dataGridView1, relativeMousePosition);
+                    contextMenuStrip2.Show(dataGridView1, relativeMousePosition);
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs eventArguments)
         {
+            if (contextMenuStrip1.Visible) {
+                contextMenuStrip1.Hide();
+                return;
+            }
+            contextMenuStrip1.Show();
+        }
+
+        private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //request an den controller zur öffnung des einstellungs-dialogs
             var propertiesForm = new GameProperties();
-            propertiesForm.Show();
+            propertiesForm.ShowDialog(this);
         }
     }
 }
