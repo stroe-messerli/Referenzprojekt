@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Gaming_Library
 {
-    static class Program
+    static class MainApp
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace Gaming_Library
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new LibraryDialog());
         }
     }
 }

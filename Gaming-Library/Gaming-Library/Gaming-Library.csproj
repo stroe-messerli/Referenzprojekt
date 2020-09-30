@@ -80,6 +80,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -117,16 +118,25 @@
     <Compile Include="BL\UseCase\Entity\GameData.cs" />
     <Compile Include="BL\UseCase\Gateway\IRepositoryModel.cs" />
     <Compile Include="DA\Adapter\RepositoryModel.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.Designer.cs">
+      <DependentUpon>GameProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="FE\Dialog\Framework\UserInterface\LibraryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FE\Dialog\Framework\UserInterface\LibraryDialog.Designer.cs">
+      <DependentUpon>LibraryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR\Dialog\MainApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\GameProperties.resx">
+      <DependentUpon>GameProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\LibraryDialog.resx">
+      <DependentUpon>LibraryDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,8 +146,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Gaming_Library.BL.UseCase.Entity.GameData.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,17 +165,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\Domain Entity\" />
-<<<<<<< Updated upstream
-    <Folder Include="BL\UseCase\" />
-=======
     <Folder Include="BL\UseCase\InputPort\" />
     <Folder Include="BL\UseCase\Interactor\" />
     <Folder Include="BL\UseCase\OutputPort\" />
->>>>>>> Stashed changes
-    <Folder Include="CR\" />
     <Folder Include="DA\Framework\" />
-    <Folder Include="FE\Adapter\" />
-    <Folder Include="FE\Framework\" />
+    <Folder Include="FE\Dialog\Adapter\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -176,6 +182,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
