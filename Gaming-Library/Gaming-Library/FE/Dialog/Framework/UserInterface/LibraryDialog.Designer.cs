@@ -42,7 +42,6 @@ namespace Gaming_Library
             this.spieleAnzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
             this.olvColumn0 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -58,12 +57,14 @@ namespace Gaming_Library
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.gameDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gameDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -138,10 +139,13 @@ namespace Gaming_Library
             // button1
             // 
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.DarkMagenta;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Image = global::Gaming_Library.Properties.Resources.expand_button;
-            this.button1.Location = new System.Drawing.Point(9, 9);
+            this.button1.Location = new System.Drawing.Point(9, 10);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 19);
@@ -156,23 +160,17 @@ namespace Gaming_Library
             // button2
             // 
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(136, 9);
+            this.button2.BackColor = System.Drawing.Color.DarkMagenta;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.Location = new System.Drawing.Point(184, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 19);
             this.button2.TabIndex = 6;
             this.button2.Text = "Statistiken";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(0, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(413, 2);
-            this.label3.TabIndex = 7;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // objectListView1
             // 
@@ -191,33 +189,35 @@ namespace Gaming_Library
             this.objectListView1.HideSelection = false;
             this.objectListView1.Location = new System.Drawing.Point(0, 83);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(413, 178);
+            this.objectListView1.Size = new System.Drawing.Size(507, 351);
             this.objectListView1.SmallImageList = this.gamesImageList;
             this.objectListView1.TabIndex = 8;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.View = System.Windows.Forms.View.Details;
+            this.objectListView1.CellClick += new System.EventHandler<BrightIdeasSoftware.CellClickEventArgs>(this.objectListView1_CellClick);
             this.objectListView1.SizeChanged += new System.EventHandler(this.objectListView1_SizeChanged);
+            this.objectListView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
             // olvColumn0
             // 
             this.olvColumn0.AspectName = "Title";
             this.olvColumn0.Tag = "1";
             this.olvColumn0.Text = "Titel";
-            this.olvColumn0.Width = 136;
+            this.olvColumn0.Width = 144;
             // 
             // olvColumn1
             // 
             this.olvColumn1.AspectName = "Genre";
             this.olvColumn1.Tag = "1";
             this.olvColumn1.Text = "Genre";
-            this.olvColumn1.Width = 136;
+            this.olvColumn1.Width = 188;
             // 
             // olvColumn2
             // 
             this.olvColumn2.AspectName = "YearOfPublication";
             this.olvColumn2.Tag = "1";
             this.olvColumn2.Text = "Erscheinungsjahr";
-            this.olvColumn2.Width = 136;
+            this.olvColumn2.Width = 231;
             // 
             // gamesImageList
             // 
@@ -227,7 +227,7 @@ namespace Gaming_Library
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 36);
+            this.textBox1.Location = new System.Drawing.Point(371, 39);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 19);
@@ -241,7 +241,7 @@ namespace Gaming_Library
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
             this.button3.Image = global::Gaming_Library.Properties.Resources.expand_button1;
-            this.button3.Location = new System.Drawing.Point(9, 36);
+            this.button3.Location = new System.Drawing.Point(9, 39);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 19);
             this.button3.TabIndex = 9;
@@ -253,13 +253,17 @@ namespace Gaming_Library
             // button4
             // 
             this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(266, 9);
+            this.button4.BackColor = System.Drawing.Color.DarkMagenta;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(371, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 19);
             this.button4.TabIndex = 11;
-            this.button4.Text = "stuff";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "Stuff";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // timer1
             // 
@@ -279,7 +283,7 @@ namespace Gaming_Library
             this.panel1.Location = new System.Drawing.Point(0, 61);
             this.panel1.MaximumSize = new System.Drawing.Size(4000, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 0);
+            this.panel1.Size = new System.Drawing.Size(507, 0);
             this.panel1.TabIndex = 12;
             // 
             // button6
@@ -287,7 +291,7 @@ namespace Gaming_Library
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(240, -25);
+            this.button6.Location = new System.Drawing.Point(334, -25);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -299,7 +303,7 @@ namespace Gaming_Library
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(333, -25);
+            this.button5.Location = new System.Drawing.Point(427, -25);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -339,6 +343,19 @@ namespace Gaming_Library
             this.checkBox1.Text = "Horror";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Location = new System.Drawing.Point(0, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(507, 34);
+            this.panel2.TabIndex = 13;
+            // 
             // gameDataBindingSource1
             // 
             this.gameDataBindingSource1.DataSource = typeof(Gaming_Library.BL.UseCase.Entity.GameData);
@@ -352,17 +369,14 @@ namespace Gaming_Library
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(413, 261);
+            this.ClientSize = new System.Drawing.Size(507, 434);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.objectListView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(424, 300);
+            this.MinimumSize = new System.Drawing.Size(523, 473);
             this.Name = "LibraryDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliothek";
@@ -371,6 +385,7 @@ namespace Gaming_Library
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -391,7 +406,6 @@ namespace Gaming_Library
         private ToolStripMenuItem spieleAnzeigenToolStripMenuItem;
         private Button button1;
         private Button button2;
-        private Label label3;
         private BindingSource gameDataBindingSource1;
         private BrightIdeasSoftware.ObjectListView objectListView1;
         private BrightIdeasSoftware.OLVColumn olvColumn0;
@@ -408,5 +422,6 @@ namespace Gaming_Library
         private CheckBox checkBox3;
         private Button button5;
         private Button button6;
+        private Panel panel2;
     }
 }

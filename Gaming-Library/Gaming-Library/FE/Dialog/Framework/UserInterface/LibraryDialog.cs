@@ -58,22 +58,6 @@ namespace Gaming_Library
             //start game
         }
 
-        private void dataGridView1_CellMouseDown(object sender, DataGridViewCellMouseEventArgs eventArguments)
-        {
-            //// Ignore if a column or row header is clicked
-            //if (eventArguments.RowIndex != -1 && eventArguments.ColumnIndex != -1) {
-            //    if (eventArguments.Button == MouseButtons.Right) {
-            //        dataGridView1.CurrentCell = (sender as DataGridView).Rows[eventArguments.RowIndex].Cells[eventArguments.ColumnIndex];
-
-            //        // Get mouse position relative to the vehicles grid
-            //        var relativeMousePosition = dataGridView1.PointToClient(Cursor.Position);
-
-            //        // Show the context menu
-            //        contextMenuStrip2.Show(dataGridView1, relativeMousePosition);
-            //    }
-            //}
-        }
-
         private void button1_Click(object sender, EventArgs eventArguments)
         {
             if (contextMenuStrip1.Visible) {
@@ -137,7 +121,7 @@ namespace Gaming_Library
         {
             timer1.Start();
         }
-        private void setObjectListAnchorForFilterPanel()
+        private void setObjectListAnchorsForFilterPanel()
         {
             //we need to remove the top-anchor to be able to move the objectlist further down
             objectListView1.Anchor =
@@ -145,7 +129,7 @@ namespace Gaming_Library
                 | AnchorStyles.Left
                 | AnchorStyles.Right;
         }
-        private void resetObjectListAnchor()
+        private void resetObjectListAnchors()
         {
             objectListView1.Anchor =
                 AnchorStyles.Top
@@ -166,7 +150,7 @@ namespace Gaming_Library
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            setObjectListAnchorForFilterPanel();
+            setObjectListAnchorsForFilterPanel();
 
             if (isPanelCollapsed) {
 
@@ -177,13 +161,36 @@ namespace Gaming_Library
                 }
             } else if (!isPanelCollapsed) {
                 AdjustComponents(-4);
-                if (panel1.Height == 0) {
+                if (panel1.Height == panel1.MinimumSize.Height) {
                     isPanelCollapsed = true;
                     timer1.Stop();
                 }
             }
 
-            resetObjectListAnchor();
+            resetObjectListAnchors();
+        }
+
+        private void objectListView1_CellClick(object sender, CellClickEventArgs e)
+        {
+            //ignore, when column header is clicked
+            if (e.RowIndex != -1 && e.ColumnIndex != -1) {
+                if (true/*MouseButtons.Right*/) {
+
+                    contextMenuStrip2.Show(new Point());
+                }
+            }
+        }
+
+        private void objectListView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right) {
+                //ignore, when column header is clicked
+                if (objectListView1.FocusedItem != null && objectListView1.FocusedItem.Index != -1) {
+                    var mousePosition = objectListView1.PointToClient(Cursor.Position);
+
+                    contextMenuStrip2.Show(mousePosition);
+                }
+            }
         }
     }
 }
