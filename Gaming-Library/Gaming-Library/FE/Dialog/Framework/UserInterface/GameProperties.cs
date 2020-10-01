@@ -20,8 +20,8 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == DialogResult.OK) {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            if (fileDialog.ShowDialog() == DialogResult.OK) {
                 //request to controller with ofd.FileName
             }
         }

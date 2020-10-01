@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Gaming_Library.BL.UseCase.Entity
     {
         public String Title;
         public String Genre;//vllt. eigener Type mit Eigenschaften
-        public DateTime YearOfPublication;
-        public String ImagePath;
+        public String YearOfPublication;
+        public Image Image;
     }
 }
