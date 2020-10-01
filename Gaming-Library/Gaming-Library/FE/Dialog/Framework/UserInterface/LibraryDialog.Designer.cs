@@ -177,8 +177,8 @@ namespace Gaming_Library
             this.objectListView1.AllColumns.Add(this.olvColumn0);
             this.objectListView1.AllColumns.Add(this.olvColumn1);
             this.objectListView1.AllColumns.Add(this.olvColumn2);
-            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -189,7 +189,7 @@ namespace Gaming_Library
             this.objectListView1.HideSelection = false;
             this.objectListView1.Location = new System.Drawing.Point(0, 80);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(508, 394);
+            this.objectListView1.Size = new System.Drawing.Size(800, 482);
             this.objectListView1.SmallImageList = this.gamesImageList;
             this.objectListView1.TabIndex = 8;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
@@ -272,7 +272,7 @@ namespace Gaming_Library
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button6);
@@ -283,7 +283,7 @@ namespace Gaming_Library
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.MaximumSize = new System.Drawing.Size(4000, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 0);
+            this.panel1.Size = new System.Drawing.Size(800, 0);
             this.panel1.TabIndex = 12;
             // 
             // button6
@@ -291,7 +291,7 @@ namespace Gaming_Library
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(335, -25);
+            this.button6.Location = new System.Drawing.Point(627, -25);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -303,7 +303,7 @@ namespace Gaming_Library
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(428, -25);
+            this.button5.Location = new System.Drawing.Point(720, -25);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -345,7 +345,7 @@ namespace Gaming_Library
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.button1);
@@ -353,7 +353,7 @@ namespace Gaming_Library
             this.panel2.Controls.Add(this.button4);
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(509, 40);
+            this.panel2.Size = new System.Drawing.Size(801, 40);
             this.panel2.TabIndex = 13;
             // 
             // gameDataBindingSource1
@@ -369,13 +369,14 @@ namespace Gaming_Library
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(508, 473);
+            this.ClientSize = new System.Drawing.Size(800, 561);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(816, 5000);
             this.MinimumSize = new System.Drawing.Size(524, 473);
             this.Name = "LibraryDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
