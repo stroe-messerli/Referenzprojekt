@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Resources;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
@@ -153,13 +154,14 @@ namespace Gaming_Library
             setObjectListAnchorsForFilterPanel();
 
             if (isPanelCollapsed) {
-
+                button3.Image = Properties.Resources.shrink_white;
                 AdjustComponents(4);
                 if (panel1.Height == panel1.MaximumSize.Height) {
                     isPanelCollapsed = false;
                     timer1.Stop();
                 }
             } else if (!isPanelCollapsed) {
+                button3.Image = Properties.Resources.image_1_;
                 AdjustComponents(-4);
                 if (panel1.Height == panel1.MinimumSize.Height) {
                     isPanelCollapsed = true;
