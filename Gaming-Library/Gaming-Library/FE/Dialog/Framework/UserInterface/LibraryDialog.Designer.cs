@@ -187,9 +187,9 @@ namespace Gaming_Library
             this.olvColumn2});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.HideSelection = false;
-            this.objectListView1.Location = new System.Drawing.Point(0, 170);
+            this.objectListView1.Location = new System.Drawing.Point(0, 80);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(508, 304);
+            this.objectListView1.Size = new System.Drawing.Size(508, 394);
             this.objectListView1.SmallImageList = this.gamesImageList;
             this.objectListView1.TabIndex = 8;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
@@ -283,7 +283,7 @@ namespace Gaming_Library
             this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.MaximumSize = new System.Drawing.Size(4000, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 90);
+            this.panel1.Size = new System.Drawing.Size(508, 0);
             this.panel1.TabIndex = 12;
             // 
             // button6
@@ -291,7 +291,7 @@ namespace Gaming_Library
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(335, 65);
+            this.button6.Location = new System.Drawing.Point(335, -25);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -303,7 +303,7 @@ namespace Gaming_Library
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(428, 65);
+            this.button5.Location = new System.Drawing.Point(428, -25);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
