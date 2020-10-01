@@ -145,10 +145,10 @@ namespace Gaming_Library
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button1.Image = global::Gaming_Library.Properties.Resources.expand_button;
-            this.button1.Location = new System.Drawing.Point(9, 10);
+            this.button1.Location = new System.Drawing.Point(10, 10);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 19);
+            this.button1.Size = new System.Drawing.Size(124, 20);
             this.button1.TabIndex = 5;
             this.button1.Text = "Spiele";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -165,9 +165,9 @@ namespace Gaming_Library
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(184, 10);
+            this.button2.Location = new System.Drawing.Point(192, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 19);
+            this.button2.Size = new System.Drawing.Size(124, 20);
             this.button2.TabIndex = 6;
             this.button2.Text = "Statistiken";
             this.button2.UseVisualStyleBackColor = false;
@@ -177,8 +177,8 @@ namespace Gaming_Library
             this.objectListView1.AllColumns.Add(this.olvColumn0);
             this.objectListView1.AllColumns.Add(this.olvColumn1);
             this.objectListView1.AllColumns.Add(this.olvColumn2);
-            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -187,9 +187,9 @@ namespace Gaming_Library
             this.olvColumn2});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.HideSelection = false;
-            this.objectListView1.Location = new System.Drawing.Point(0, 83);
+            this.objectListView1.Location = new System.Drawing.Point(0, 170);
             this.objectListView1.Name = "objectListView1";
-            this.objectListView1.Size = new System.Drawing.Size(507, 351);
+            this.objectListView1.Size = new System.Drawing.Size(508, 304);
             this.objectListView1.SmallImageList = this.gamesImageList;
             this.objectListView1.TabIndex = 8;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
@@ -227,10 +227,10 @@ namespace Gaming_Library
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 39);
+            this.textBox1.Location = new System.Drawing.Point(374, 50);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 19);
+            this.textBox1.Size = new System.Drawing.Size(124, 20);
             this.textBox1.TabIndex = 10;
             this.textBox1.Text = "Suchen  🔍";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -241,9 +241,9 @@ namespace Gaming_Library
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F);
             this.button3.Image = global::Gaming_Library.Properties.Resources.expand_button1;
-            this.button3.Location = new System.Drawing.Point(9, 39);
+            this.button3.Location = new System.Drawing.Point(10, 50);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 19);
+            this.button3.Size = new System.Drawing.Size(124, 20);
             this.button3.TabIndex = 9;
             this.button3.Text = "Filtern ";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -258,9 +258,9 @@ namespace Gaming_Library
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(371, 10);
+            this.button4.Location = new System.Drawing.Point(374, 10);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 19);
+            this.button4.Size = new System.Drawing.Size(124, 20);
             this.button4.TabIndex = 11;
             this.button4.Text = "Stuff";
             this.button4.UseVisualStyleBackColor = false;
@@ -272,7 +272,7 @@ namespace Gaming_Library
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.button6);
@@ -280,10 +280,10 @@ namespace Gaming_Library
             this.panel1.Controls.Add(this.checkBox3);
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Location = new System.Drawing.Point(0, 80);
             this.panel1.MaximumSize = new System.Drawing.Size(4000, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(507, 0);
+            this.panel1.Size = new System.Drawing.Size(508, 90);
             this.panel1.TabIndex = 12;
             // 
             // button6
@@ -291,7 +291,7 @@ namespace Gaming_Library
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(334, -25);
+            this.button6.Location = new System.Drawing.Point(335, 65);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -303,7 +303,7 @@ namespace Gaming_Library
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(427, -25);
+            this.button5.Location = new System.Drawing.Point(428, 65);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -345,7 +345,7 @@ namespace Gaming_Library
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.button1);
@@ -353,7 +353,7 @@ namespace Gaming_Library
             this.panel2.Controls.Add(this.button4);
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(507, 34);
+            this.panel2.Size = new System.Drawing.Size(509, 40);
             this.panel2.TabIndex = 13;
             // 
             // gameDataBindingSource1
@@ -369,14 +369,14 @@ namespace Gaming_Library
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(507, 434);
+            this.ClientSize = new System.Drawing.Size(508, 473);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.objectListView1);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(523, 473);
+            this.MinimumSize = new System.Drawing.Size(524, 473);
             this.Name = "LibraryDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliothek";
