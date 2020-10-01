@@ -160,6 +160,7 @@ namespace Gaming_Library
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.button2.FlatAppearance.BorderSize = 0;
@@ -168,7 +169,7 @@ namespace Gaming_Library
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(192, 10);
+            this.button2.Location = new System.Drawing.Point(338, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 20);
             this.button2.TabIndex = 6;
@@ -230,7 +231,7 @@ namespace Gaming_Library
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(374, 50);
+            this.textBox1.Location = new System.Drawing.Point(666, 50);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(124, 20);
@@ -261,6 +262,7 @@ namespace Gaming_Library
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.button4.FlatAppearance.BorderSize = 0;
@@ -269,7 +271,7 @@ namespace Gaming_Library
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(374, 10);
+            this.button4.Location = new System.Drawing.Point(666, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 20);
             this.button4.TabIndex = 11;
@@ -302,7 +304,7 @@ namespace Gaming_Library
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(627, -25);
+            this.button6.Location = new System.Drawing.Point(627, -28);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -314,7 +316,7 @@ namespace Gaming_Library
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(720, -25);
+            this.button5.Location = new System.Drawing.Point(720, -28);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -364,7 +366,7 @@ namespace Gaming_Library
             this.panel2.Controls.Add(this.button4);
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 40);
+            this.panel2.Size = new System.Drawing.Size(800, 40);
             this.panel2.TabIndex = 13;
             // 
             // gameDataBindingSource1

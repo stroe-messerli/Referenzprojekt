@@ -1,4 +1,6 @@
+*.suo
 *.cache
+*.csprojAssemblyReference
 *.dll
 *.exe
 *.pdb
