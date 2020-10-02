@@ -214,5 +214,11 @@
   <ItemGroup>
     <None Include="Icons\plus_dark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\die-einstellungen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\expand-white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

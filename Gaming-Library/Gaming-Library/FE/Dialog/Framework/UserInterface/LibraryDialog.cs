@@ -35,29 +35,12 @@ namespace Gaming_Library
             gameData[0].Genre = "Action";
             gameData[0].Title = "Among Us";
             gameData[0].YearOfPublication = "2018";
-            gameData[0].Image = Properties.Resources.amongus;
+            gameData[0].Image = Resources.amongus;
             gameData[1].Genre = "Action";
             gameData[1].Title = "Counter Strike";
             gameData[1].YearOfPublication = "2012";
-            gameData[1].Image = Properties.Resources.csgo;
+            gameData[1].Image = Resources.csgo;
             return gameData;
-        }
-
-        private void button1_MouseHover(object sender, EventArgs eventArguments)
-        {
-            //contextMenuStrip1.Show(button1, new Point(0, button1.Height));
-        }
-
-        private void contextMenuStrip1_MouseLeave(object sender, EventArgs eventArguments)
-        {
-            contextMenuStrip1.Hide();
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs eventArguments)
-        {
-            if (!contextMenuStrip1.Bounds.Contains(MousePosition)) {
-                contextMenuStrip1.Hide();
-            }
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
@@ -222,6 +205,32 @@ namespace Gaming_Library
                     timer2.Stop();
                 }
             }
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox2.Text = "";
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox2.Text = Settings.Default.FilterField;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
+            checkBox4.Checked = false;
+            checkBox5.Checked = false;
+            checkBox6.Checked = false;
+            checkBox7.Checked = false;
+            checkBox8.Checked = false;
+            checkBox9.Checked = false;
+            checkBox10.Checked = false;
+            checkBox11.Checked = false;
+            checkBox12.Checked = false;
+            checkBox13.Checked = false;
+            checkBox14.Checked = false;
+            checkBox15.Checked = false;
+            checkBox16.Checked = false;
         }
     }
 }

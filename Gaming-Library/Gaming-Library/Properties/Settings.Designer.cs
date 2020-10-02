@@ -23,15 +23,21 @@ namespace Gaming_Library.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Suchen  🔍")]
         public string SearchField {
             get {
                 return ((string)(this["SearchField"]));
             }
-            set {
-                this["SearchField"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("hier tags eingeben")]
+        public string FilterField {
+            get {
+                return ((string)(this["FilterField"]));
             }
         }
     }
