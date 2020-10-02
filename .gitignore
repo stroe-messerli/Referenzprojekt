@@ -113,3 +113,5 @@ Gaming-Library/packages/ObjectListView.Official.2.9.1/.signature.p7s
 Gaming-Library/packages/ObjectListView.Official.2.9.1/ObjectListView.Official.2.9.1.nupkg
 Gaming-Library/packages/ObjectListView.Official.2.9.1/lib/net20/ObjectListView.XML
 
+Gaming-Library/.vs/Gaming-Library/v16/Server/sqlite3/db.lock
+Gaming-Library/.vs/Gaming-Library/v16/Server/sqlite3/storage.ide
