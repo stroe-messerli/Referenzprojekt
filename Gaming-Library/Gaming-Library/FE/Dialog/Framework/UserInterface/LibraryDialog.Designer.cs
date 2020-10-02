@@ -37,49 +37,48 @@ namespace Gaming_Library
             this.eigenschaftenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielEntfernenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.spieleAnzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.buttonStatistics = new System.Windows.Forms.Button();
+            this.gameListView = new BrightIdeasSoftware.ObjectListView();
             this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.gamesImageList = new System.Windows.Forms.ImageList(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonGames = new System.Windows.Forms.Button();
+            this.buttonShowFilter = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxSearchTags = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkControllerFull = new System.Windows.Forms.CheckBox();
+            this.checkVR = new System.Windows.Forms.CheckBox();
+            this.checkControllerPartial = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkMultiplayer = new System.Windows.Forms.CheckBox();
+            this.checkCoop = new System.Windows.Forms.CheckBox();
+            this.checkSports = new System.Windows.Forms.CheckBox();
+            this.checkAction = new System.Windows.Forms.CheckBox();
+            this.checkSimulation = new System.Windows.Forms.CheckBox();
+            this.checkSinglePlayer = new System.Windows.Forms.CheckBox();
+            this.checkStrategy = new System.Windows.Forms.CheckBox();
+            this.checkAdventure = new System.Windows.Forms.CheckBox();
+            this.checkCasual = new System.Windows.Forms.CheckBox();
+            this.checkIndie = new System.Windows.Forms.CheckBox();
+            this.checkRacing = new System.Windows.Forms.CheckBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkRPG = new System.Windows.Forms.CheckBox();
+            this.checkMMP = new System.Windows.Forms.CheckBox();
             this.gameDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gameDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameListView)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -136,61 +135,61 @@ namespace Gaming_Library
             this.spieleAnzeigenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.spieleAnzeigenToolStripMenuItem.Text = "Spiele anzeigen";
             // 
-            // button2
+            // buttonStatistics
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button2.Enabled = false;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(342, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 20);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Statistiken";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonStatistics.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonStatistics.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonStatistics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonStatistics.Enabled = false;
+            this.buttonStatistics.FlatAppearance.BorderSize = 0;
+            this.buttonStatistics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonStatistics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStatistics.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStatistics.Location = new System.Drawing.Point(342, 10);
+            this.buttonStatistics.Name = "buttonStatistics";
+            this.buttonStatistics.Size = new System.Drawing.Size(124, 20);
+            this.buttonStatistics.TabIndex = 6;
+            this.buttonStatistics.Text = "Statistiken";
+            this.buttonStatistics.UseVisualStyleBackColor = false;
             // 
-            // objectListView1
+            // gameListView
             // 
-            this.objectListView1.AllColumns.Add(this.olvColumn3);
-            this.objectListView1.AllColumns.Add(this.olvColumn0);
-            this.objectListView1.AllColumns.Add(this.olvColumn1);
-            this.objectListView1.AllColumns.Add(this.olvColumn2);
-            this.objectListView1.AlternateRowBackColor = System.Drawing.Color.White;
-            this.objectListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.gameListView.AllColumns.Add(this.olvColumn3);
+            this.gameListView.AllColumns.Add(this.olvColumn0);
+            this.gameListView.AllColumns.Add(this.olvColumn1);
+            this.gameListView.AllColumns.Add(this.olvColumn2);
+            this.gameListView.AlternateRowBackColor = System.Drawing.Color.White;
+            this.gameListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.objectListView1.BackColor = System.Drawing.Color.LightGray;
-            this.objectListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.objectListView1.CellEditUseWholeCell = false;
-            this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.gameListView.BackColor = System.Drawing.Color.LightGray;
+            this.gameListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gameListView.CellEditUseWholeCell = false;
+            this.gameListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.olvColumn3,
             this.olvColumn0,
             this.olvColumn1,
             this.olvColumn2});
-            this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.objectListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.objectListView1.FullRowSelect = true;
-            this.objectListView1.GridLines = true;
-            this.objectListView1.HideSelection = false;
-            this.objectListView1.LargeImageList = this.gamesImageList;
-            this.objectListView1.Location = new System.Drawing.Point(0, 93);
-            this.objectListView1.Margin = new System.Windows.Forms.Padding(0);
-            this.objectListView1.Name = "objectListView1";
-            this.objectListView1.RowHeight = 60;
-            this.objectListView1.Size = new System.Drawing.Size(808, 348);
-            this.objectListView1.SmallImageList = this.gamesImageList;
-            this.objectListView1.SortGroupItemsByPrimaryColumn = false;
-            this.objectListView1.TabIndex = 8;
-            this.objectListView1.UseCompatibleStateImageBehavior = false;
-            this.objectListView1.View = System.Windows.Forms.View.Details;
-            this.objectListView1.SizeChanged += new System.EventHandler(this.objectListView1_SizeChanged);
-            this.objectListView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
+            this.gameListView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gameListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameListView.FullRowSelect = true;
+            this.gameListView.GridLines = true;
+            this.gameListView.HideSelection = false;
+            this.gameListView.LargeImageList = this.gamesImageList;
+            this.gameListView.Location = new System.Drawing.Point(0, 93);
+            this.gameListView.Margin = new System.Windows.Forms.Padding(0);
+            this.gameListView.Name = "gameListView";
+            this.gameListView.RowHeight = 60;
+            this.gameListView.Size = new System.Drawing.Size(808, 348);
+            this.gameListView.SmallImageList = this.gamesImageList;
+            this.gameListView.SortGroupItemsByPrimaryColumn = false;
+            this.gameListView.TabIndex = 8;
+            this.gameListView.UseCompatibleStateImageBehavior = false;
+            this.gameListView.View = System.Windows.Forms.View.Details;
+            this.gameListView.SizeChanged += new System.EventHandler(this.objectListView1_SizeChanged);
+            this.gameListView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
             // olvColumn3
             // 
@@ -245,20 +244,20 @@ namespace Gaming_Library
             this.gamesImageList.Images.SetKeyName(10, "spiele.ico");
             this.gamesImageList.Images.SetKeyName(11, "start.png");
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.LightGray;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(674, 50);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Suchen  🔍";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBoxSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBoxSearch.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearch.Location = new System.Drawing.Point(342, 62);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(98, 20);
+            this.textBoxSearch.TabIndex = 10;
+            this.textBoxSearch.Text = "Suchen  🔍";
+            this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // button4
             // 
@@ -290,10 +289,11 @@ namespace Gaming_Library
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.buttonGames);
+            this.panel2.Controls.Add(this.textBoxSearch);
+            this.panel2.Controls.Add(this.buttonStatistics);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.buttonShowFilter);
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(808, 91);
@@ -330,45 +330,45 @@ namespace Gaming_Library
             this.button7.UseVisualStyleBackColor = false;
             this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button7_MouseClick);
             // 
-            // button1
+            // buttonGames
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::Gaming_Library.Properties.Resources.expand_white;
-            this.button1.Location = new System.Drawing.Point(10, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 20);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Spiele";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGames.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonGames.FlatAppearance.BorderSize = 0;
+            this.buttonGames.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonGames.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGames.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGames.Image = global::Gaming_Library.Properties.Resources.expand_white;
+            this.buttonGames.Location = new System.Drawing.Point(10, 10);
+            this.buttonGames.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonGames.Name = "buttonGames";
+            this.buttonGames.Size = new System.Drawing.Size(124, 20);
+            this.buttonGames.TabIndex = 5;
+            this.buttonGames.Text = "Spiele";
+            this.buttonGames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonGames.UseVisualStyleBackColor = false;
+            this.buttonGames.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // buttonShowFilter
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Image = global::Gaming_Library.Properties.Resources.image_1_;
-            this.button3.Location = new System.Drawing.Point(10, 62);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 20);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Filtern ";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonShowFilter.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonShowFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonShowFilter.FlatAppearance.BorderSize = 0;
+            this.buttonShowFilter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonShowFilter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonShowFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonShowFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold);
+            this.buttonShowFilter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonShowFilter.Image = global::Gaming_Library.Properties.Resources.expand_white;
+            this.buttonShowFilter.Location = new System.Drawing.Point(439, 62);
+            this.buttonShowFilter.Name = "buttonShowFilter";
+            this.buttonShowFilter.Size = new System.Drawing.Size(27, 20);
+            this.buttonShowFilter.TabIndex = 9;
+            this.buttonShowFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonShowFilter.UseVisualStyleBackColor = false;
+            this.buttonShowFilter.Click += new System.EventHandler(this.button3_Click);
             // 
             // timer2
             // 
@@ -380,29 +380,28 @@ namespace Gaming_Library
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBoxSearchTags);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.checkBox16);
-            this.panel1.Controls.Add(this.checkBox15);
-            this.panel1.Controls.Add(this.checkBox14);
+            this.panel1.Controls.Add(this.checkControllerFull);
+            this.panel1.Controls.Add(this.checkVR);
+            this.panel1.Controls.Add(this.checkControllerPartial);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.checkBox13);
-            this.panel1.Controls.Add(this.checkBox12);
-            this.panel1.Controls.Add(this.checkBox11);
-            this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Controls.Add(this.checkBox10);
-            this.panel1.Controls.Add(this.checkBox9);
-            this.panel1.Controls.Add(this.checkBox8);
-            this.panel1.Controls.Add(this.checkBox7);
-            this.panel1.Controls.Add(this.checkBox6);
-            this.panel1.Controls.Add(this.checkBox5);
-            this.panel1.Controls.Add(this.checkBox4);
+            this.panel1.Controls.Add(this.checkMultiplayer);
+            this.panel1.Controls.Add(this.checkCoop);
+            this.panel1.Controls.Add(this.checkSports);
+            this.panel1.Controls.Add(this.checkAction);
+            this.panel1.Controls.Add(this.checkSimulation);
+            this.panel1.Controls.Add(this.checkSinglePlayer);
+            this.panel1.Controls.Add(this.checkStrategy);
+            this.panel1.Controls.Add(this.checkAdventure);
+            this.panel1.Controls.Add(this.checkCasual);
+            this.panel1.Controls.Add(this.checkIndie);
+            this.panel1.Controls.Add(this.checkRacing);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.checkRPG);
+            this.panel1.Controls.Add(this.checkMMP);
             this.panel1.Location = new System.Drawing.Point(0, 93);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.MaximumSize = new System.Drawing.Size(4000, 100);
@@ -410,20 +409,20 @@ namespace Gaming_Library
             this.panel1.Size = new System.Drawing.Size(808, 0);
             this.panel1.TabIndex = 14;
             // 
-            // textBox2
+            // textBoxSearchTags
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(635, 20);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 23;
-            this.textBox2.Text = "hier tags eingeben";
-            this.textBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
+            this.textBoxSearchTags.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearchTags.BackColor = System.Drawing.Color.White;
+            this.textBoxSearchTags.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSearchTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearchTags.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxSearchTags.Location = new System.Drawing.Point(635, 20);
+            this.textBoxSearchTags.Multiline = true;
+            this.textBoxSearchTags.Name = "textBoxSearchTags";
+            this.textBoxSearchTags.Size = new System.Drawing.Size(163, 20);
+            this.textBoxSearchTags.TabIndex = 23;
+            this.textBoxSearchTags.Text = "hier tags eingeben";
+            this.textBoxSearchTags.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
             // 
             // label4
             // 
@@ -436,38 +435,38 @@ namespace Gaming_Library
             this.label4.TabIndex = 22;
             this.label4.Text = "Tags";
             // 
-            // checkBox16
+            // checkControllerFull
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(517, 38);
-            this.checkBox16.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(95, 17);
-            this.checkBox16.TabIndex = 21;
-            this.checkBox16.Text = "Controller (voll)";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkControllerFull.AutoSize = true;
+            this.checkControllerFull.Location = new System.Drawing.Point(517, 38);
+            this.checkControllerFull.Margin = new System.Windows.Forms.Padding(0);
+            this.checkControllerFull.Name = "checkControllerFull";
+            this.checkControllerFull.Size = new System.Drawing.Size(95, 17);
+            this.checkControllerFull.TabIndex = 21;
+            this.checkControllerFull.Text = "Controller (voll)";
+            this.checkControllerFull.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // checkVR
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(517, 56);
-            this.checkBox15.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(41, 17);
-            this.checkBox15.TabIndex = 20;
-            this.checkBox15.Text = "VR";
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkVR.AutoSize = true;
+            this.checkVR.Location = new System.Drawing.Point(517, 56);
+            this.checkVR.Margin = new System.Windows.Forms.Padding(0);
+            this.checkVR.Name = "checkVR";
+            this.checkVR.Size = new System.Drawing.Size(41, 17);
+            this.checkVR.TabIndex = 20;
+            this.checkVR.Text = "VR";
+            this.checkVR.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // checkControllerPartial
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(517, 20);
-            this.checkBox14.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(119, 17);
-            this.checkBox14.TabIndex = 19;
-            this.checkBox14.Text = "Controller (teilweise)";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkControllerPartial.AutoSize = true;
+            this.checkControllerPartial.Location = new System.Drawing.Point(517, 20);
+            this.checkControllerPartial.Margin = new System.Windows.Forms.Padding(0);
+            this.checkControllerPartial.Name = "checkControllerPartial";
+            this.checkControllerPartial.Size = new System.Drawing.Size(119, 17);
+            this.checkControllerPartial.TabIndex = 19;
+            this.checkControllerPartial.Text = "Controller (teilweise)";
+            this.checkControllerPartial.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -499,133 +498,133 @@ namespace Gaming_Library
             this.label1.TabIndex = 16;
             this.label1.Text = "Genre";
             // 
-            // checkBox13
+            // checkMultiplayer
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(320, 20);
-            this.checkBox13.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(80, 17);
-            this.checkBox13.TabIndex = 15;
-            this.checkBox13.Text = "Mehrspieler";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkMultiplayer.AutoSize = true;
+            this.checkMultiplayer.Location = new System.Drawing.Point(320, 20);
+            this.checkMultiplayer.Margin = new System.Windows.Forms.Padding(0);
+            this.checkMultiplayer.Name = "checkMultiplayer";
+            this.checkMultiplayer.Size = new System.Drawing.Size(80, 17);
+            this.checkMultiplayer.TabIndex = 15;
+            this.checkMultiplayer.Text = "Mehrspieler";
+            this.checkMultiplayer.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // checkCoop
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(320, 56);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(77, 17);
-            this.checkBox12.TabIndex = 14;
-            this.checkBox12.Text = "Kooperativ";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkCoop.AutoSize = true;
+            this.checkCoop.Location = new System.Drawing.Point(320, 56);
+            this.checkCoop.Margin = new System.Windows.Forms.Padding(0);
+            this.checkCoop.Name = "checkCoop";
+            this.checkCoop.Size = new System.Drawing.Size(77, 17);
+            this.checkCoop.TabIndex = 14;
+            this.checkCoop.Text = "Kooperativ";
+            this.checkCoop.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // checkSports
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(192, 56);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(56, 17);
-            this.checkBox11.TabIndex = 13;
-            this.checkBox11.Text = "Sports";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkSports.AutoSize = true;
+            this.checkSports.Location = new System.Drawing.Point(192, 56);
+            this.checkSports.Margin = new System.Windows.Forms.Padding(0);
+            this.checkSports.Name = "checkSports";
+            this.checkSports.Size = new System.Drawing.Size(56, 17);
+            this.checkSports.TabIndex = 13;
+            this.checkSports.Text = "Sports";
+            this.checkSports.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkAction
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 20);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(56, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Action";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkAction.AutoSize = true;
+            this.checkAction.Location = new System.Drawing.Point(10, 20);
+            this.checkAction.Margin = new System.Windows.Forms.Padding(0);
+            this.checkAction.Name = "checkAction";
+            this.checkAction.Size = new System.Drawing.Size(56, 17);
+            this.checkAction.TabIndex = 12;
+            this.checkAction.Text = "Action";
+            this.checkAction.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // checkSimulation
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(101, 56);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(74, 17);
-            this.checkBox10.TabIndex = 11;
-            this.checkBox10.Text = "Simulation";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkSimulation.AutoSize = true;
+            this.checkSimulation.Location = new System.Drawing.Point(101, 56);
+            this.checkSimulation.Margin = new System.Windows.Forms.Padding(0);
+            this.checkSimulation.Name = "checkSimulation";
+            this.checkSimulation.Size = new System.Drawing.Size(74, 17);
+            this.checkSimulation.TabIndex = 11;
+            this.checkSimulation.Text = "Simulation";
+            this.checkSimulation.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // checkSinglePlayer
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(320, 38);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(84, 17);
-            this.checkBox9.TabIndex = 10;
-            this.checkBox9.Text = "Einzelspieler";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkSinglePlayer.AutoSize = true;
+            this.checkSinglePlayer.Location = new System.Drawing.Point(320, 38);
+            this.checkSinglePlayer.Margin = new System.Windows.Forms.Padding(0);
+            this.checkSinglePlayer.Name = "checkSinglePlayer";
+            this.checkSinglePlayer.Size = new System.Drawing.Size(84, 17);
+            this.checkSinglePlayer.TabIndex = 10;
+            this.checkSinglePlayer.Text = "Einzelspieler";
+            this.checkSinglePlayer.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // checkStrategy
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(192, 74);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(65, 17);
-            this.checkBox8.TabIndex = 9;
-            this.checkBox8.Text = "Strategy";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkStrategy.AutoSize = true;
+            this.checkStrategy.Location = new System.Drawing.Point(192, 74);
+            this.checkStrategy.Margin = new System.Windows.Forms.Padding(0);
+            this.checkStrategy.Name = "checkStrategy";
+            this.checkStrategy.Size = new System.Drawing.Size(65, 17);
+            this.checkStrategy.TabIndex = 9;
+            this.checkStrategy.Text = "Strategy";
+            this.checkStrategy.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // checkAdventure
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(10, 38);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(75, 17);
-            this.checkBox7.TabIndex = 8;
-            this.checkBox7.Text = "Adventure";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkAdventure.AutoSize = true;
+            this.checkAdventure.Location = new System.Drawing.Point(10, 38);
+            this.checkAdventure.Margin = new System.Windows.Forms.Padding(0);
+            this.checkAdventure.Name = "checkAdventure";
+            this.checkAdventure.Size = new System.Drawing.Size(75, 17);
+            this.checkAdventure.TabIndex = 8;
+            this.checkAdventure.Text = "Adventure";
+            this.checkAdventure.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // checkCasual
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(10, 56);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(58, 17);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "Casual";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkCasual.AutoSize = true;
+            this.checkCasual.Location = new System.Drawing.Point(10, 56);
+            this.checkCasual.Margin = new System.Windows.Forms.Padding(0);
+            this.checkCasual.Name = "checkCasual";
+            this.checkCasual.Size = new System.Drawing.Size(58, 17);
+            this.checkCasual.TabIndex = 7;
+            this.checkCasual.Text = "Casual";
+            this.checkCasual.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // checkIndie
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(10, 74);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(49, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "Indie";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkIndie.AutoSize = true;
+            this.checkIndie.Location = new System.Drawing.Point(10, 74);
+            this.checkIndie.Margin = new System.Windows.Forms.Padding(0);
+            this.checkIndie.Name = "checkIndie";
+            this.checkIndie.Size = new System.Drawing.Size(49, 17);
+            this.checkIndie.TabIndex = 6;
+            this.checkIndie.Text = "Indie";
+            this.checkIndie.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkRacing
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(101, 20);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(60, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "Racing";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkRacing.AutoSize = true;
+            this.checkRacing.Location = new System.Drawing.Point(101, 20);
+            this.checkRacing.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRacing.Name = "checkRacing";
+            this.checkRacing.Size = new System.Drawing.Size(60, 17);
+            this.checkRacing.TabIndex = 5;
+            this.checkRacing.Text = "Racing";
+            this.checkRacing.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(635, -28);
+            this.button6.Location = new System.Drawing.Point(718, -26);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 4;
@@ -633,39 +632,27 @@ namespace Gaming_Library
             this.button6.UseVisualStyleBackColor = false;
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
             // 
-            // button5
+            // checkRPG
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.Location = new System.Drawing.Point(728, -28);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Anwenden";
-            this.button5.UseVisualStyleBackColor = false;
+            this.checkRPG.AutoSize = true;
+            this.checkRPG.Location = new System.Drawing.Point(101, 38);
+            this.checkRPG.Margin = new System.Windows.Forms.Padding(0);
+            this.checkRPG.Name = "checkRPG";
+            this.checkRPG.Size = new System.Drawing.Size(49, 17);
+            this.checkRPG.TabIndex = 2;
+            this.checkRPG.Text = "RPG";
+            this.checkRPG.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkMMP
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(101, 38);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(49, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "RPG";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(101, 74);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(91, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Massively MP";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkMMP.AutoSize = true;
+            this.checkMMP.Location = new System.Drawing.Point(101, 74);
+            this.checkMMP.Margin = new System.Windows.Forms.Padding(0);
+            this.checkMMP.Name = "checkMMP";
+            this.checkMMP.Size = new System.Drawing.Size(91, 17);
+            this.checkMMP.TabIndex = 1;
+            this.checkMMP.Text = "Massively MP";
+            this.checkMMP.UseVisualStyleBackColor = true;
             // 
             // gameDataBindingSource1
             // 
@@ -682,8 +669,7 @@ namespace Gaming_Library
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(808, 434);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.objectListView1);
+            this.Controls.Add(this.gameListView);
             this.Controls.Add(this.panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(900, 5000);
@@ -692,15 +678,15 @@ namespace Gaming_Library
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bibliothek";
             this.contextMenuStrip2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameListView)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gameDataBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -711,46 +697,45 @@ namespace Gaming_Library
         private System.Windows.Forms.ToolStripMenuItem eigenschaftenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem spielEntfernenToolStripMenuItem1;
         private ToolStripMenuItem spieleAnzeigenToolStripMenuItem;
-        private Button button2;
+        private Button buttonStatistics;
         private BindingSource gameDataBindingSource1;
-        private BrightIdeasSoftware.ObjectListView objectListView1;
+        private BrightIdeasSoftware.ObjectListView gameListView;
         private BrightIdeasSoftware.OLVColumn olvColumn1;
         private BrightIdeasSoftware.OLVColumn olvColumn2;
-        private Button button3;
-        private TextBox textBox1;
+        private Button buttonShowFilter;
+        private TextBox textBoxSearch;
         private ImageList gamesImageList;
         private Button button4;
         private Timer timer1;
         private Panel panel2;
         private BrightIdeasSoftware.OLVColumn olvColumn0;
         private BrightIdeasSoftware.OLVColumn olvColumn3;
-        private Button button1;
+        private Button buttonGames;
         private Timer timer2;
         private Panel panel3;
         private Button button7;
         private Panel panel1;
-        private TextBox textBox2;
+        private TextBox textBoxSearchTags;
         private Label label4;
-        private CheckBox checkBox16;
-        private CheckBox checkBox15;
-        private CheckBox checkBox14;
+        private CheckBox checkControllerFull;
+        private CheckBox checkVR;
+        private CheckBox checkControllerPartial;
         private Label label3;
         private Label label2;
         private Label label1;
-        private CheckBox checkBox13;
-        private CheckBox checkBox12;
-        private CheckBox checkBox11;
-        private CheckBox checkBox1;
-        private CheckBox checkBox10;
-        private CheckBox checkBox9;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
+        private CheckBox checkMultiplayer;
+        private CheckBox checkCoop;
+        private CheckBox checkSports;
+        private CheckBox checkAction;
+        private CheckBox checkSimulation;
+        private CheckBox checkSinglePlayer;
+        private CheckBox checkStrategy;
+        private CheckBox checkAdventure;
+        private CheckBox checkCasual;
+        private CheckBox checkIndie;
+        private CheckBox checkRacing;
         private Button button6;
-        private Button button5;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
+        private CheckBox checkRPG;
+        private CheckBox checkMMP;
     }
 }

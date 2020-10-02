@@ -8,5 +8,11 @@
     <Setting Name="FilterField" Type="System.String" Scope="Application">
       <Value Profile="(Default)">hier tags eingeben</Value>
     </Setting>
+    <Setting Name="FilterViewCollapsed" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IsFirstAccess" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
