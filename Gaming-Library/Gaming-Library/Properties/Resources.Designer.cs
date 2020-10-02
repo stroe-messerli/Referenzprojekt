@@ -113,16 +113,6 @@ namespace Gaming_Library.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap die_einstellungen {
-            get {
-                object obj = ResourceManager.GetObject("die-einstellungen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap expand_button {
             get {
                 object obj = ResourceManager.GetObject("expand-button", resourceCulture);
@@ -133,39 +123,9 @@ namespace Gaming_Library.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap expand_button1 {
+        internal static System.Drawing.Bitmap expand_white {
             get {
-                object obj = ResourceManager.GetObject("expand-button1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap expand_button2 {
-            get {
-                object obj = ResourceManager.GetObject("expand-button2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap image_1_ {
-            get {
-                object obj = ResourceManager.GetObject("image(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap image_1_1 {
-            get {
-                object obj = ResourceManager.GetObject("image(1)1", resourceCulture);
+                object obj = ResourceManager.GetObject("expand_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,12 +12,15 @@ namespace Gaming_Library
 {
     public partial class LibraryDialog : Form
     {
-        private bool isFilterCollapsed = true;
         private bool isDropdownCollapsed = true;
+        private bool isFilterViewCollapsed = true;
         public LibraryDialog()
         {
+            Settings.Default.Reset();
             InitializeComponent();
-
+            if (!Settings.Default.FilterViewCollapsed) {
+                timer1.Start();
+            }
             LoadData();
         }
 
@@ -25,7 +28,7 @@ namespace Gaming_Library
         {
             //request to controller to return data from DA as list of viewmodels
             var listOfViewModels = createTestObjects();
-            objectListView1.SetObjects(listOfViewModels);
+            gameListView.SetObjects(listOfViewModels);
 
         }
 
@@ -35,29 +38,12 @@ namespace Gaming_Library
             gameData[0].Genre = "Action";
             gameData[0].Title = "Among Us";
             gameData[0].YearOfPublication = "2018";
-            gameData[0].Image = Properties.Resources.amongus;
+            gameData[0].Image = Resources.amongus;
             gameData[1].Genre = "Action";
             gameData[1].Title = "Counter Strike";
             gameData[1].YearOfPublication = "2012";
-            gameData[1].Image = Properties.Resources.csgo;
+            gameData[1].Image = Resources.csgo;
             return gameData;
-        }
-
-        private void button1_MouseHover(object sender, EventArgs eventArguments)
-        {
-            //contextMenuStrip1.Show(button1, new Point(0, button1.Height));
-        }
-
-        private void contextMenuStrip1_MouseLeave(object sender, EventArgs eventArguments)
-        {
-            contextMenuStrip1.Hide();
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs eventArguments)
-        {
-            if (!contextMenuStrip1.Bounds.Contains(MousePosition)) {
-                contextMenuStrip1.Hide();
-            }
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
@@ -86,14 +72,14 @@ namespace Gaming_Library
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox1.TextAlign = HorizontalAlignment.Left;
+            textBoxSearch.Text = "";
+            textBoxSearch.TextAlign = HorizontalAlignment.Left;
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            textBox1.Text = Settings.Default.SearchField;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            textBoxSearch.Text = Settings.Default.SearchField;
+            textBoxSearch.TextAlign = HorizontalAlignment.Right;
         }
 
         private void objectListView1_SizeChanged(object sender, EventArgs e)
@@ -129,19 +115,35 @@ namespace Gaming_Library
 
         private void button3_Click(object sender, EventArgs e)
         {
+            HandleFirstAccess();
             timer1.Start();
+        }
+
+        private void HandleFirstAccess()
+        {
+            if (Settings.Default.IsFirstAccess) {
+                DialogResult dialogResult = MessageBox.Show(
+                    "Möchten Sie die Filter-View zu Beginn anzeigen lassen?\n",
+                    "Filter-View",
+                    MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes) {
+                    Settings.Default.FilterViewCollapsed = false;
+                }
+                Settings.Default.IsFirstAccess = false;
+                Settings.Default.Save();
+            }
         }
         private void setObjectListAnchorsForFilterPanel()
         {
             //we need to remove the top-anchor to be able to move the objectlist further down
-            objectListView1.Anchor =
+            gameListView.Anchor =
                 AnchorStyles.Bottom
                 | AnchorStyles.Left
                 | AnchorStyles.Right;
         }
         private void resetObjectListAnchors()
         {
-            objectListView1.Anchor =
+            gameListView.Anchor =
                 AnchorStyles.Top
                 | AnchorStyles.Bottom
                 | AnchorStyles.Left
@@ -151,9 +153,9 @@ namespace Gaming_Library
         private void AdjustComponents(int adjustment)
         {
             //if (WindowState == FormWindowState.Maximized) {
-            objectListView1.Location = new Point(
-                objectListView1.Location.X,
-                objectListView1.Location.Y + adjustment
+            gameListView.Location = new Point(
+                gameListView.Location.X,
+                gameListView.Location.Y + adjustment
                 );
             panel1.Height += adjustment;
         }
@@ -162,18 +164,18 @@ namespace Gaming_Library
         {
             setObjectListAnchorsForFilterPanel();
 
-            if (isFilterCollapsed) {
-                button3.Image = Properties.Resources.shrink_white;
+            if (isFilterViewCollapsed) {
+                buttonShowFilter.Image = Properties.Resources.shrink_white;
                 AdjustComponents(5);
                 if (panel1.Height == panel1.MaximumSize.Height) {
-                    isFilterCollapsed = false;
+                    isFilterViewCollapsed = false;
                     timer1.Stop();
                 }
-            } else if (!isFilterCollapsed) {
-                button3.Image = Properties.Resources.image_1_;
+            } else if (!isFilterViewCollapsed) {
+                buttonShowFilter.Image = Properties.Resources.expand_white;
                 AdjustComponents(-5);
                 if (panel1.Height == panel1.MinimumSize.Height) {
-                    isFilterCollapsed = true;
+                    isFilterViewCollapsed = true;
                     timer1.Stop();
                 }
             }
@@ -185,9 +187,9 @@ namespace Gaming_Library
         {
             if (e.Button == MouseButtons.Right) {
                 //ignore, if no row is selected
-                if (objectListView1.SelectedItem != null) {
-                    var mousePosition = objectListView1.PointToClient(Cursor.Position);
-                    contextMenuStrip2.Show(objectListView1, mousePosition);
+                if (gameListView.SelectedItem != null) {
+                    var mousePosition = gameListView.PointToClient(Cursor.Position);
+                    contextMenuStrip2.Show(gameListView, mousePosition);
                 }
             }
         }
@@ -208,20 +210,51 @@ namespace Gaming_Library
         private void timer2_Tick(object sender, EventArgs e)
         {
             if (isDropdownCollapsed) {
-                button1.Image = Properties.Resources.shrink_white;
+                buttonGames.Image = Properties.Resources.shrink_white;
                 panel3.Height += 2;
                 if (panel3.Height == panel3.MaximumSize.Height) {
                     isDropdownCollapsed = false;
                     timer2.Stop();
                 }
             } else if (!isDropdownCollapsed) {
-                button1.Image = Properties.Resources.image_1_;
+                buttonGames.Image = Properties.Resources.expand_white;
                 panel3.Height -= 2;
                 if (panel3.Height == panel3.MinimumSize.Height) {
                     isDropdownCollapsed = true;
                     timer2.Stop();
                 }
             }
+        }
+
+        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxSearchTags.Text = "";
+            textBoxSearchTags.Font = new Font(textBoxSearchTags.Font, FontStyle.Regular);
+            textBoxSearchTags.ForeColor = Color.Black;
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxSearchTags.Text = Settings.Default.FilterField;
+            textBoxSearchTags.Font = new Font(textBoxSearchTags.Font, FontStyle.Italic);
+            textBoxSearchTags.ForeColor = Color.Gray;
+
+            checkAction.Checked = false;
+            checkMMP.Checked = false;
+            checkRPG.Checked = false;
+            checkRacing.Checked = false;
+            checkIndie.Checked = false;
+            checkCasual.Checked = false;
+            checkAdventure.Checked = false;
+            checkStrategy.Checked = false;
+            checkSinglePlayer.Checked = false;
+            checkSimulation.Checked = false;
+            checkSports.Checked = false;
+            checkCoop.Checked = false;
+            checkMultiplayer.Checked = false;
+            checkControllerPartial.Checked = false;
+            checkVR.Checked = false;
+            checkControllerFull.Checked = false;
         }
     }
 }

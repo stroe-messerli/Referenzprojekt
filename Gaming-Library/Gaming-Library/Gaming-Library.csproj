@@ -118,6 +118,7 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\GameProperties.resx">
       <DependentUpon>GameProperties.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,7 +136,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Gaming_Library.BL.UseCase.Entity.GameData.datasource" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -213,6 +214,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\plus_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\die-einstellungen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\expand-white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
