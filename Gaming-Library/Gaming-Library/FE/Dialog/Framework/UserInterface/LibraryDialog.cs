@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Resources;
@@ -40,7 +41,7 @@ namespace Gaming_Library
             gameData[0].YearOfPublication = "2018";
             gameData[0].Image = Resources.amongus;
             gameData[1].Genre = "Action";
-            gameData[1].Title = "Counter Strike";
+            gameData[1].Title = "Counter Strike:Global Offensive";
             gameData[1].YearOfPublication = "2012";
             gameData[1].Image = Resources.csgo;
             return gameData;
@@ -51,16 +52,6 @@ namespace Gaming_Library
             //request an den controller zur öffnung des einstellungs-dialogs
             var propertiesForm = new GameProperties();
             propertiesForm.ShowDialog(this);
-        }
-
-        private void spielEntfernenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
-        {
-            //request to controller
-        }
-
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs eventArguments)
-        {
-            //start game
         }
 
         private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,37 +71,6 @@ namespace Gaming_Library
         {
             textBoxSearch.Text = Settings.Default.SearchField;
             textBoxSearch.TextAlign = HorizontalAlignment.Right;
-        }
-
-        private void objectListView1_SizeChanged(object sender, EventArgs e)
-        {
-            //if (resizing) {
-            //    return;
-            //}
-            //// Set the resizing flag
-            //resizing = true;
-
-            //ObjectListView objectListView = sender as ObjectListView;
-            //if (objectListView != null) {
-            //    float totalColumnWidth = 0;
-
-            //    // Get the sum of all column tags
-            //    for (int i = 1; i < objectListView.Columns.Count; i++) {
-            //        totalColumnWidth += Convert.ToInt32(objectListView.Columns[i].Tag);
-            //    }
-
-            //    // Calculate the percentage of space each column should 
-            //    // occupy in reference to the other columns and then set the 
-            //    // width of the column to that percentage of the visible space.
-            //    for (int i = 1; i < objectListView.Columns.Count; i++) {
-            //        float colPercentage = (Convert.ToInt32(objectListView.Columns[i].Tag) / (totalColumnWidth));
-
-            //        //We have to take into account, that column1 is not resizable - ergo its width has to be subtracted.
-            //        var relativeWidth = (colPercentage * (objectListView.ClientRectangle.Width - objectListView.Columns[0].Width));
-            //        objectListView.Columns[i].Width = (int)relativeWidth;
-            //    }
-            //}
-            //resizing = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -141,6 +101,7 @@ namespace Gaming_Library
                 | AnchorStyles.Left
                 | AnchorStyles.Right;
         }
+
         private void resetObjectListAnchors()
         {
             gameListView.Anchor =
@@ -255,6 +216,27 @@ namespace Gaming_Library
             checkControllerPartial.Checked = false;
             checkVR.Checked = false;
             checkControllerFull.Checked = false;
+        }
+
+        private void gameListView_DoubleClick(object sender, EventArgs e)
+        {
+            //request to controller
+            Process.Start("steam://rungameid/945360");
+        }
+
+        private void spielEntfernenToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //request to controller for removal of the item in DA, so the FE can be updated 
+            //using LoadObjects()
+            gameListView.Items.Remove(gameListView.SelectedItem);
+            gameListView.Update();
+            Update();
+        }
+
+        private void spielStartenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //request to controller
+            Process.Start("steam://rungameid/945360");
         }
     }
 }

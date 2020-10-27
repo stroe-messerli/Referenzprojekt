@@ -61,7 +61,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +149,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(7, 113);
+            this.label8.Location = new System.Drawing.Point(9, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
@@ -162,9 +163,9 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(216, 38);
+            this.button2.Location = new System.Drawing.Point(216, 37);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 24);
+            this.button2.Size = new System.Drawing.Size(100, 21);
             this.button2.TabIndex = 24;
             this.button2.Text = "Recherche";
             this.button2.UseVisualStyleBackColor = false;
@@ -195,17 +196,17 @@
             // 
             // buttonSetFolderPath
             // 
-            this.buttonSetFolderPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonSetFolderPath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.buttonSetFolderPath.FlatAppearance.BorderSize = 0;
             this.buttonSetFolderPath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.buttonSetFolderPath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.buttonSetFolderPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSetFolderPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSetFolderPath.Location = new System.Drawing.Point(216, 85);
+            this.buttonSetFolderPath.Image = global::Gaming_Library.Properties.Resources.edit;
+            this.buttonSetFolderPath.Location = new System.Drawing.Point(236, 91);
             this.buttonSetFolderPath.Name = "buttonSetFolderPath";
-            this.buttonSetFolderPath.Size = new System.Drawing.Size(100, 23);
+            this.buttonSetFolderPath.Size = new System.Drawing.Size(55, 23);
             this.buttonSetFolderPath.TabIndex = 22;
-            this.buttonSetFolderPath.Text = "Ändern";
             this.buttonSetFolderPath.UseVisualStyleBackColor = false;
             this.buttonSetFolderPath.Click += new System.EventHandler(this.buttonSetFolderPath_Click);
             // 
@@ -214,7 +215,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(7, 90);
+            this.label6.Location = new System.Drawing.Point(7, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 21;
@@ -250,17 +251,17 @@
             // 
             // buttonSetImagePath
             // 
-            this.buttonSetImagePath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonSetImagePath.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.buttonSetImagePath.FlatAppearance.BorderSize = 0;
             this.buttonSetImagePath.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.buttonSetImagePath.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.buttonSetImagePath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSetImagePath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSetImagePath.Location = new System.Drawing.Point(216, 62);
+            this.buttonSetImagePath.Image = global::Gaming_Library.Properties.Resources.edit;
+            this.buttonSetImagePath.Location = new System.Drawing.Point(236, 68);
             this.buttonSetImagePath.Name = "buttonSetImagePath";
-            this.buttonSetImagePath.Size = new System.Drawing.Size(100, 23);
+            this.buttonSetImagePath.Size = new System.Drawing.Size(55, 23);
             this.buttonSetImagePath.TabIndex = 19;
-            this.buttonSetImagePath.Text = "Ändern";
             this.buttonSetImagePath.UseVisualStyleBackColor = false;
             this.buttonSetImagePath.Click += new System.EventHandler(this.buttonSetImagePath_Click);
             // 
@@ -290,6 +291,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(384, 0);
             this.panel1.TabIndex = 29;
+            this.panel1.Visible = false;
             // 
             // textBox4
             // 
@@ -450,19 +452,32 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // checkedListBox1
+            // comboBox1
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.HorizontalScrollbar = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "Action",
-            "Adventure",
-            "etc.",
-            "MMP"});
-            this.checkedListBox1.Location = new System.Drawing.Point(87, 113);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(100, 19);
-            this.checkedListBox1.TabIndex = 30;
+            "Indie",
+            "Adventure"});
+            this.comboBox1.Location = new System.Drawing.Point(87, 113);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = global::Gaming_Library.Properties.Resources.edit;
+            this.button1.Location = new System.Drawing.Point(236, 114);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 23);
+            this.button1.TabIndex = 31;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // GameProperties
             // 
@@ -470,8 +485,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(384, 231);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.buttonProperties);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
@@ -487,6 +502,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.saveProperties);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(556, 465);
@@ -535,6 +551,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

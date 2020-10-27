@@ -8,23 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using BrightIdeasSoftware;
+using Gaming_Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 {
     public partial class GameProperties : Form
     {
         private bool isPropertiesViewCollapsed = true;
+        //private ViewModel viewModel;
         public GameProperties()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog fileDialog = new OpenFileDialog();
-            if (fileDialog.ShowDialog() == DialogResult.OK) {
-                //request to controller with ofd.FileName
-            }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -37,14 +32,6 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             //request to controller
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == DialogResult.OK) {
-                //request to controller with ofd.FileName
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -52,17 +39,36 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         private void buttonSetImagePath_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK) {
+                //request to controller with ofd.FileName
+            }
         }
 
         private void buttonSetFolderPath_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK) {
+                //request to controller with ofd.FileName
+            }
         }
 
         private void buttonProperties_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            if (isPropertiesViewCollapsed) {
+                Height = MaximumSize.Height;
+                Width = MaximumSize.Width;
+                panel1.Visible = true;
+                isPropertiesViewCollapsed = false;
+                buttonProperties.Image = Properties.Resources.shrink_white;
+            } else {
+                Height = MinimumSize.Height;
+                Width = MinimumSize.Width;
+                panel1.Visible = false;
+                isPropertiesViewCollapsed = true;
+                buttonProperties.Image = Properties.Resources.expand_white;
+            }
+
         }
 
         private void AdjustComponents(int adjustment)

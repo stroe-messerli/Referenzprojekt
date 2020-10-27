@@ -127,6 +127,15 @@
   <data name="start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="shrink-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\shrink-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plus_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\plus_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="die_einstellungen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\die-einstellungen.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="die-einstellungen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\die-einstellungen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,14 +154,17 @@
   <data name="shrink-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\shrink-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="round-play-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\round-play-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="expand_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\expand-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shrink-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\shrink-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shrink-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\shrink-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,16 +172,7 @@
   <data name="delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shrink-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\shrink-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plus_dark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\plus_dark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="die_einstellungen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\die-einstellungen.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="expand_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\expand-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="round-play-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\round-play-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

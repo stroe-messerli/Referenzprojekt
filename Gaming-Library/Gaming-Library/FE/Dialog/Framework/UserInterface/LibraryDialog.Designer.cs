@@ -113,6 +113,7 @@ namespace Gaming_Library
             this.spielStartenToolStripMenuItem.Name = "spielStartenToolStripMenuItem";
             this.spielStartenToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.spielStartenToolStripMenuItem.Text = "Spiel starten";
+            this.spielStartenToolStripMenuItem.Click += new System.EventHandler(this.spielStartenToolStripMenuItem_Click);
             // 
             // eigenschaftenToolStripMenuItem
             // 
@@ -128,6 +129,7 @@ namespace Gaming_Library
             this.spielEntfernenToolStripMenuItem1.Name = "spielEntfernenToolStripMenuItem1";
             this.spielEntfernenToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
             this.spielEntfernenToolStripMenuItem1.Text = "Spiel entfernen";
+            this.spielEntfernenToolStripMenuItem1.Click += new System.EventHandler(this.spielEntfernenToolStripMenuItem1_Click);
             // 
             // spieleAnzeigenToolStripMenuItem
             // 
@@ -188,7 +190,7 @@ namespace Gaming_Library
             this.gameListView.TabIndex = 8;
             this.gameListView.UseCompatibleStateImageBehavior = false;
             this.gameListView.View = System.Windows.Forms.View.Details;
-            this.gameListView.SizeChanged += new System.EventHandler(this.objectListView1_SizeChanged);
+            this.gameListView.DoubleClick += new System.EventHandler(this.gameListView_DoubleClick);
             this.gameListView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
             // 
             // olvColumn3

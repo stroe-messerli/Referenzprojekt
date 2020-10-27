@@ -221,5 +221,8 @@
   <ItemGroup>
     <None Include="Icons\expand-white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
