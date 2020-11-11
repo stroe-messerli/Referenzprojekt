@@ -36,13 +36,13 @@ namespace Gaming_Library
         private GameData[] createTestObjects()
         {
             GameData[] gameData = new GameData[2];
-            gameData[0].Genre = "Action";
+            gameData[0].Genres = new BL.UseCase.Entity.Types.Genre[1] { "Action" };
             gameData[0].Title = "Among Us";
-            gameData[0].YearOfPublication = "2018";
+            gameData[0].YearOfPublication = new DateTime(2018, 1, 1);
             gameData[0].Image = Resources.amongus;
-            gameData[1].Genre = "Action";
+            gameData[1].Genres = new String[1] { "Action" };
             gameData[1].Title = "Counter Strike:Global Offensive";
-            gameData[1].YearOfPublication = "2012";
+            gameData[1].YearOfPublication = new DateTime(2012, 1, 1);
             gameData[1].Image = Resources.csgo;
             return gameData;
         }

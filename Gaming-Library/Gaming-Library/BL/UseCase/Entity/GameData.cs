@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.BL.UseCase.Entity
 {
-    struct GameData
+    [Equals]
+    class GameData
     {
-        public int SteamId;
-        public String Title;
-        public String Genre;//vllt. eigener Type mit Eigenschaften
-        public String Publisher;
-        public String Location;
-        public String YearOfPublication;
+        public SteamId SteamId;
+        public Title Title;
+        public Publisher Publisher;
+        public Location Location;
+        public YearOfPublication Year;
         public Image Image;
-        //String [] Tags
-        //Genre[] genres;
-        //GameAttribute[] attributes;
+        public Tag[] Tags;
+        public Genre[] Genres;
+        public GameAttributes Attributes;
     }
 }
