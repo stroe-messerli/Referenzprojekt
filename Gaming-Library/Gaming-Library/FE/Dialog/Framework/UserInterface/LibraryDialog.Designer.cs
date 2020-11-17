@@ -88,7 +88,7 @@ namespace Gaming_Library
             // 
             // olvColumn0
             // 
-            this.olvColumn0.AspectName = "Title";
+            this.olvColumn0.AspectName = "Game.Title";
             this.olvColumn0.FillsFreeSpace = true;
             this.olvColumn0.Groupable = false;
             this.olvColumn0.HeaderForeColor = System.Drawing.Color.Black;
@@ -197,7 +197,7 @@ namespace Gaming_Library
             // 
             this.olvColumn3.AspectName = "";
             this.olvColumn3.Groupable = false;
-            this.olvColumn3.ImageAspectName = "Image";
+            this.olvColumn3.ImageAspectName = "Game.Image.GameImage";
             this.olvColumn3.IsEditable = false;
             this.olvColumn3.MaximumWidth = 110;
             this.olvColumn3.MinimumWidth = 110;
@@ -208,7 +208,7 @@ namespace Gaming_Library
             // 
             // olvColumn1
             // 
-            this.olvColumn1.AspectName = "Genre";
+            this.olvColumn1.AspectName = "Game.Genre";
             this.olvColumn1.FillsFreeSpace = true;
             this.olvColumn1.HeaderForeColor = System.Drawing.Color.Black;
             this.olvColumn1.IsEditable = false;
@@ -219,7 +219,7 @@ namespace Gaming_Library
             // 
             // olvColumn2
             // 
-            this.olvColumn2.AspectName = "YearOfPublication";
+            this.olvColumn2.AspectName = "Game.Year";
             this.olvColumn2.FillsFreeSpace = true;
             this.olvColumn2.Groupable = false;
             this.olvColumn2.HeaderForeColor = System.Drawing.Color.Black;

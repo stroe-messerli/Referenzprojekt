@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Gaming_Library.BL.UseCase.Entity.Types
 {
     [Equals]
-    sealed class Title
+    public sealed class Title
     {
         public Title(string title)
         {
@@ -15,6 +15,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
         }
 
         public string GameTitle { get; }
-
+        public static bool operator ==(Title left, Title right) => Operator.Weave(left, right);
+        public static bool operator !=(Title left, Title right) => Operator.Weave(left, right);
     }
 }

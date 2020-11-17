@@ -6,15 +6,18 @@ using System.Resources;
 using System.Windows.Forms;
 using BrightIdeasSoftware;
 using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.BL.UseCase.Entity.Types;
+using Gaming_Library.FE.Dialog.Adapter.View;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;
 
 namespace Gaming_Library
 {
-    public partial class LibraryDialog : Form
+    public partial class LibraryDialog : Form, IView
     {
         private bool isDropdownCollapsed = true;
         private bool isFilterViewCollapsed = true;
+
         public LibraryDialog()
         {
             Settings.Default.Reset();
@@ -25,6 +28,12 @@ namespace Gaming_Library
             LoadData();
         }
 
+        public void UpdateView()
+        {
+            Update();
+        }
+
+
         private void LoadData()
         {
             //request to controller to return data from DA as list of viewmodels
@@ -33,18 +42,20 @@ namespace Gaming_Library
 
         }
 
-        private GameData[] createTestObjects()
+        private ViewModel[] createTestObjects()
         {
-            GameData[] gameData = new GameData[2];
-            gameData[0].Genres = new BL.UseCase.Entity.Types.Genre[1] { "Action" };
-            gameData[0].Title = "Among Us";
-            gameData[0].YearOfPublication = new DateTime(2018, 1, 1);
-            gameData[0].Image = Resources.amongus;
-            gameData[1].Genres = new String[1] { "Action" };
-            gameData[1].Title = "Counter Strike:Global Offensive";
-            gameData[1].YearOfPublication = new DateTime(2012, 1, 1);
-            gameData[1].Image = Resources.csgo;
-            return gameData;
+            ViewModel[] viewModels = new ViewModel[2];
+            viewModels[0] = new ViewModel();
+            viewModels[1] = new ViewModel();
+            viewModels[0].Game.Genre = "Action";
+            viewModels[0].Game.Title = "Among Us";
+            viewModels[0].Game.Year = "01.01.2018";
+            viewModels[0].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
+            viewModels[1].Game.Genre = "Action";
+            viewModels[1].Game.Title = "Counter Strike:Global Offensive";
+            viewModels[1].Game.Year = "01.01.2012";
+            viewModels[1].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
+            return viewModels;
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)

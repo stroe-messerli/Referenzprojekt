@@ -8,7 +8,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 {
     [Equals]
 
-    sealed class Location
+    public sealed class Location
     {
         public Location(string location)
         {
@@ -16,6 +16,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
         }
 
         public string GameLocation { get; }
-
+        public static bool operator ==(Location left, Location right) => Operator.Weave(left, right);
+        public static bool operator !=(Location left, Location right) => Operator.Weave(left, right);
     }
 }

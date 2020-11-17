@@ -8,7 +8,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 {
     [Equals]
 
-    sealed class Publisher
+    public sealed class Publisher
     {
         public Publisher(string publisher)
         {
@@ -16,6 +16,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
         }
 
         public string GamePublisher { get; }
-
+        public static bool operator ==(Publisher left, Publisher right) => Operator.Weave(left, right);
+        public static bool operator !=(Publisher left, Publisher right) => Operator.Weave(left, right);
     }
 }

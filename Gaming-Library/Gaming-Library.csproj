@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
+  <NoWarn>CS0660;CS0661
+  </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
    <LangVersion>8</LangVersion>
 </PropertyGroup>
 

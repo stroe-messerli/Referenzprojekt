@@ -9,14 +9,15 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 {
     [Equals]
 
-    sealed class Image
+    public sealed class Image
     {
-        public Image(Image image)
+        public Image(Bitmap image)
         {
             GameImage = image;
         }
 
-        public Image GameImage { get; }
-
+        public Bitmap GameImage { get; }
+        public static bool operator ==(Image left, Image right) => Operator.Weave(left, right);
+        public static bool operator !=(Image left, Image right) => Operator.Weave(left, right);
     }
 }

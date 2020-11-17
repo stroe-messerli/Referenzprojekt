@@ -2,7 +2,7 @@
 
 namespace Gaming_Library.BL.UseCase.Entity.Types
 {
-    struct GameAttributes
+    public struct GameAttributes
     {
         public bool IsMultiPlayer;
         public bool IsSinglePlayer;

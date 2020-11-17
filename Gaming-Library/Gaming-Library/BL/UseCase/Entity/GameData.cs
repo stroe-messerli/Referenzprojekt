@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.BL.UseCase.Entity
@@ -11,7 +12,9 @@ namespace Gaming_Library.BL.UseCase.Entity
     [Equals]
     class GameData
     {
-        public SteamId SteamId;
+#nullable enable
+        public SteamId? SteamId;
+#nullable disable
         public Title Title;
         public Publisher Publisher;
         public Location Location;
@@ -20,5 +23,8 @@ namespace Gaming_Library.BL.UseCase.Entity
         public Tag[] Tags;
         public Genre[] Genres;
         public GameAttributes Attributes;
+
+        public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
+        public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
     }
 }

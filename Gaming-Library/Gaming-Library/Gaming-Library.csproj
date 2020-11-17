@@ -11,9 +11,12 @@
     <AssemblyName>Gaming-Library</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -28,9 +31,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,6 +42,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWarn>CS0660;CS0661
+  </NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8</LangVersion>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -50,6 +57,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Equals, Version=4.0.1.0, Culture=neutral, PublicKeyToken=15432f00798e61a4, processorArchitecture=MSIL">
@@ -113,7 +124,14 @@
     <Compile Include="BL\UseCase\Entity\Types\Image.cs" />
     <Compile Include="BL\UseCase\Entity\Types\Title.cs" />
     <Compile Include="BL\UseCase\Entity\Types\SteamId.cs" />
+    <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
+    <Compile Include="BL\UseCase\OutputPort\ResponseModel.cs" />
     <Compile Include="DA\Adapter\RepositoryModel.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\IResponseModelConverter.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\Presenter.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\ResponseModelConverter.cs" />
+    <Compile Include="FE\Dialog\Adapter\View\IView.cs" />
+    <Compile Include="FE\Dialog\Adapter\View\ViewModel.cs" />
     <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,9 +192,8 @@
     <Folder Include="BL\UseCase\Gateway\" />
     <Folder Include="BL\UseCase\InputPort\" />
     <Folder Include="BL\UseCase\Interactor\" />
-    <Folder Include="BL\UseCase\OutputPort\" />
     <Folder Include="DA\Framework\" />
-    <Folder Include="FE\Dialog\Adapter\" />
+    <Folder Include="FE\Dialog\Adapter\Controller\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
