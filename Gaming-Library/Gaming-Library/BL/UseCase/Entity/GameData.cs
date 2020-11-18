@@ -9,7 +9,7 @@ using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.BL.UseCase.Entity
 {
-    [Equals]
+    //[Equals]
     class GameData
     {
 #nullable enable
@@ -24,7 +24,7 @@ namespace Gaming_Library.BL.UseCase.Entity
         public Genre[] Genres;
         public GameAttributes Attributes;
 
-        public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
-        public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
+//        public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
+//        public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
     }
 }
