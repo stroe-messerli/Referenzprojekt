@@ -41,7 +41,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
             viewModel.Game.SteamId = _injector.ResponseModel.Game.SteamId.ToString();
 
             foreach (var tag in _injector.ResponseModel.Game.Tags) {
-                viewModel.Game.Tags.Append(tag.ToString());
+                viewModel.Game.Tags.Append(tag.GameTag);
             }
 
             viewModel.Game.Title = _injector.ResponseModel.Game.Title.GameTitle;
