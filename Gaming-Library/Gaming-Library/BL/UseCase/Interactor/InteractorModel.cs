@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.Interactor
 {
-    class InteractorModel
+    public sealed class InteractorModel
     {
+        public Entity.GameData Game { get; }
+        public bool IsModified { get; }
     }
 }

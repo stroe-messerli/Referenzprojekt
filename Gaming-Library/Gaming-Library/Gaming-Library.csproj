@@ -124,6 +124,18 @@
     <Compile Include="BL\UseCase\Entity\Types\Image.cs" />
     <Compile Include="BL\UseCase\Entity\Types\Title.cs" />
     <Compile Include="BL\UseCase\Entity\Types\SteamId.cs" />
+    <Compile Include="BL\UseCase\InputPort\IInteractor.cs" />
+    <Compile Include="BL\UseCase\InputPort\RequestModel.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Add.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\IProcessor.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\IRequest.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Processor.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Save.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\Commands.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\ICommand.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="BL\UseCase\Interactor\Interactor.cs" />
+    <Compile Include="BL\UseCase\Interactor\InteractorModel.cs" />
     <Compile Include="BL\UseCase\OutputPort\IInteractorModelConverter.cs" />
     <Compile Include="BL\UseCase\OutputPort\InteractorModelConverter.cs" />
     <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
@@ -192,8 +204,6 @@
   <ItemGroup>
     <Folder Include="BL\Domain Entity\" />
     <Folder Include="BL\UseCase\Gateway\" />
-    <Folder Include="BL\UseCase\InputPort\" />
-    <Folder Include="BL\UseCase\Interactor\" />
     <Folder Include="DA\Framework\" />
     <Folder Include="FE\Dialog\Adapter\Controller\" />
   </ItemGroup>

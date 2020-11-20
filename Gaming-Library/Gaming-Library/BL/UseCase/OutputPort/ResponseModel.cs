@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.OutputPort
 {
-    public struct ResponseModel
+    public sealed class ResponseModel
     {
-        public struct GameData
+        public sealed class GameData
         {
             public Entity.Types.SteamId SteamId;
             public Entity.Types.Title Title;
@@ -21,8 +21,8 @@ namespace Gaming_Library.BL.UseCase.OutputPort
             public Entity.Types.GameAttributes Attributes;
         }
 
-        public bool IsModified { get; }
-        public GameData Game { get; }
+        public bool IsModified;
+        public GameData Game { get; set; }
     }
 }
 

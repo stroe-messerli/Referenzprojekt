@@ -9,8 +9,8 @@ using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.BL.UseCase.Entity
 {
-    //[Equals]
-    class GameData
+    [Equals]
+    public class GameData
     {
 #nullable enable
         public SteamId? SteamId;
@@ -24,7 +24,7 @@ namespace Gaming_Library.BL.UseCase.Entity
         public Genre[] Genres;
         public GameAttributes Attributes;
 
-//        public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
-//        public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
+        public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
+        public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
     }
 }

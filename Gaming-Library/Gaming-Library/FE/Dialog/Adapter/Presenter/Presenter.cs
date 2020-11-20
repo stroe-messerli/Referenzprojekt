@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gaming_Library.BL.UseCase.OutputPort;
+using Gaming_Library.FE.Dialog.Adapter.View;
 
 namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 {
@@ -12,15 +13,25 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
     {
         private Injector _injector;
 
-        public struct Injector
+        public sealed class Injector
         {
             public View.ViewModel ViewModel;
             public View.IView View;
+
+            public Injector(ViewModel viewModel, IView view)
+            {
+                ViewModel = viewModel;
+                View = view;
+            }
         }
 
         public static IPresenter Create(Injector injector)
         {
             return new Presenter(injector);
+        }
+        private Presenter(Injector injector)
+        {
+            _injector = injector;
         }
 
         public void Update(BL.UseCase.OutputPort.ResponseModel responseModel)
@@ -30,11 +41,5 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
             _injector.ViewModel = responseModelConverter.CreateViewModel();
             _injector.View.UpdateView();
         }
-
-        private Presenter(Injector injector)
-        {
-            _injector = injector;
-        }
-
     }
 }

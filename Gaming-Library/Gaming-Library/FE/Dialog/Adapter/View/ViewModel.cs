@@ -7,9 +7,9 @@ using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.FE.Dialog.Adapter.View
 {
-    public struct ViewModel
+    public sealed class ViewModel
     {
-        public struct GameData
+        public sealed class GameData
         {
             public string SteamId;
             public string Title;
@@ -20,6 +20,11 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public string[] Tags;
             public string Genre;
             public BL.UseCase.Entity.Types.GameAttributes Attributes;
+        }
+
+        public ViewModel()
+        {
+            Game = new GameData();
         }
 
         public bool IsInvalidGame;
