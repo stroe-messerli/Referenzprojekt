@@ -124,6 +124,8 @@
     <Compile Include="BL\UseCase\Entity\Types\Image.cs" />
     <Compile Include="BL\UseCase\Entity\Types\Title.cs" />
     <Compile Include="BL\UseCase\Entity\Types\SteamId.cs" />
+    <Compile Include="BL\UseCase\OutputPort\IInteractorModelConverter.cs" />
+    <Compile Include="BL\UseCase\OutputPort\InteractorModelConverter.cs" />
     <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
     <Compile Include="BL\UseCase\OutputPort\ResponseModel.cs" />
     <Compile Include="DA\Adapter\RepositoryModel.cs" />
