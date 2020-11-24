@@ -8,7 +8,7 @@ namespace Gaming_Library.BL.UseCase.OutputPort
 {
     public struct ResponseModel
     {
-        public struct GameData
+        public sealed class GameData
         {
             public Entity.Types.SteamId SteamId;
             public Entity.Types.Title Title;

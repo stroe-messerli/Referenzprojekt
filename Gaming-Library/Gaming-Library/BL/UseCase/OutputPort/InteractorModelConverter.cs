@@ -10,7 +10,7 @@ namespace Gaming_Library.BL.UseCase.OutputPort
     {
         public struct Injector
         {
-            InteractorModel interactorModel;
+            public BL.UseCase.Interactor.InteractorModel interactorModel;
         };
 
         private Injector _injector;
@@ -22,9 +22,20 @@ namespace Gaming_Library.BL.UseCase.OutputPort
 
         public ResponseModel CreateResponseModel()
         {
-            BL.UseCase.OutputPort.ResponseModel responseModel {new ResponseModel};
+            BL.UseCase.OutputPort.ResponseModel responseModel = new ResponseModel();
 
-            responseModel
+            responseModel.IsModified = _injector.interactorModel.Modifed;
+            responseModel.Game.SteamId = _injector.interactorModel.EntityModel.SteamId;
+            responseModel.Game.Title = _injector.interactorModel.EntityModel.Title;
+            responseModel.Game.Publisher = _injector.interactorModel.EntityModel.Publisher;
+            responseModel.Game.Location = _injector.interactorModel.EntityModel.Location;
+            responseModel.Game.Year = _injector.interactorModel.EntityModel.Year;
+            responseModel.Game.Image = _injector.interactorModel.EntityModel.Image;
+            responseModel.Game.Tags = _injector.interactorModel.EntityModel.Tags;
+            responseModel.Game.Genres = _injector.interactorModel.EntityModel.Genres;
+            responseModel.Game.Attributes = _injector.interactorModel.EntityModel.Attributes;
+
+            return responseModel;
         } 
 
         private InteractorModelConverter(Injector injector)
