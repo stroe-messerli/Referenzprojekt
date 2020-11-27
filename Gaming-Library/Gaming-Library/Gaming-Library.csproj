@@ -127,25 +127,33 @@
     <Compile Include="BL\UseCase\InputPort\IInteractor.cs" />
     <Compile Include="BL\UseCase\InputPort\RequestModel.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Add.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\OpenProperties.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Delete.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\IProcessor.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\IRequest.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Processor.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Save.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Start.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Commands.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\Delete.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\ICommand.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\Start.cs" />
+    <Compile Include="BL\UseCase\Interactor\PathComposer\GamePathComposerFactory.cs" />
+    <Compile Include="BL\UseCase\Interactor\PathComposer\IGamePathComposer.cs" />
     <Compile Include="BL\UseCase\Interactor\Interactor.cs" />
-    <Compile Include="BL\UseCase\Interactor\InteractorModel.cs" />
-    <Compile Include="BL\UseCase\OutputPort\IInteractorModelConverter.cs" />
-    <Compile Include="BL\UseCase\OutputPort\InteractorModelConverter.cs" />
+    <Compile Include="BL\UseCase\Interactor\Model.cs" />
+    <Compile Include="BL\UseCase\Interactor\PathComposer\PathTypes.cs" />
+    <Compile Include="BL\UseCase\Interactor\PathComposer\SteamGamePathComposer.cs" />
+    <Compile Include="BL\UseCase\OutputPort\IToResponseModel.cs" />
+    <Compile Include="BL\UseCase\OutputPort\ToResponseModel.cs" />
     <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
     <Compile Include="BL\UseCase\OutputPort\ResponseModel.cs" />
     <Compile Include="DA\Adapter\RepositoryModel.cs" />
-    <Compile Include="FE\Dialog\Adapter\Presenter\IResponseModelConverter.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\IToViewModel.cs" />
     <Compile Include="FE\Dialog\Adapter\Presenter\Presenter.cs" />
-    <Compile Include="FE\Dialog\Adapter\Presenter\ResponseModelConverter.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\ToViewModel.cs" />
     <Compile Include="FE\Dialog\Adapter\View\IView.cs" />
-    <Compile Include="FE\Dialog\Adapter\View\ViewModel.cs" />
+    <Compile Include="FE\Dialog\Adapter\View\Model.cs" />
     <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,9 +232,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\expand-button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\image%281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\shrink-button.png" />
