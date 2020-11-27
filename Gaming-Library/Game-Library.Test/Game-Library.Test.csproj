@@ -62,7 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Processor.Test.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Processor.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +74,10 @@
       <Project>{1543c752-c712-410e-9d9f-93bfaed1cbf2}</Project>
       <Name>Gaming-Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\UseCase\Interactor\" />
+    <Folder Include="BL\UseCase\OutputPort\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
