@@ -7,8 +7,8 @@ using Gaming_Library.FE.Dialog.Adapter.View;
 
 namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 {
-    public interface IResponseModelConverter
+    public interface IToViewModel
     {
-        ViewModel CreateViewModel();
+        Model CreateViewModel();
     }
 }

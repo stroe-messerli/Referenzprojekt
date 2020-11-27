@@ -7,14 +7,13 @@ using Gaming_Library.BL.UseCase.Interactor;
 
 namespace Gaming_Library.BL.UseCase.OutputPort
 {
-    class InteractorModelConverter : Gaming_Library.BL.UseCase.OutputPort.IInteractorModelConverter
+    class ToResponseModel : IToResponseModel
     {
         public struct Injector
         {
+            public Interactor.Model InteractorModel;
 
-            public Interactor.InteractorModel InteractorModel;
-
-            public Injector(InteractorModel interactorModel)
+            public Injector(Model interactorModel)
             {
                 InteractorModel = interactorModel;
             }
@@ -22,11 +21,11 @@ namespace Gaming_Library.BL.UseCase.OutputPort
 
         private readonly Injector _injector;
 
-        public static InteractorModelConverter Create(Injector injector)
+        public static ToResponseModel Create(Injector injector)
         {
-            return new InteractorModelConverter(injector);
+            return new ToResponseModel(injector);
         }
-        private InteractorModelConverter(Injector injector)
+        private ToResponseModel(Injector injector)
         {
             _injector = injector;
         }

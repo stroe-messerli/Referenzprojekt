@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.OutputPort
 {
-    public interface IInteractorModelConverter
+    public interface IToResponseModel
     {
         public ResponseModel CreateResponseModel();
     }

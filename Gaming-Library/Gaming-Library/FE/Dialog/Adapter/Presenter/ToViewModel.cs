@@ -9,7 +9,7 @@ using Gaming_Library.FE.Dialog.Adapter.View;
 
 namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 {
-    public sealed class ResponseModelConverter : IResponseModelConverter
+    public sealed class ToViewModel : IToViewModel
     {
         private readonly Injector _injector;
 
@@ -24,14 +24,14 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
         }
 
 
-        public static IResponseModelConverter Create(Injector injector)
+        public static IToViewModel Create(Injector injector)
         {
-            return new ResponseModelConverter(injector);
+            return new ToViewModel(injector);
         }
 
-        public ViewModel CreateViewModel()
+        public Model CreateViewModel()
         {
-            var viewModel = new ViewModel();
+            var viewModel = new Model();
             viewModel.IsModified = _injector.ResponseModel.IsModified;
             viewModel.Game.Attributes = _injector.ResponseModel.Game.Attributes;
             viewModel.Game.Genre = _injector.ResponseModel.Game.Genres[0].GameGenre;
@@ -50,7 +50,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
             return viewModel;
         }
 
-        private ResponseModelConverter(Injector injector)
+        private ToViewModel(Injector injector)
         {
             _injector = injector;
         }

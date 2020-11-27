@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
-    class Save : IRequest
+    class Start : IRequest
     {
     }
 }

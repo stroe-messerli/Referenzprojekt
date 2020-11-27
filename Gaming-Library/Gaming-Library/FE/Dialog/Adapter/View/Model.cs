@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.FE.Dialog.Adapter.View
 {
-    public sealed class ViewModel
+    public sealed class Model
     {
         public sealed class GameData
         {
@@ -22,13 +21,13 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public BL.UseCase.Entity.Types.GameAttributes Attributes;
         }
 
-        public ViewModel()
+        public Model()
         {
-            Game = new GameData();
+            Games = new List<GameData>();
         }
 
         public bool IsInvalidGame;
         public bool IsModified;
-        public GameData Game;
+        public List<GameData> Games;
     }
 }
