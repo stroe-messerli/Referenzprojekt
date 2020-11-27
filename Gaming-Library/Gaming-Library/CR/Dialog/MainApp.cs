@@ -18,8 +18,8 @@ namespace Gaming_Library
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            BL.UseCase.Interactor.InteractorModel interactorModel;
-            FE.Dialog.Adapter.View.ViewModel viewModel;
+            BL.UseCase.Interactor.Model interactorModel;
+            FE.Dialog.Adapter.View.Model viewModel;
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
             //commands.Add(BL.UseCase.Interactor.Commands)
             //var injector = BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);

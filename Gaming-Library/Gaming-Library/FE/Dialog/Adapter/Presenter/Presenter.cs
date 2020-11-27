@@ -15,10 +15,10 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 
         public sealed class Injector
         {
-            public View.ViewModel ViewModel;
+            public View.Model ViewModel;
             public View.IView View;
 
-            public Injector(ViewModel viewModel, IView view)
+            public Injector(Model viewModel, IView view)
             {
                 ViewModel = viewModel;
                 View = view;
@@ -36,8 +36,8 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 
         public void Update(BL.UseCase.OutputPort.ResponseModel responseModel)
         {
-            var injector = new ResponseModelConverter.Injector(responseModel);
-            var responseModelConverter = ResponseModelConverter.Create(injector);
+            var injector = new ToViewModel.Injector(responseModel);
+            var responseModelConverter = ToViewModel.Create(injector);
             _injector.ViewModel = responseModelConverter.CreateViewModel();
             _injector.View.UpdateView();
         }
