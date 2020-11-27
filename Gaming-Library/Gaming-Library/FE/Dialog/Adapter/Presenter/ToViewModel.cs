@@ -31,21 +31,21 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
 
         public Model CreateViewModel()
         {
-            var viewModel = new Model();
-            viewModel.IsModified = _injector.ResponseModel.IsModified;
-            viewModel.Game.Attributes = _injector.ResponseModel.Game.Attributes;
-            viewModel.Game.Genre = _injector.ResponseModel.Game.Genres[0].GameGenre;
-            viewModel.Game.Image = _injector.ResponseModel.Game.Image;
-            viewModel.Game.Location = _injector.ResponseModel.Game.Location.GameLocation;
-            viewModel.Game.Publisher = _injector.ResponseModel.Game.Publisher.GamePublisher;
-            viewModel.Game.SteamId = _injector.ResponseModel.Game.SteamId.ToString();
+            var viewModel = new View.Model();
+            //viewModel.IsModified = _injector.ResponseModel.IsModified;
+            //viewModel.Game.Attributes = _injector.ResponseModel.Game.Attributes;
+            //viewModel.Game.Genre = _injector.ResponseModel.Game.Genres[0].GameGenre;
+            //viewModel.Game.Image = _injector.ResponseModel.Game.Image;
+            //viewModel.Game.Location = _injector.ResponseModel.Game.Location.GameLocation;
+            //viewModel.Game.Publisher = _injector.ResponseModel.Game.Publisher.GamePublisher;
+            //viewModel.Game.SteamId = _injector.ResponseModel.Game.SteamId.ToString();
 
-            foreach (var tag in _injector.ResponseModel.Game.Tags) {
-                viewModel.Game.Tags.Append(tag.GameTag);
-            }
+            //foreach (var tag in _injector.ResponseModel.Game.Tags) {
+            //    viewModel.Game.Tags.Append(tag.GameTag);
+            //}
 
-            viewModel.Game.Title = _injector.ResponseModel.Game.Title.GameTitle;
-            viewModel.Game.Year = _injector.ResponseModel.Game.Year.ToString();
+            //viewModel.Game.Title = _injector.ResponseModel.Game.Title.GameTitle;
+            //viewModel.Game.Year = _injector.ResponseModel.Game.Year.ToString();
 
             return viewModel;
         }

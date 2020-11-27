@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
-using System.Resources;
 using System.Windows.Forms;
-using BrightIdeasSoftware;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.Entity.Types;
 using Gaming_Library.FE.Dialog.Adapter.View;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;
@@ -44,7 +39,7 @@ namespace Gaming_Library
 
         private Model[] createTestObjects()
         {
-            //ViewModel[] viewModels = new ViewModel[2];
+            Model[] viewModels = new Model[2];
             //viewModels[0] = new ViewModel();
             //viewModels[1] = new ViewModel();
             //viewModels[0].Game.Genre = "Action";
@@ -55,7 +50,7 @@ namespace Gaming_Library
             //viewModels[1].Game.Title = "Counter Strike:Global Offensive";
             //viewModels[1].Game.Year = "01.01.2012";
             //viewModels[1].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
-            //return viewModels;
+            return viewModels;
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)

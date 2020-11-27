@@ -11,7 +11,7 @@ using Gaming_Library.BL.UseCase.Interactor.PathComposer;
 
 namespace Gaming_Library.BL.UseCase.Interactor.Commands
 {
-    class Start : ICommand
+    public class Start : ICommand
     {
         private Injector _injector;
         public sealed class Injector
