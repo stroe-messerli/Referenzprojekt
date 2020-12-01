@@ -1,4 +1,5 @@
 *.suo
+.suo
 *.cache
 *.csprojAssemblyReference
 *.dll
