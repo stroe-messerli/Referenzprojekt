@@ -8,7 +8,7 @@ using Gaming_Library.BL.UseCase.Interactor.Commands;
 
 namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
-    class Processor : IProcessor
+    public class Processor : IProcessor
     {
         private Injector _injector;
 
@@ -26,7 +26,7 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
         }
         private Processor(Injector injector)
         {
-
+            _injector = injector;
         }
         public static IProcessor Create(Injector injector)
         {

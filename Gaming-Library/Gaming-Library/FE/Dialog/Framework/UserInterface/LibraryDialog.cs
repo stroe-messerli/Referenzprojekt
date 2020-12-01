@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
-using System.Resources;
 using System.Windows.Forms;
-using BrightIdeasSoftware;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.Entity.Types;
 using Gaming_Library.FE.Dialog.Adapter.View;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;
@@ -42,19 +37,19 @@ namespace Gaming_Library
 
         }
 
-        private ViewModel[] createTestObjects()
+        private Model[] createTestObjects()
         {
-            ViewModel[] viewModels = new ViewModel[2];
-            viewModels[0] = new ViewModel();
-            viewModels[1] = new ViewModel();
-            viewModels[0].Game.Genre = "Action";
-            viewModels[0].Game.Title = "Among Us";
-            viewModels[0].Game.Year = "01.01.2018";
-            viewModels[0].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
-            viewModels[1].Game.Genre = "Action";
-            viewModels[1].Game.Title = "Counter Strike:Global Offensive";
-            viewModels[1].Game.Year = "01.01.2012";
-            viewModels[1].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
+            Model[] viewModels = new Model[2];
+            //viewModels[0] = new ViewModel();
+            //viewModels[1] = new ViewModel();
+            //viewModels[0].Game.Genre = "Action";
+            //viewModels[0].Game.Title = "Among Us";
+            //viewModels[0].Game.Year = "01.01.2018";
+            //viewModels[0].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
+            //viewModels[1].Game.Genre = "Action";
+            //viewModels[1].Game.Title = "Counter Strike:Global Offensive";
+            //viewModels[1].Game.Year = "01.01.2012";
+            //viewModels[1].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
             return viewModels;
         }
 

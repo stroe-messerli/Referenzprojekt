@@ -18,11 +18,11 @@ namespace Gaming_Library.BL.UseCase.Interactor
         public sealed class Injector
         {
 
-            public InteractorModel InteractorModel;
+            public Model InteractorModel;
             public OutputPort.IPresenter Presenter;
             public Commands.ICommands Commands;
 
-            public Injector(InteractorModel interactorModel, IPresenter presenter, ICommands commands)
+            public Injector(Model interactorModel, IPresenter presenter, ICommands commands)
             {
                 InteractorModel = interactorModel;
                 Presenter = presenter;
@@ -51,8 +51,8 @@ namespace Gaming_Library.BL.UseCase.Interactor
 
         private void UpdatePresenter()
         {
-            var injector = new OutputPort.InteractorModelConverter.Injector(_injector.InteractorModel);
-            var interactorModelConverter = OutputPort.InteractorModelConverter.Create(injector);
+            var injector = new OutputPort.ToResponseModel.Injector(_injector.InteractorModel);
+            var interactorModelConverter = OutputPort.ToResponseModel.Create(injector);
             var responseModel = interactorModelConverter.CreateResponseModel();
             _injector.Presenter.Update(responseModel);
         }
