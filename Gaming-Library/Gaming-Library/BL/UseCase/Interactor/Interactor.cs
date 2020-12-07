@@ -40,7 +40,6 @@ namespace Gaming_Library.BL.UseCase.Interactor
             _injector = injector;
         }
 
-
         public void Update(RequestModel requestmodel)
         {
             var injector = new InputPort.Requests.Processor.Injector(requestmodel, _injector.Commands);

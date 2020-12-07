@@ -10,7 +10,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 {
     public class Commands : ICommands
     {
-        private readonly Dictionary<int, ICommand> _commands;
+        private readonly Dictionary<int, ICommand> _commands = new Dictionary<int, ICommand>();
 
         public static ICommands Create()
         {
@@ -29,7 +29,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
         public ICommand GetCommand(IRequest request)
         {
             ICommand command;
-            _commands.TryGetValue(request.GetType().GetHashCode(), out command);
+            _commands.TryGetValue(request.GetType().Name.GetHashCode(), out command);
             return command;
         }
     }

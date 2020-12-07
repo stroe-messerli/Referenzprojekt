@@ -21,13 +21,8 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public BL.UseCase.Entity.Types.GameAttributes Attributes;
         }
 
-        public Model()
-        {
-            Games = new List<GameData>();
-        }
-
         public bool IsInvalidGame;
         public bool IsModified;
-        public List<GameData> Games;
+        public List<GameData> Games = new List<GameData>();
     }
 }

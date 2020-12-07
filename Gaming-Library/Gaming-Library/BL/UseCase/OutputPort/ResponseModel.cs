@@ -22,7 +22,7 @@ namespace Gaming_Library.BL.UseCase.OutputPort
         }
 
         public bool IsModified;
-        public GameData Game { get; set; }
+        public List<GameData> Games { get; set; }
     }
 }
 

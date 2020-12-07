@@ -140,10 +140,14 @@
     <Compile Include="BL\UseCase\InputPort\Requests\IRequest.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Processor.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Start.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\Add.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Commands.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Delete.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\ICommand.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="DA\JsonFileHandler\GamesJsonFileHandler.cs" />
+    <Compile Include="DA\JsonFileHandler\IJsonFileHandler.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\Load.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Start.cs" />
     <Compile Include="BL\UseCase\Interactor\PathComposer\GamePathComposerFactory.cs" />
     <Compile Include="BL\UseCase\Interactor\PathComposer\IGamePathComposer.cs" />
@@ -218,7 +222,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\Domain Entity\" />
-    <Folder Include="BL\UseCase\Gateway\" />
     <Folder Include="DA\Framework\" />
     <Folder Include="FE\Dialog\Adapter\Controller\" />
   </ItemGroup>

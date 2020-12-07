@@ -29,7 +29,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 
         public int GetId()
         {
-            return GetType().GetHashCode();
+            return GetType().Name.GetHashCode();
         }
 
 

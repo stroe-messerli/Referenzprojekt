@@ -8,5 +8,11 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
     class Delete : IRequest
     {
+        public readonly int GameIndex;
+
+        public Delete(int GameIndex)
+        {
+            this.GameIndex = GameIndex;
+        }
     }
 }

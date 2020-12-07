@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.Interactor.PathComposer
 {
-    class SteamGamePathComposer : IGamePathComposer
+    public class SteamGamePathComposer : IGamePathComposer
     {
         public static IGamePathComposer Create()
         {
@@ -17,9 +17,9 @@ namespace Gaming_Library.BL.UseCase.Interactor.PathComposer
         {
         }
 
-        public string ComposeExecutablePath(Model interactorModel)
+        public string ComposeExecutablePath(Entity.GameData game)
         {
-            return "steam://rungameid/" + interactorModel.Game.SteamId.ToString();
+            return "steam://rungameid/" + game.SteamId.ToString();
         }
     }
 }

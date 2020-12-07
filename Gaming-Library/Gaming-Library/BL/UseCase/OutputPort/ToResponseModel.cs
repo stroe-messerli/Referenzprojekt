@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gaming_Library.BL.UseCase.Entity.Types;
 using Gaming_Library.BL.UseCase.Interactor;
 
 namespace Gaming_Library.BL.UseCase.OutputPort
@@ -36,16 +37,20 @@ namespace Gaming_Library.BL.UseCase.OutputPort
             var responseModel = new ResponseModel();
             responseModel.IsModified = _injector.InteractorModel.IsModified;
 
-            responseModel.Game.Attributes = _injector.InteractorModel.Game.Attributes;
-            responseModel.Game.Genres = _injector.InteractorModel.Game.Genres;
-            responseModel.Game.Image = _injector.InteractorModel.Game.Image;
-            responseModel.Game.Location = _injector.InteractorModel.Game.Location;
-            responseModel.Game.Publisher = _injector.InteractorModel.Game.Publisher;
-            responseModel.Game.SteamId = _injector.InteractorModel.Game.SteamId;
-            responseModel.Game.Tags = _injector.InteractorModel.Game.Tags;
-            responseModel.Game.Title = _injector.InteractorModel.Game.Title;
-            responseModel.Game.Year = _injector.InteractorModel.Game.Year;
+            foreach (var game in _injector.InteractorModel.Games) {
+                var responseGame = new ResponseModel.GameData();
 
+                responseGame.Genres = game.Genres;
+                responseGame.Image = game.Image;
+                responseGame.Location = game.Location;
+                responseGame.Publisher = game.Publisher;
+                responseGame.SteamId = game.SteamId;
+                responseGame.Tags = game.Tags;
+                responseGame.Title = game.Title;
+                responseGame.Year = game.Year;
+
+                responseModel.Games.Add(responseGame);
+            }
             return responseModel;
         }
     }

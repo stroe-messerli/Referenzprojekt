@@ -32,25 +32,28 @@ namespace Gaming_Library
         private void LoadData()
         {
             //request to controller to return data from DA as list of viewmodels
-            var listOfViewModels = createTestObjects();
-            gameListView.SetObjects(listOfViewModels);
+            var viewModel = createTestObjects();
+            gameListView.SetObjects(viewModel.Games);
 
         }
 
-        private Model[] createTestObjects()
+        private Model createTestObjects()
         {
-            Model[] viewModels = new Model[2];
-            //viewModels[0] = new ViewModel();
-            //viewModels[1] = new ViewModel();
-            //viewModels[0].Game.Genre = "Action";
-            //viewModels[0].Game.Title = "Among Us";
-            //viewModels[0].Game.Year = "01.01.2018";
-            //viewModels[0].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
-            //viewModels[1].Game.Genre = "Action";
-            //viewModels[1].Game.Title = "Counter Strike:Global Offensive";
-            //viewModels[1].Game.Year = "01.01.2012";
-            //viewModels[1].Game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
-            return viewModels;
+            Model viewModel = new Model();
+            var game = new Model.GameData();
+            game.Genre = "Action";
+            game.Title = "Among Us";
+            game.Year = "01.01.2018";
+            game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
+            viewModel.Games.Add(game);
+
+            //game.Genre = "Action";
+            //game.Title = "Counter Strike:Global Offensive";
+            //game.Year = "01.01.2012";
+            //game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
+            //viewModel.Games.Add(game);
+
+            return viewModel;
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)

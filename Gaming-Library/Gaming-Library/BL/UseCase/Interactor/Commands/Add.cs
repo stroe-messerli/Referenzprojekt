@@ -11,7 +11,7 @@ using Gaming_Library.BL.UseCase.Interactor.PathComposer;
 
 namespace Gaming_Library.BL.UseCase.Interactor.Commands
 {
-    public class Start : ICommand
+    public class Add : ICommand
     {
         private Injector _injector;
 
@@ -22,19 +22,14 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 
         public static ICommand Create(Injector injector)
         {
-            return new Start(injector);
+            return new Add(injector);
         }
-        private Start(Injector injector)
+        private Add(Injector injector)
         {
             _injector = injector;
         }
         public void Do(IRequest request)
         {
-            var startRequest = (InputPort.Requests.Start)request;
-            var pathtype = _injector.Model.Games.ElementAt(startRequest.GameIndex).SteamId != null ? PathTypes.STEAM : PathTypes.NON_STEAM;
-            var pathComposer = GamePathComposerFactory.CreatePathComposer(pathtype);
-            var execPath = pathComposer.ComposeExecutablePath(_injector.Model.Games.ElementAt(startRequest.GameIndex));
-            Process.Start(execPath);
         }
 
         public int GetId()

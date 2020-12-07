@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
-    class OpenProperties : IRequest
+    public class OpenProperties : IRequest
     {
+        public readonly int GameIndex;
+
+        public OpenProperties(int GameIndex)
+        {
+            this.GameIndex = GameIndex;
+        }
     }
 }

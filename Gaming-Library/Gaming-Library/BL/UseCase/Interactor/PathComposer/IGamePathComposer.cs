@@ -7,8 +7,8 @@ using Gaming_Library.BL.UseCase.InputPort;
 
 namespace Gaming_Library.BL.UseCase.Interactor.PathComposer
 {
-    interface IGamePathComposer
+    public interface IGamePathComposer
     {
-        public string ComposeExecutablePath(Model interactorModel);
+        public string ComposeExecutablePath(Entity.GameData game);
     }
 }

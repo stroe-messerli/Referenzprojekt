@@ -7,9 +7,8 @@ using Gaming_Library.BL.UseCase.Interactor;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System.Runtime.InteropServices;
 
-namespace Game_Library.Test
+namespace Game_Library.UseCase.InputPort.Requests.Test
 {
     [TestClass]
     public class Processor_Test
@@ -32,14 +31,14 @@ namespace Game_Library.Test
         public void ProcessorExecuteRequestTest()
         {
             var requestModel = new RequestModel();
-            var request = new Start();
+            var request = new Add();
             requestModel.Requests = new List<IRequest>()
             {
                request
             };
 
             var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
-            command.Setup(x => x.Do(new Start())).Verifiable();
+            command.Setup(x => x.Do(new Add())).Verifiable();
 
             var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
@@ -55,7 +54,7 @@ namespace Game_Library.Test
         public void ProcessorExecuteMultipleRequestsTest()
         {
             var requestModel = new RequestModel();
-            var request = new Start();
+            var request = new Add();
             requestModel.Requests = new List<IRequest>()
             {
                request,
@@ -64,7 +63,7 @@ namespace Game_Library.Test
             };
 
             var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
-            command.Setup(x => x.Do(new Start())).Verifiable();
+            command.Setup(x => x.Do(new Add())).Verifiable();
 
             var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
@@ -80,11 +79,11 @@ namespace Game_Library.Test
         public void ProcessorExecuteNoRequestsTest()
         {
             var requestModel = new RequestModel();
-            var request = new Start();
+            var request = new Add();
             requestModel.Requests = new List<IRequest>();
 
             var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
-            command.Setup(x => x.Do(new Start())).Verifiable();
+            command.Setup(x => x.Do(new Add())).Verifiable();
 
             var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
@@ -100,7 +99,7 @@ namespace Game_Library.Test
         public void ProcessorExecuteInvalidRequestsTest()
         {
             var requestModel = new RequestModel();
-            var request = new Start();
+            var request = new Add();
             requestModel.Requests = new List<IRequest>()
             {
                 null,
@@ -108,7 +107,7 @@ namespace Game_Library.Test
             };
 
             var command = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommand>();
-            command.Setup(x => x.Do(new Start())).Verifiable();
+            command.Setup(x => x.Do(new Add())).Verifiable();
 
             var commands = new Mock<Gaming_Library.BL.UseCase.Interactor.Commands.ICommands>();
             commands.Setup(x => x.GetCommand(request)).Returns(command.Object);
