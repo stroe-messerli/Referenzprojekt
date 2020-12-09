@@ -8,8 +8,13 @@ using Gaming_Library.BL.UseCase.InputPort.Requests;
 
 namespace Gaming_Library.BL.UseCase.InputPort
 {
-    public struct RequestModel
+    public sealed class RequestModel
     {
         public List<IRequest> Requests { get; set; }
+
+        public RequestModel()
+        {
+            Requests = new List<IRequest>();
+        }
     }
 }

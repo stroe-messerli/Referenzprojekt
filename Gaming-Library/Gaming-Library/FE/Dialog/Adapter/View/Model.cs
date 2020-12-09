@@ -23,6 +23,11 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
 
         public bool IsInvalidGame;
         public bool IsModified;
-        public List<GameData> Games = new List<GameData>();
+        public List<GameData> Games { get; set; }
+
+        public Model()
+        {
+            Games = new List<GameData>();
+        }
     }
 }

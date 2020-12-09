@@ -13,27 +13,22 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 {
     public class Start : ICommand
     {
-        private Injector _injector;
+        private Model Model;
 
-        public sealed class Injector
+        public static ICommand Create(Model model)
         {
-            public Model Model;
+            return new Start(model);
         }
-
-        public static ICommand Create(Injector injector)
+        private Start(Model model)
         {
-            return new Start(injector);
-        }
-        private Start(Injector injector)
-        {
-            _injector = injector;
+            Model = model;
         }
         public void Do(IRequest request)
         {
             var startRequest = (InputPort.Requests.Start)request;
-            var pathtype = _injector.Model.Games.ElementAt(startRequest.GameIndex).SteamId != null ? PathTypes.STEAM : PathTypes.NON_STEAM;
+            var pathtype = Model.Games.ElementAt(startRequest.GameIndex).SteamId != null ? PathTypes.STEAM : PathTypes.NON_STEAM;
             var pathComposer = GamePathComposerFactory.CreatePathComposer(pathtype);
-            var execPath = pathComposer.ComposeExecutablePath(_injector.Model.Games.ElementAt(startRequest.GameIndex));
+            var execPath = pathComposer.ComposeExecutablePath(Model.Games.ElementAt(startRequest.GameIndex));
             Process.Start(execPath);
         }
 

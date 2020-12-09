@@ -28,31 +28,36 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
         {
             return new ToViewModel(injector);
         }
+        private ToViewModel(Injector injector)
+        {
+            _injector = injector;
+        }
 
         public Model CreateViewModel()
         {
             var viewModel = new View.Model();
-            //viewModel.IsModified = _injector.ResponseModel.IsModified;
-            //viewModel.Game.Attributes = _injector.ResponseModel.Game.Attributes;
-            //viewModel.Game.Genre = _injector.ResponseModel.Game.Genres[0].GameGenre;
-            //viewModel.Game.Image = _injector.ResponseModel.Game.Image;
-            //viewModel.Game.Location = _injector.ResponseModel.Game.Location.GameLocation;
-            //viewModel.Game.Publisher = _injector.ResponseModel.Game.Publisher.GamePublisher;
-            //viewModel.Game.SteamId = _injector.ResponseModel.Game.SteamId.ToString();
 
-            //foreach (var tag in _injector.ResponseModel.Game.Tags) {
-            //    viewModel.Game.Tags.Append(tag.GameTag);
-            //}
+            viewModel.IsModified = _injector.ResponseModel.IsModified;
 
-            //viewModel.Game.Title = _injector.ResponseModel.Game.Title.GameTitle;
-            //viewModel.Game.Year = _injector.ResponseModel.Game.Year.ToString();
+            foreach (var game in _injector.ResponseModel.Games) {
+                var viewGame = new View.Model.GameData();
+                viewGame.Attributes = game.Attributes;
+                viewGame.Genre = game.Genres[0].GameGenre;
+                viewGame.Image = game.Image;
+                viewGame.Location = game.Location.GameLocation;
+                viewGame.Publisher = game.Publisher.GamePublisher;
+                viewGame.SteamId = game.SteamId.ToString();
+                viewGame.Title = game.Title.GameTitle;
+                viewGame.Year = game.Year.ToString();
 
+                foreach (var tag in game.Tags) {
+                    viewGame.Tags.Append(tag.GameTag);
+
+                }
+
+                viewModel.Games.Add(viewGame);
+            }
             return viewModel;
-        }
-
-        private ToViewModel(Injector injector)
-        {
-            _injector = injector;
         }
     }
 }

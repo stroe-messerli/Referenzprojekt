@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Gaming_Library.BL.UseCase.Interactor;
 
 namespace Gaming_Library
 {
@@ -18,15 +17,26 @@ namespace Gaming_Library
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            BL.UseCase.Interactor.Model interactorModel;
-            FE.Dialog.Adapter.View.Model viewModel;
+            var interactorModel = new BL.UseCase.Interactor.Model();
+            var viewModel = new FE.Dialog.Adapter.View.Model();
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
-            //commands.Add(BL.UseCase.Interactor.Commands)
-            //var injector = BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);
-            //var interactor = BL.UseCase.Interactor.Interactor.Create(;
+            commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
+            commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel));
 
-            Application.Run(new LibraryDialog());
+            var views = new List<LibraryDialog>();
 
+            var presenterInjector = new FE.Dialog.Adapter.Presenter.Presenter.Injector(viewModel, dialog);
+            var presenter = FE.Dialog.Adapter.Presenter.Presenter.Create(presenterInjector);
+
+            var interactorInjector = new BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);
+            var interactor = BL.UseCase.Interactor.Interactor.Create(interactorInjector);
+
+            var controllerInjector = new FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor);
+            var controller = FE.Dialog.Adapter.Controller.Controller.Create(controllerInjector);
+
+            dialog = new LibraryDialog(controller, viewModel);
+
+            Application.Run(dialog);
         }
     }
 }

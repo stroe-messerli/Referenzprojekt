@@ -134,6 +134,7 @@
     <Compile Include="BL\UseCase\InputPort\IInteractor.cs" />
     <Compile Include="BL\UseCase\InputPort\RequestModel.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Add.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\Load.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\OpenProperties.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Delete.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\IProcessor.cs" />
@@ -160,6 +161,8 @@
     <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
     <Compile Include="BL\UseCase\OutputPort\ResponseModel.cs" />
     <Compile Include="DA\Adapter\RepositoryModel.cs" />
+    <Compile Include="FE\Dialog\Adapter\Controller\Controller.cs" />
+    <Compile Include="FE\Dialog\Adapter\Controller\IController.cs" />
     <Compile Include="FE\Dialog\Adapter\Presenter\IToViewModel.cs" />
     <Compile Include="FE\Dialog\Adapter\Presenter\Presenter.cs" />
     <Compile Include="FE\Dialog\Adapter\Presenter\ToViewModel.cs" />
@@ -223,7 +226,6 @@
   <ItemGroup>
     <Folder Include="BL\Domain Entity\" />
     <Folder Include="DA\Framework\" />
-    <Folder Include="FE\Dialog\Adapter\Controller\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

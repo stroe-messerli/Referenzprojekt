@@ -23,6 +23,11 @@ namespace Gaming_Library.BL.UseCase.OutputPort
 
         public bool IsModified;
         public List<GameData> Games { get; set; }
+
+        public ResponseModel()
+        {
+            Games = new List<GameData>();
+        }
     }
 }
 

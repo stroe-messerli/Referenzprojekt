@@ -10,5 +10,10 @@ namespace Gaming_Library.BL.UseCase.Interactor
     {
         public List<Entity.GameData> Games { get; set; }
         public bool IsModified { get; }
+
+        public Model()
+        {
+            Games = new List<Entity.GameData>();
+        }
     }
 }

@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
+using Castle.Components.DictionaryAdapter;
+using Gaming_Library.FE.Dialog.Adapter.Presenter;
 using Gaming_Library.FE.Dialog.Adapter.View;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;
@@ -13,14 +15,25 @@ namespace Gaming_Library
         private bool isDropdownCollapsed = true;
         private bool isFilterViewCollapsed = true;
 
-        public LibraryDialog()
+        private FE.Dialog.Adapter.Controller.IController _controller;
+        private Model _viewModel;
+
+        public LibraryDialog(FE.Dialog.Adapter.Controller.IController controller, Model viewModel)
         {
+            _controller = controller;
+            _viewModel = viewModel;
+
             Settings.Default.Reset();
             InitializeComponent();
             if (!Settings.Default.FilterViewCollapsed) {
                 timer1.Start();
             }
             LoadData();
+        }
+
+        public LibraryDialog()
+        {
+
         }
 
         public void UpdateView()
@@ -31,29 +44,9 @@ namespace Gaming_Library
 
         private void LoadData()
         {
-            //request to controller to return data from DA as list of viewmodels
-            var viewModel = createTestObjects();
-            gameListView.SetObjects(viewModel.Games);
+            _controller.LoadData();
+            gameListView.SetObjects(_viewModel.Games);
 
-        }
-
-        private Model createTestObjects()
-        {
-            Model viewModel = new Model();
-            var game = new Model.GameData();
-            game.Genre = "Action";
-            game.Title = "Among Us";
-            game.Year = "01.01.2018";
-            game.Image = new BL.UseCase.Entity.Types.Image(Resources.amongus);
-            viewModel.Games.Add(game);
-
-            //game.Genre = "Action";
-            //game.Title = "Counter Strike:Global Offensive";
-            //game.Year = "01.01.2012";
-            //game.Image = new BL.UseCase.Entity.Types.Image(Resources.csgo);
-            //viewModel.Games.Add(game);
-
-            return viewModel;
         }
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
@@ -229,8 +222,7 @@ namespace Gaming_Library
 
         private void gameListView_DoubleClick(object sender, EventArgs e)
         {
-            //request to controller
-            Process.Start("steam://rungameid/945360");
+            _controller.StartGame(gameListView.SelectedIndex);
         }
 
         private void spielEntfernenToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -244,8 +236,7 @@ namespace Gaming_Library
 
         private void spielStartenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //request to controller
-            Process.Start("steam://rungameid/945360");
+            _controller.StartGame(gameListView.SelectedIndex);
         }
     }
 }
