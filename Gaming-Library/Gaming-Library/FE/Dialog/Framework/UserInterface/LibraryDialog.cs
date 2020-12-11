@@ -28,17 +28,18 @@ namespace Gaming_Library
             if (!Settings.Default.FilterViewCollapsed) {
                 timer1.Start();
             }
-            LoadData();
-        }
-
-        public LibraryDialog()
-        {
-
         }
 
         public void UpdateView()
         {
+            gameListView.SetObjects(_viewModel.Games);
+            gameListView.Update();
             Update();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            LoadData();
         }
 
 
@@ -51,15 +52,13 @@ namespace Gaming_Library
 
         private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
         {
-            //request an den controller zur öffnung des einstellungs-dialogs
-            var propertiesForm = new GameProperties();
+            var propertiesForm = new GameProperties(_controller, gameListView.GetItemCount() + 1);
             propertiesForm.ShowDialog(this);
         }
 
         private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //request an den controller zur öffnung des einstellungs-dialogs
-            var propertiesForm = new GameProperties();
+            var propertiesForm = new GameProperties(_controller, gameListView.SelectedIndex);
             propertiesForm.ShowDialog(this);
         }
 
@@ -227,11 +226,8 @@ namespace Gaming_Library
 
         private void spielEntfernenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //request to controller for removal of the item in DA, so the FE can be updated 
-            //using LoadObjects()
-            gameListView.Items.Remove(gameListView.SelectedItem);
-            gameListView.Update();
-            Update();
+            _controller.DeleteGame(gameListView.SelectedIndex);
+            gameListView.Invalidate();
         }
 
         private void spielStartenToolStripMenuItem_Click(object sender, EventArgs e)

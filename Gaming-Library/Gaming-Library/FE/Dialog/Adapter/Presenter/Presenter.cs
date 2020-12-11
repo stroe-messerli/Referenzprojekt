@@ -16,12 +16,12 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
         public sealed class Injector
         {
             public View.Model ViewModel;
-            public View.IView View;
+            public List<View.IView> Views;
 
-            public Injector(Model viewModel, IView view)
+            public Injector(Model viewModel, List<IView> views)
             {
                 ViewModel = viewModel;
-                View = view;
+                Views = views;
             }
         }
 
@@ -38,8 +38,10 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
         {
             var injector = new ToViewModel.Injector(responseModel);
             var responseModelConverter = ToViewModel.Create(injector);
-            _injector.ViewModel = responseModelConverter.CreateViewModel();
-            _injector.View.UpdateView();
+            _injector.ViewModel.Clone(responseModelConverter.CreateViewModel());
+            foreach (var view in _injector.Views) {
+                view.UpdateView();
+            }
         }
     }
 }

@@ -28,6 +28,12 @@ namespace Gaming_Library.BL.UseCase.OutputPort
         {
             Games = new List<GameData>();
         }
+
+        public void Clone(ResponseModel model)
+        {
+            IsModified = model.IsModified;
+            Games = model.Games;
+        }
     }
 }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gaming_Library.BL.UseCase.Entity.Types;
 
 namespace Gaming_Library.FE.Dialog.Adapter.View
 {
@@ -28,6 +29,11 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
         public Model()
         {
             Games = new List<GameData>();
+        }
+
+        public void Clone(Model model)
+        {
+            Games = model.Games;
         }
     }
 }

@@ -10,7 +10,7 @@ using Gaming_Library.BL.UseCase.Entity.Types;
 namespace Gaming_Library.BL.UseCase.Entity
 {
     [Equals]
-    public class GameData
+    public sealed class GameData
     {
 #nullable enable
         public SteamId? SteamId;

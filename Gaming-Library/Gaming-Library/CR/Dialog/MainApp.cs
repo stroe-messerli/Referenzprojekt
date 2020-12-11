@@ -19,13 +19,15 @@ namespace Gaming_Library
 
             var interactorModel = new BL.UseCase.Interactor.Model();
             var viewModel = new FE.Dialog.Adapter.View.Model();
+
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
             commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel));
+            commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel));
 
-            var views = new List<LibraryDialog>();
+            var views = new List<FE.Dialog.Adapter.View.IView>();
 
-            var presenterInjector = new FE.Dialog.Adapter.Presenter.Presenter.Injector(viewModel, dialog);
+            var presenterInjector = new FE.Dialog.Adapter.Presenter.Presenter.Injector(viewModel, views);
             var presenter = FE.Dialog.Adapter.Presenter.Presenter.Create(presenterInjector);
 
             var interactorInjector = new BL.UseCase.Interactor.Interactor.Injector(interactorModel, presenter, commands);
@@ -34,9 +36,9 @@ namespace Gaming_Library
             var controllerInjector = new FE.Dialog.Adapter.Controller.Controller.Injector(viewModel, interactor);
             var controller = FE.Dialog.Adapter.Controller.Controller.Create(controllerInjector);
 
-            dialog = new LibraryDialog(controller, viewModel);
+            views.Add(new LibraryDialog(controller, viewModel));
 
-            Application.Run(dialog);
+            Application.Run((LibraryDialog)views.ElementAt(0));
         }
     }
 }

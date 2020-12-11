@@ -224,7 +224,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BL\Domain Entity\" />
     <Folder Include="DA\Framework\" />
   </ItemGroup>
   <ItemGroup>

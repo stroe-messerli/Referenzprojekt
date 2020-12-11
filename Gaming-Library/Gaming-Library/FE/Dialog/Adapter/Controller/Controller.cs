@@ -34,6 +34,10 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             _injector = injector;
         }
 
+        public int GetNumberOfGames()
+        {
+
+        }
         public void StartGame(int index)
         {
             SendRequest(new BL.UseCase.InputPort.Requests.Start(index));

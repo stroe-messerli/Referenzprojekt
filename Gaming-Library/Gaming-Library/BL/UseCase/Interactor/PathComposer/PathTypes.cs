@@ -10,7 +10,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.PathComposer
     {
         STEAM,
         NON_STEAM,
-        //EPIC
+        //EPIC,
+        //XBOX,
         //HUMBLEBUNDLE ETC.
     }
 }

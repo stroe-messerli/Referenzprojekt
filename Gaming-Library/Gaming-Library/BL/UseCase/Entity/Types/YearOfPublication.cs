@@ -19,7 +19,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
         public static bool operator !=(YearOfPublication left, YearOfPublication right) => Operator.Weave(left, right);
         public override string ToString()
         {
-            return PublicationYear.ToString("dd.MM.JJJ");
+            return PublicationYear.ToString("yyyy");
         }
     }
 }

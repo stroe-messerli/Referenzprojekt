@@ -16,20 +16,26 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
     public partial class GameProperties : Form
     {
         private bool isPropertiesViewCollapsed = true;
-        //private ViewModel viewModel;
-        public GameProperties()
+        private Adapter.Controller.IController _controller;
+        private int _gameIndex;
+
+        public GameProperties(Adapter.Controller.IController controller, int nextGameIndex)
         {
+            _gameIndex = nextGameIndex;
+            _controller = controller;
+            _controller.AddGame();
             InitializeComponent();
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
+            _controller.DeleteGame(_gameIndex);
             Close();
         }
 
         private void saveProperties_Click(object sender, EventArgs e)
         {
-            //request to controller
+            _controller
         }
 
         private void button2_Click(object sender, EventArgs e)
