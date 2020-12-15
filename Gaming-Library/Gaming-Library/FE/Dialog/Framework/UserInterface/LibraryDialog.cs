@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using Castle.Components.DictionaryAdapter;
 using Gaming_Library.FE.Dialog.Adapter.Presenter;
@@ -50,31 +51,19 @@ namespace Gaming_Library
 
         }
 
-        private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
-        {
-            var propertiesForm = new GameProperties(_controller, gameListView.GetItemCount() + 1);
-            propertiesForm.ShowDialog(this);
-        }
-
-        private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var propertiesForm = new GameProperties(_controller, gameListView.SelectedIndex);
-            propertiesForm.ShowDialog(this);
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void searchInViewTextBox_Enter(object sender, EventArgs e)
         {
             textBoxSearch.Text = "";
             textBoxSearch.TextAlign = HorizontalAlignment.Left;
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void searchInViewTextBox_Leave(object sender, EventArgs e)
         {
             textBoxSearch.Text = Settings.Default.SearchField;
             textBoxSearch.TextAlign = HorizontalAlignment.Right;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void openFilterView_Click(object sender, EventArgs e)
         {
             HandleFirstAccess();
             timer1.Start();
@@ -114,7 +103,6 @@ namespace Gaming_Library
 
         private void AdjustComponents(int adjustment)
         {
-            //if (WindowState == FormWindowState.Maximized) {
             gameListView.Location = new Point(
                 gameListView.Location.X,
                 gameListView.Location.Y + adjustment
@@ -145,7 +133,7 @@ namespace Gaming_Library
             resetObjectListAnchors();
         }
 
-        private void objectListView1_MouseDown(object sender, MouseEventArgs e)
+        private void gameListView_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right) {
                 //ignore, if no row is selected
@@ -156,16 +144,15 @@ namespace Gaming_Library
             }
         }
 
-        private void button7_MouseClick(object sender, MouseEventArgs e)
+        private void buttonAddGame_MouseClick(object sender, MouseEventArgs e)
         {
             //hide button after action was requested
             timer2.Start();
-            //request an den controller zur öffnung des einstellungs-dialogs
-            var propertiesForm = new GameProperties();
+            var propertiesForm = new GameProperties(_controller, new Model.GameData());
             propertiesForm.ShowDialog(this);
         }
 
-        private void button1_Click(object sender, EventArgs eventArguments)
+        private void buttonGames_Click(object sender, EventArgs eventArguments)
         {
             timer2.Start();
         }
@@ -188,14 +175,14 @@ namespace Gaming_Library
             }
         }
 
-        private void textBox2_MouseClick(object sender, MouseEventArgs e)
+        private void filterTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             textBoxSearchTags.Text = "";
             textBoxSearchTags.Font = new Font(textBoxSearchTags.Font, FontStyle.Regular);
             textBoxSearchTags.ForeColor = Color.Black;
         }
 
-        private void button6_MouseClick(object sender, MouseEventArgs e)
+        private void buttonResetFilter_MouseClick(object sender, MouseEventArgs e)
         {
             textBoxSearchTags.Text = Settings.Default.FilterField;
             textBoxSearchTags.Font = new Font(textBoxSearchTags.Font, FontStyle.Italic);
@@ -234,5 +221,19 @@ namespace Gaming_Library
         {
             _controller.StartGame(gameListView.SelectedIndex);
         }
+
+        private void spielHinzufügenToolStripMenuItem_Click(object sender, EventArgs eventArguments)
+        {
+            var propertiesForm = new GameProperties(_controller, new Model.GameData());
+            propertiesForm.ShowDialog(this);
+        }
+
+        private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var propertiesForm = new GameProperties(
+                _controller, ((Model)gameListView.SelectedObject).Games.ElementAt(gameListView.SelectedIndex));
+            propertiesForm.ShowDialog(this);
+        }
+
     }
 }

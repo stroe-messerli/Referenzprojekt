@@ -35,33 +35,33 @@
             this.buttonProperties = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.searchForTitle = new System.Windows.Forms.Button();
+            this.locationPath = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSetFolderPath = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.title = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.imagePath = new System.Windows.Forms.Label();
             this.buttonSetImagePath = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.publisher = new System.Windows.Forms.TextBox();
+            this.tags = new System.Windows.Forms.TextBox();
+            this.publicationYear = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.isCoop = new System.Windows.Forms.CheckBox();
+            this.isMultiPlayer = new System.Windows.Forms.CheckBox();
+            this.isSinglePlayer = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.controllerPart = new System.Windows.Forms.RadioButton();
+            this.controllerFull = new System.Windows.Forms.RadioButton();
+            this.isVR = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.genresCombo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +75,7 @@
             this.saveProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.saveProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveProperties.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.saveProperties.Location = new System.Drawing.Point(297, 196);
+            this.saveProperties.Location = new System.Drawing.Point(453, 391);
             this.saveProperties.Name = "saveProperties";
             this.saveProperties.Size = new System.Drawing.Size(75, 23);
             this.saveProperties.TabIndex = 0;
@@ -92,7 +92,7 @@
             this.cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cancel.Location = new System.Drawing.Point(216, 196);
+            this.cancel.Location = new System.Drawing.Point(372, 391);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 1;
@@ -106,9 +106,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(0, 191);
+            this.label3.Location = new System.Drawing.Point(0, 386);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(384, 1);
+            this.label3.Size = new System.Drawing.Size(540, 1);
             this.label3.TabIndex = 6;
             // 
             // buttonProperties
@@ -125,7 +125,7 @@
             this.buttonProperties.Image = global::Gaming_Library.Properties.Resources.expand_white;
             this.buttonProperties.Location = new System.Drawing.Point(1, 164);
             this.buttonProperties.Name = "buttonProperties";
-            this.buttonProperties.Size = new System.Drawing.Size(383, 27);
+            this.buttonProperties.Size = new System.Drawing.Size(539, 27);
             this.buttonProperties.TabIndex = 28;
             this.buttonProperties.Text = "Erweiterte Eigenschaften";
             this.buttonProperties.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -155,32 +155,32 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Genre(s)";
             // 
-            // button2
+            // searchForTitle
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(216, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 21);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Recherche";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.searchForTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.searchForTitle.FlatAppearance.BorderSize = 0;
+            this.searchForTitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.searchForTitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.searchForTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchForTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.searchForTitle.Location = new System.Drawing.Point(216, 37);
+            this.searchForTitle.Name = "searchForTitle";
+            this.searchForTitle.Size = new System.Drawing.Size(100, 21);
+            this.searchForTitle.TabIndex = 24;
+            this.searchForTitle.Text = "Recherche";
+            this.searchForTitle.UseVisualStyleBackColor = false;
+            this.searchForTitle.Visible = false;
+            this.searchForTitle.Click += new System.EventHandler(this.searchForTitle_Click);
             // 
-            // label7
+            // locationPath
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(87, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "nicht festgelegt";
+            this.locationPath.AutoSize = true;
+            this.locationPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.locationPath.Location = new System.Drawing.Point(87, 90);
+            this.locationPath.Name = "locationPath";
+            this.locationPath.Size = new System.Drawing.Size(79, 13);
+            this.locationPath.TabIndex = 23;
+            this.locationPath.Text = "nicht festgelegt";
             // 
             // label1
             // 
@@ -221,12 +221,12 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Speicherort";
             // 
-            // textBox1
+            // title
             // 
-            this.textBox1.Location = new System.Drawing.Point(87, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
+            this.title.Location = new System.Drawing.Point(87, 37);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(100, 20);
+            this.title.TabIndex = 18;
             // 
             // label2
             // 
@@ -239,15 +239,15 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Bild";
             // 
-            // label4
+            // imagePath
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(87, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "nicht festgelegt";
+            this.imagePath.AutoSize = true;
+            this.imagePath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.imagePath.Location = new System.Drawing.Point(87, 67);
+            this.imagePath.Name = "imagePath";
+            this.imagePath.Size = new System.Drawing.Size(79, 13);
+            this.imagePath.TabIndex = 20;
+            this.imagePath.Text = "nicht festgelegt";
             // 
             // buttonSetImagePath
             // 
@@ -271,48 +271,48 @@
             | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.publisher);
+            this.panel1.Controls.Add(this.tags);
+            this.panel1.Controls.Add(this.publicationYear);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.checkBox4);
-            this.panel1.Controls.Add(this.checkBox3);
-            this.panel1.Controls.Add(this.checkBox2);
+            this.panel1.Controls.Add(this.isCoop);
+            this.panel1.Controls.Add(this.isMultiPlayer);
+            this.panel1.Controls.Add(this.isSinglePlayer);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.controllerPart);
+            this.panel1.Controls.Add(this.controllerFull);
+            this.panel1.Controls.Add(this.isVR);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(0, 191);
             this.panel1.MaximumSize = new System.Drawing.Size(540, 175);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 0);
+            this.panel1.Size = new System.Drawing.Size(540, 175);
             this.panel1.TabIndex = 29;
             this.panel1.Visible = false;
             // 
-            // textBox4
+            // publisher
             // 
-            this.textBox4.Location = new System.Drawing.Point(394, 48);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(134, 20);
-            this.textBox4.TabIndex = 41;
+            this.publisher.Location = new System.Drawing.Point(394, 48);
+            this.publisher.Name = "publisher";
+            this.publisher.Size = new System.Drawing.Size(134, 20);
+            this.publisher.TabIndex = 41;
             // 
-            // textBox3
+            // tags
             // 
-            this.textBox3.Location = new System.Drawing.Point(394, 82);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 20);
-            this.textBox3.TabIndex = 40;
+            this.tags.Location = new System.Drawing.Point(394, 82);
+            this.tags.Name = "tags";
+            this.tags.Size = new System.Drawing.Size(134, 20);
+            this.tags.TabIndex = 40;
             // 
-            // textBox2
+            // publicationYear
             // 
-            this.textBox2.Location = new System.Drawing.Point(394, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 20);
-            this.textBox2.TabIndex = 39;
+            this.publicationYear.Location = new System.Drawing.Point(394, 11);
+            this.publicationYear.Name = "publicationYear";
+            this.publicationYear.Size = new System.Drawing.Size(134, 20);
+            this.publicationYear.TabIndex = 39;
             // 
             // label14
             // 
@@ -357,38 +357,38 @@
             this.label11.TabIndex = 35;
             this.label11.Text = "Erscheinungsjahr";
             // 
-            // checkBox4
+            // isCoop
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox4.Location = new System.Drawing.Point(187, 108);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(77, 17);
-            this.checkBox4.TabIndex = 34;
-            this.checkBox4.Text = "Kooperativ";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.isCoop.AutoSize = true;
+            this.isCoop.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.isCoop.Location = new System.Drawing.Point(187, 108);
+            this.isCoop.Name = "isCoop";
+            this.isCoop.Size = new System.Drawing.Size(77, 17);
+            this.isCoop.TabIndex = 34;
+            this.isCoop.Text = "Kooperativ";
+            this.isCoop.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // isMultiPlayer
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox3.Location = new System.Drawing.Point(100, 108);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 33;
-            this.checkBox3.Text = "Mehrspieler";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.isMultiPlayer.AutoSize = true;
+            this.isMultiPlayer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.isMultiPlayer.Location = new System.Drawing.Point(100, 108);
+            this.isMultiPlayer.Name = "isMultiPlayer";
+            this.isMultiPlayer.Size = new System.Drawing.Size(80, 17);
+            this.isMultiPlayer.TabIndex = 33;
+            this.isMultiPlayer.Text = "Mehrspieler";
+            this.isMultiPlayer.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // isSinglePlayer
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox2.Location = new System.Drawing.Point(10, 108);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(84, 17);
-            this.checkBox2.TabIndex = 32;
-            this.checkBox2.Text = "Einzelspieler";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.isSinglePlayer.AutoSize = true;
+            this.isSinglePlayer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.isSinglePlayer.Location = new System.Drawing.Point(10, 108);
+            this.isSinglePlayer.Name = "isSinglePlayer";
+            this.isSinglePlayer.Size = new System.Drawing.Size(84, 17);
+            this.isSinglePlayer.TabIndex = 32;
+            this.isSinglePlayer.Text = "Einzelspieler";
+            this.isSinglePlayer.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -401,40 +401,40 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Spieler";
             // 
-            // radioButton2
+            // controllerPart
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton2.Location = new System.Drawing.Point(110, 27);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(118, 17);
-            this.radioButton2.TabIndex = 30;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Controller (teilweise)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.controllerPart.AutoSize = true;
+            this.controllerPart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.controllerPart.Location = new System.Drawing.Point(110, 27);
+            this.controllerPart.Name = "controllerPart";
+            this.controllerPart.Size = new System.Drawing.Size(118, 17);
+            this.controllerPart.TabIndex = 30;
+            this.controllerPart.TabStop = true;
+            this.controllerPart.Text = "Controller (teilweise)";
+            this.controllerPart.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // controllerFull
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.radioButton1.Location = new System.Drawing.Point(10, 27);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 17);
-            this.radioButton1.TabIndex = 29;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Controller (voll)";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.controllerFull.AutoSize = true;
+            this.controllerFull.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.controllerFull.Location = new System.Drawing.Point(10, 27);
+            this.controllerFull.Name = "controllerFull";
+            this.controllerFull.Size = new System.Drawing.Size(94, 17);
+            this.controllerFull.TabIndex = 29;
+            this.controllerFull.TabStop = true;
+            this.controllerFull.Text = "Controller (voll)";
+            this.controllerFull.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // isVR
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkBox1.Location = new System.Drawing.Point(10, 50);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(41, 17);
-            this.checkBox1.TabIndex = 27;
-            this.checkBox1.Text = "VR";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.isVR.AutoSize = true;
+            this.isVR.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.isVR.Location = new System.Drawing.Point(10, 50);
+            this.isVR.Name = "isVR";
+            this.isVR.Size = new System.Drawing.Size(41, 17);
+            this.isVR.TabIndex = 27;
+            this.isVR.Text = "VR";
+            this.isVR.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -452,17 +452,17 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // comboBox1
+            // genresCombo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.genresCombo.FormattingEnabled = true;
+            this.genresCombo.Items.AddRange(new object[] {
             "Action",
             "Indie",
             "Adventure"});
-            this.comboBox1.Location = new System.Drawing.Point(87, 113);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 30;
+            this.genresCombo.Location = new System.Drawing.Point(87, 113);
+            this.genresCombo.Name = "genresCombo";
+            this.genresCombo.Size = new System.Drawing.Size(100, 21);
+            this.genresCombo.TabIndex = 30;
             // 
             // button1
             // 
@@ -484,20 +484,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(384, 231);
+            this.ClientSize = new System.Drawing.Size(540, 426);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.genresCombo);
             this.Controls.Add(this.buttonProperties);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.searchForTitle);
+            this.Controls.Add(this.locationPath);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSetFolderPath);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.title);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.imagePath);
             this.Controls.Add(this.buttonSetImagePath);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cancel);
@@ -525,33 +525,33 @@
         private System.Windows.Forms.Button buttonProperties;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button searchForTitle;
+        private System.Windows.Forms.Label locationPath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSetFolderPath;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox title;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label imagePath;
         private System.Windows.Forms.Button buttonSetImagePath;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.RadioButton controllerFull;
+        private System.Windows.Forms.CheckBox isVR;
+        private System.Windows.Forms.RadioButton controllerPart;
+        private System.Windows.Forms.CheckBox isCoop;
+        private System.Windows.Forms.CheckBox isMultiPlayer;
+        private System.Windows.Forms.CheckBox isSinglePlayer;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox publisher;
+        private System.Windows.Forms.TextBox tags;
+        private System.Windows.Forms.TextBox publicationYear;
+        private System.Windows.Forms.ComboBox genresCombo;
         private System.Windows.Forms.Button button1;
     }
 }

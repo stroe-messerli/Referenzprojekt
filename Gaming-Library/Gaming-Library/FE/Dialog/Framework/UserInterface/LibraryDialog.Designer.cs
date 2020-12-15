@@ -48,7 +48,7 @@ namespace Gaming_Library
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonAddGame = new System.Windows.Forms.Button();
             this.buttonGames = new System.Windows.Forms.Button();
             this.buttonShowFilter = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -72,7 +72,7 @@ namespace Gaming_Library
             this.checkCasual = new System.Windows.Forms.CheckBox();
             this.checkIndie = new System.Windows.Forms.CheckBox();
             this.checkRacing = new System.Windows.Forms.CheckBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonResetFilter = new System.Windows.Forms.Button();
             this.checkRPG = new System.Windows.Forms.CheckBox();
             this.checkMMP = new System.Windows.Forms.CheckBox();
             this.gameDataBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -191,13 +191,13 @@ namespace Gaming_Library
             this.gameListView.UseCompatibleStateImageBehavior = false;
             this.gameListView.View = System.Windows.Forms.View.Details;
             this.gameListView.DoubleClick += new System.EventHandler(this.gameListView_DoubleClick);
-            this.gameListView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.objectListView1_MouseDown);
+            this.gameListView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.gameListView_MouseDown);
             // 
             // olvColumn3
             // 
             this.olvColumn3.AspectName = "";
             this.olvColumn3.Groupable = false;
-            this.olvColumn3.ImageAspectName = "Image.GameImage";
+            this.olvColumn3.ImageAspectName = "Image";
             this.olvColumn3.IsEditable = false;
             this.olvColumn3.MaximumWidth = 110;
             this.olvColumn3.MinimumWidth = 110;
@@ -258,8 +258,8 @@ namespace Gaming_Library
             this.textBoxSearch.TabIndex = 10;
             this.textBoxSearch.Text = "Suchen  🔍";
             this.textBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBoxSearch.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBoxSearch.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBoxSearch.Enter += new System.EventHandler(this.searchInViewTextBox_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.searchInViewTextBox_Leave);
             // 
             // button4
             // 
@@ -304,33 +304,33 @@ namespace Gaming_Library
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.button7);
+            this.panel3.Controls.Add(this.buttonAddGame);
             this.panel3.Location = new System.Drawing.Point(10, 31);
             this.panel3.MaximumSize = new System.Drawing.Size(124, 28);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(124, 0);
             this.panel3.TabIndex = 14;
             // 
-            // button7
+            // buttonAddGame
             // 
-            this.button7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button7.BackColor = System.Drawing.Color.Silver;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Image = global::Gaming_Library.Properties.Resources.plus_dark;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(124, 28);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Hinzufügen";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button7_MouseClick);
+            this.buttonAddGame.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonAddGame.BackColor = System.Drawing.Color.Silver;
+            this.buttonAddGame.FlatAppearance.BorderSize = 0;
+            this.buttonAddGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonAddGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.buttonAddGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddGame.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.buttonAddGame.Image = global::Gaming_Library.Properties.Resources.plus_dark;
+            this.buttonAddGame.Location = new System.Drawing.Point(0, 0);
+            this.buttonAddGame.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAddGame.Name = "buttonAddGame";
+            this.buttonAddGame.Size = new System.Drawing.Size(124, 28);
+            this.buttonAddGame.TabIndex = 18;
+            this.buttonAddGame.Text = "Hinzufügen";
+            this.buttonAddGame.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonAddGame.UseVisualStyleBackColor = false;
+            this.buttonAddGame.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonAddGame_MouseClick);
             // 
             // buttonGames
             // 
@@ -351,7 +351,7 @@ namespace Gaming_Library
             this.buttonGames.Text = "Spiele";
             this.buttonGames.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonGames.UseVisualStyleBackColor = false;
-            this.buttonGames.Click += new System.EventHandler(this.button1_Click);
+            this.buttonGames.Click += new System.EventHandler(this.buttonGames_Click);
             // 
             // buttonShowFilter
             // 
@@ -370,7 +370,7 @@ namespace Gaming_Library
             this.buttonShowFilter.TabIndex = 9;
             this.buttonShowFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonShowFilter.UseVisualStyleBackColor = false;
-            this.buttonShowFilter.Click += new System.EventHandler(this.button3_Click);
+            this.buttonShowFilter.Click += new System.EventHandler(this.openFilterView_Click);
             // 
             // timer2
             // 
@@ -401,7 +401,7 @@ namespace Gaming_Library
             this.panel1.Controls.Add(this.checkCasual);
             this.panel1.Controls.Add(this.checkIndie);
             this.panel1.Controls.Add(this.checkRacing);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.buttonResetFilter);
             this.panel1.Controls.Add(this.checkRPG);
             this.panel1.Controls.Add(this.checkMMP);
             this.panel1.Location = new System.Drawing.Point(0, 93);
@@ -424,7 +424,7 @@ namespace Gaming_Library
             this.textBoxSearchTags.Size = new System.Drawing.Size(163, 20);
             this.textBoxSearchTags.TabIndex = 23;
             this.textBoxSearchTags.Text = "hier tags eingeben";
-            this.textBoxSearchTags.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox2_MouseClick);
+            this.textBoxSearchTags.MouseClick += new System.Windows.Forms.MouseEventHandler(this.filterTextBox_MouseClick);
             // 
             // label4
             // 
@@ -621,18 +621,18 @@ namespace Gaming_Library
             this.checkRacing.Text = "Racing";
             this.checkRacing.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonResetFilter
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.Location = new System.Drawing.Point(718, -26);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Zurücksetzen";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
+            this.buttonResetFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonResetFilter.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.buttonResetFilter.FlatAppearance.BorderSize = 0;
+            this.buttonResetFilter.Location = new System.Drawing.Point(718, -26);
+            this.buttonResetFilter.Name = "buttonResetFilter";
+            this.buttonResetFilter.Size = new System.Drawing.Size(87, 23);
+            this.buttonResetFilter.TabIndex = 4;
+            this.buttonResetFilter.Text = "Zurücksetzen";
+            this.buttonResetFilter.UseVisualStyleBackColor = false;
+            this.buttonResetFilter.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonResetFilter_MouseClick);
             // 
             // checkRPG
             // 
@@ -715,7 +715,7 @@ namespace Gaming_Library
         private Button buttonGames;
         private Timer timer2;
         private Panel panel3;
-        private Button button7;
+        private Button buttonAddGame;
         private Panel panel1;
         private TextBox textBoxSearchTags;
         private Label label4;
@@ -736,7 +736,7 @@ namespace Gaming_Library
         private CheckBox checkCasual;
         private CheckBox checkIndie;
         private CheckBox checkRacing;
-        private Button button6;
+        private Button buttonResetFilter;
         private CheckBox checkRPG;
         private CheckBox checkMMP;
     }

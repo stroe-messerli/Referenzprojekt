@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gaming_Library.BL.UseCase.Entity.Types;
+using System.Drawing;
 
 namespace Gaming_Library.FE.Dialog.Adapter.View
 {
@@ -16,7 +17,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public string Publisher;
             public string Location;
             public string Year;
-            public BL.UseCase.Entity.Types.Image Image;
+            public Bitmap Image;
             public string[] Tags;
             public string Genre;
             public BL.UseCase.Entity.Types.GameAttributes Attributes;

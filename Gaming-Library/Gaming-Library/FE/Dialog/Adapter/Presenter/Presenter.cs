@@ -34,7 +34,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
             _injector = injector;
         }
 
-        public void Update(BL.UseCase.OutputPort.ResponseModel responseModel)
+        public void Update(ResponseModel responseModel)
         {
             var injector = new ToViewModel.Injector(responseModel);
             var responseModelConverter = ToViewModel.Create(injector);

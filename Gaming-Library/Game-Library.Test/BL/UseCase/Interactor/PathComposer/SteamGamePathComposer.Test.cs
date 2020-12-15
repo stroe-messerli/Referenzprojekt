@@ -28,9 +28,9 @@ namespace Game_Library.UseCase.Interactor.PathComposer.Test
         public void ComposeExecutablePathTest()
         {
             var composer = Gaming_Library.BL.UseCase.Interactor.PathComposer.SteamGamePathComposer.Create();
-            var game = new Mock<GameData>();
-            game.Object.SteamId = new Gaming_Library.BL.UseCase.Entity.Types.SteamId(400);
-            Assert.AreEqual("steam://rungameid/400", composer.ComposeExecutablePath(game.Object));
+            var game = new GameData();
+            game.SteamId = new Gaming_Library.BL.UseCase.Entity.Types.SteamId(400);
+            Assert.AreEqual("steam://rungameid/400", composer.ComposeExecutablePath(game));
         }
     }
 }

@@ -43,15 +43,15 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
                 var viewGame = new View.Model.GameData();
                 viewGame.Attributes = game.Attributes;
                 viewGame.Genre = game.Genres[0].GameGenre;
-                viewGame.Image = game.Image;
+                viewGame.Image = game.Image.GameImage;
                 viewGame.Location = game.Location.GameLocation;
                 viewGame.Publisher = game.Publisher.GamePublisher;
                 viewGame.SteamId = game.SteamId.ToString();
                 viewGame.Title = game.Title.GameTitle;
                 viewGame.Year = game.Year.ToString();
-
+                viewGame.Tags = new string[0];
                 foreach (var tag in game.Tags) {
-                    viewGame.Tags.Append(tag.GameTag);
+                    viewGame.Tags = viewGame.Tags.Append(tag.GameTag).ToArray();
 
                 }
 

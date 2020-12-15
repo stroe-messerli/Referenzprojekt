@@ -24,6 +24,8 @@ namespace Gaming_Library
             commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel));
+            commands.Add(BL.UseCase.Interactor.Commands.Add.Create(interactorModel));
+            commands.Add(BL.UseCase.Interactor.Commands.Modify.Create(interactorModel));
 
             var views = new List<FE.Dialog.Adapter.View.IView>();
 

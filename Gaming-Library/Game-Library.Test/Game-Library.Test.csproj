@@ -67,6 +67,8 @@
     <Compile Include="BL\UseCase\Interactor\Interactor.Test.cs" />
     <Compile Include="BL\UseCase\Interactor\PathComposer\SteamGamePathComposer.Test.cs" />
     <Compile Include="DA\JsonFileHandler\GamesJsonFileHandler.Test.cs" />
+    <Compile Include="FE\Dialog\Adapter\Controller\Controller.Test.cs" />
+    <Compile Include="FE\Dialog\Adapter\Presenter\Presenter.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BL\UseCase\OutputPort\" />
+    <Folder Include="FE\Dialog\UserInterface\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -4,6 +4,7 @@ using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gaming_Library.BL.UseCase.Entity;
 using Gaming_Library.BL.UseCase.InputPort;
 using Gaming_Library.BL.UseCase.InputPort.Requests;
 
@@ -34,17 +35,15 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             _injector = injector;
         }
 
-        public int GetNumberOfGames()
-        {
-
-        }
         public void StartGame(int index)
         {
             SendRequest(new BL.UseCase.InputPort.Requests.Start(index));
         }
-        public void AddGame()
+        public void AddGame(View.Model.GameData game)
         {
-            SendRequest(new BL.UseCase.InputPort.Requests.Add());
+            var toAddRequest = ToAddRequest.Create(game);
+            var request = toAddRequest.CreateAddRequest();
+            SendRequest(request);
         }
         public void DeleteGame(int index)
         {
@@ -60,11 +59,19 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             SendRequest(new BL.UseCase.InputPort.Requests.Load());
         }
 
+        public void ModifyGame(int index, View.Model viewModel)
+        {
+            var toModifyRequest = ToModifyRequest.Create(index, viewModel);
+            var request = toModifyRequest.CreateModifyRequest();
+            SendRequest(request);
+        }
+
         private void SendRequest(IRequest request)
         {
             var requestModel = new RequestModel();
             requestModel.Requests.Add(request);
             _injector.Interactor.Update(requestModel);
         }
+
     }
 }

@@ -13,23 +13,36 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 {
     public class Add : ICommand
     {
-        private Injector _injector;
+        private Model _model;
 
-        public sealed class Injector
+        public static ICommand Create(Model model)
         {
-            public Model Model;
+            return new Add(model);
         }
-
-        public static ICommand Create(Injector injector)
+        private Add(Model model)
         {
-            return new Add(injector);
-        }
-        private Add(Injector injector)
-        {
-            _injector = injector;
+            _model = model;
         }
         public void Do(IRequest request)
         {
+            var addRequest = (InputPort.Requests.Add)request;
+
+            _model.Games.Add(new Entity.GameData()
+            {
+                SteamId = new SteamId(Convert.ToInt32(addRequest.Game.SteamId)),
+                Title = new Title(addRequest.Game.Title),
+                Publisher = new Publisher(addRequest.Game.Publisher),
+                Location = new Location(addRequest.Game.Location),
+                Image = new Image(addRequest.Game.Image),
+                Tags = new Tag[0] { },
+                Year = new YearOfPublication(new DateTime(Convert.ToInt32(addRequest.Game.Year), 1, 1)),
+                Genres = new Genre[1] { new Genre(addRequest.Game.Genre) },
+            });
+            foreach (var tag in addRequest.Game.Tags) {
+                var index = _model.Games.Count - 1;
+                _model.Games[index].Tags = _model.Games[index].Tags.Append(new Tag(tag)).ToArray();
+
+            }
         }
 
         public int GetId()

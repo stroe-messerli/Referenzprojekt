@@ -10,35 +10,54 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using BrightIdeasSoftware;
 using Gaming_Library.BL.UseCase.Entity;
+using Gaming_Library.BL.UseCase.Entity.Types;
+using System.IO;
 
 namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 {
     public partial class GameProperties : Form
     {
         private bool isPropertiesViewCollapsed = true;
-        private Adapter.Controller.IController _controller;
-        private int _gameIndex;
 
-        public GameProperties(Adapter.Controller.IController controller, int nextGameIndex)
+        private readonly Adapter.Controller.IController _controller;
+        private readonly Adapter.View.Model.GameData _game;
+        private readonly int _gameIndex;
+
+        public GameProperties(Adapter.Controller.IController controller, Adapter.View.Model.GameData game)
         {
-            _gameIndex = nextGameIndex;
+            _game = game;
+            //_gameIndex = _game..Count - 1;
             _controller = controller;
-            _controller.AddGame();
             InitializeComponent();
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            _controller.DeleteGame(_gameIndex);
             Close();
         }
 
         private void saveProperties_Click(object sender, EventArgs e)
         {
-            _controller
+            _game.Attributes.HasFullControllerSupport = controllerFull.Checked;
+            _game.Attributes.HasPartialControllerSupport = controllerPart.Checked;
+            _game.Attributes.IsCooperative = isCoop.Checked;
+            _game.Attributes.IsMultiPlayer = isMultiPlayer.Checked;
+            _game.Attributes.IsSinglePlayer = isSinglePlayer.Checked;
+            _game.Attributes.IsVRSupportive = isVR.Checked;
+            _game.Attributes.HasAchievements = true;
+            _game.Publisher = publisher.Text;
+            _game.Tags = tags.Text.Split(',').ToArray();
+            _game.Genre = (string)genresCombo.SelectedItem;
+            _game.Location = locationPath.Text;
+            _game.Title = title.Text;
+            _game.Year = publicationYear.Text;
+
+            //check if adding or modifying
+            _controller.AddGame(_game);
+            Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void searchForTitle_Click(object sender, EventArgs e)
         {
 
         }
@@ -47,15 +66,22 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK) {
-                //request to controller with ofd.FileName
+                _game.Image = new Bitmap(ofd.FileName);
+                _game.Image = ResizeImage(_game.Image);
+                imagePath.Text = Path.GetFileName(ofd.FileName);
             }
+        }
+
+        private Bitmap ResizeImage(Bitmap image)
+        {
+            return new Bitmap(image, new Size(110, 62));
         }
 
         private void buttonSetFolderPath_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK) {
-                //request to controller with ofd.FileName
+                locationPath.Text = ofd.FileName;
             }
         }
 
@@ -77,12 +103,6 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         }
 
-        private void AdjustComponents(int adjustment)
-        {
-            Height += adjustment;
-            Width += adjustment;
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (isPropertiesViewCollapsed) {
@@ -100,6 +120,12 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
                     timer1.Stop();
                 }
             }
+        }
+
+        private void AdjustComponents(int adjustment)
+        {
+            Height += adjustment;
+            Width += adjustment;
         }
     }
 }
