@@ -26,7 +26,6 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         public GameProperties(Adapter.Controller.IController controller, Adapter.View.Model.GameData game)
         {
             _game = game;
-            //_gameIndex = _game..Count - 1;
             _controller = controller;
             InitializeComponent();
         }
@@ -66,7 +65,15 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK) {
-                _game.Image = new Bitmap(ofd.FileName);
+                try {
+                    _game.Image = new Bitmap(ofd.FileName);
+                } catch (ArgumentException) {
+                    MessageBox.Show(
+                    "Ausgewähltes Bild ist zu gross.\nVerkleinern Sie es, oder wählen Sie ein anderes Bild!",
+                    "Information",
+                    MessageBoxButtons.OK);
+                    return;
+                }
                 _game.Image = ResizeImage(_game.Image);
                 imagePath.Text = Path.GetFileName(ofd.FileName);
             }

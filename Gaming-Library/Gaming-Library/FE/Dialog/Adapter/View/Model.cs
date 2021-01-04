@@ -20,7 +20,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public Bitmap Image;
             public string[] Tags;
             public string Genre;
-            public BL.UseCase.Entity.Types.GameAttributes Attributes;
+            public GameAttributes Attributes;
         }
 
         public bool IsInvalidGame;

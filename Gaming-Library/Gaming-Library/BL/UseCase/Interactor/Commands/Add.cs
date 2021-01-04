@@ -43,6 +43,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games[index].Tags = _model.Games[index].Tags.Append(new Tag(tag)).ToArray();
 
             }
+
+            //JSON.serialize(bla);
         }
 
         public int GetId()
