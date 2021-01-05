@@ -14,12 +14,6 @@ C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\ObjectListView.dll
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Gaming-Library.pdb
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Gaming-Library.exe.config
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Castle.Core.xml
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\Moq.xml
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\bin\Debug\ObjectListView.xml
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\obj\Debug\Game-Library.Test.csprojAssemblyReference.cache
 C:\Users\haziraj\Documents\Referenzprojekt\Gaming-Library\Game-Library.Test\obj\Debug\Game-Library.Test.csproj.CoreCompileInputs.cache

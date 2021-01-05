@@ -22,6 +22,7 @@ namespace Gaming_Library
 
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
             commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
+            //TODO insert fake repository 
             commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Add.Create(interactorModel));
