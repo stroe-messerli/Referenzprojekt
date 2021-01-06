@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gaming_Library.BL.UseCase.InputPort.Requests
+namespace Gaming_Library.DA.Repository
 {
-    public sealed class Load : IRequest
+    public interface ISteamGameFinder
     {
-
+        public List<string> FindGame(string term);
     }
 }

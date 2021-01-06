@@ -59,6 +59,11 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             SendRequest(new BL.UseCase.InputPort.Requests.Load());
         }
 
+        public void Save()
+        {
+            SendRequest(new BL.UseCase.InputPort.Requests.Save());
+        }
+
         public void ModifyGame(int index, View.Model viewModel)
         {
             var toModifyRequest = ToModifyRequest.Create(index, viewModel);

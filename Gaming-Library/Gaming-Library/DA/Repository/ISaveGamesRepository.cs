@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Gaming_Library.BL.UseCase.Entity;
 
-namespace Gaming_Library.DA
+namespace Gaming_Library.DA.Repository
 {
-    public interface IJsonFileHandler
+    public interface ISaveGamesRepository
     {
-        public List<GameData> LoadAllFromFile();
-        public void SaveToFile(List<GameData> itemsToSave);
+        public void SaveToFile(List<GameData> itemsToSave, string path);
     }
 }

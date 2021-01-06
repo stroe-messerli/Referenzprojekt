@@ -12,16 +12,18 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
     class Load : ICommand
     {
         private UseCase.Interactor.Model _interactorModel;
+        private DA.Repository.ILoadGamesRepository _repository;
 
-        public static ICommand Create(Model interactorModel)
+        public static ICommand Create(Model interactorModel, DA.Repository.ILoadGamesRepository repository)
         {
-            return new Load(interactorModel);
+            return new Load(interactorModel, repository);
 
         }
 
-        private Load(Model interactorModel)
+        private Load(Model interactorModel, DA.Repository.ILoadGamesRepository repository)
         {
             _interactorModel = interactorModel;
+            _repository = repository;
         }
 
 
@@ -33,9 +35,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
         public void Do(IRequest request)
         {
             createTestObjects();
-            //var jsonFileHandler = GamesJsonFileHandler.Create();
-            //var games = jsonFileHandler.LoadAllFromFile();
-            //_injector.InteractorModel.Games = games;
+            //var games = _repository.LoadAllFromFile("");
+            //_interactorModel.Games = games;
         }
 
         private void createTestObjects()

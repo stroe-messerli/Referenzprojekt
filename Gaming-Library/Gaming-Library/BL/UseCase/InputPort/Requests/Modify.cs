@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
-    public class Modify : IRequest
+    public sealed class Modify : IRequest
     {
 
         public sealed class GameData

@@ -7,7 +7,7 @@ using Gaming_Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.BL.UseCase.InputPort.Requests
 {
-    public class Start : IRequest
+    public sealed class Start : IRequest
     {
 
         public readonly int GameIndex;

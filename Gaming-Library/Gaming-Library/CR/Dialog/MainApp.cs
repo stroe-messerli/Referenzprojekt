@@ -20,10 +20,13 @@ namespace Gaming_Library
             var interactorModel = new BL.UseCase.Interactor.Model();
             var viewModel = new FE.Dialog.Adapter.View.Model();
 
+            var inputRepository = DA.Repository.StandardLoadGamesRepository.Create();
+            var outputRepository = DA.Repository.StandardSaveGamesRepository.Create();
+
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
+            commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel, inputRepository));
+            commands.Add(BL.UseCase.Interactor.Commands.Save.Create(interactorModel, outputRepository));
             commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
-            //TODO insert fake repository 
-            commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Add.Create(interactorModel));
             commands.Add(BL.UseCase.Interactor.Commands.Modify.Create(interactorModel));

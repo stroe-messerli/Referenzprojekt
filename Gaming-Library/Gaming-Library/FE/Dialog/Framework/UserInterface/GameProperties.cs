@@ -53,6 +53,8 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
             //check if adding or modifying
             _controller.AddGame(_game);
+            //_controller.ModifyGame(0, _game);
+
             Close();
         }
 
