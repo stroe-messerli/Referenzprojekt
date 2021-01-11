@@ -42,17 +42,17 @@ namespace Game_Library.UseCase.OutputPort
             });
             var injector = new ToResponseModel.Injector(interactorModel);
             var responseModelConverter = ToResponseModel.Create(injector);
-            var result = responseModelConverter.CreateResponseModel();
+            var responseModel = responseModelConverter.CreateResponseModel();
 
-            Assert.IsTrue(result.Games.Count == 1);
-            Assert.IsTrue(result.Games[0].SteamId == interactorModel.Games[0].SteamId);
-            Assert.IsTrue(result.Games[0].Title == interactorModel.Games[0].Title);
-            Assert.IsTrue(result.Games[0].Year == interactorModel.Games[0].Year);
-            Assert.IsTrue(result.Games[0].Genres == interactorModel.Games[0].Genres);
-            Assert.IsTrue(result.Games[0].Attributes == interactorModel.Games[0].Attributes);
-            Assert.IsTrue(result.Games[0].Image == interactorModel.Games[0].Image);
-            Assert.IsTrue(result.Games[0].Location == interactorModel.Games[0].Location);
-            Assert.IsTrue(result.Games[0].Tags == interactorModel.Games[0].Tags);
+            Assert.IsTrue(responseModel.Games.Count == 1);
+            Assert.IsTrue(responseModel.Games[0].SteamId == interactorModel.Games[0].SteamId);
+            Assert.IsTrue(responseModel.Games[0].Title == interactorModel.Games[0].Title);
+            Assert.IsTrue(responseModel.Games[0].Year == interactorModel.Games[0].Year);
+            Assert.IsTrue(responseModel.Games[0].Genres == interactorModel.Games[0].Genres);
+            Assert.IsTrue(responseModel.Games[0].Attributes == interactorModel.Games[0].Attributes);
+            Assert.IsTrue(responseModel.Games[0].Image == interactorModel.Games[0].Image);
+            Assert.IsTrue(responseModel.Games[0].Location == interactorModel.Games[0].Location);
+            Assert.IsTrue(responseModel.Games[0].Tags == interactorModel.Games[0].Tags);
         }
 
 
