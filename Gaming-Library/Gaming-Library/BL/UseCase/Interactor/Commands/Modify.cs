@@ -26,8 +26,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
         {
             var modifyRequest = (InputPort.Requests.Modify)request;
 
-            if (modifyRequest.Game.Attributes.HasValue) {
-                _model.Games.ElementAt(modifyRequest.GameIndex).Attributes = modifyRequest.Game.Attributes.Value;
+            if (modifyRequest.Game.Attributes != null) {
+                _model.Games.ElementAt(modifyRequest.GameIndex).Attributes = modifyRequest.Game.Attributes;
             }
             if (modifyRequest.Game.Genre != null) {
                 // _model.Games.ElementAt(modifyRequest.GameIndex).Genres = modifyRequest.Game.Genre;

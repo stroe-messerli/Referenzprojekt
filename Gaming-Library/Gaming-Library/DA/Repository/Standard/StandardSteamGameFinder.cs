@@ -20,9 +20,9 @@ namespace Gaming_Library.DA.Repository.Standard
             _repository = repository;
         }
 
-        public List<string> FindGame(string term)
+        public List<string> FindGame(string term, string path)
         {
-            var registeredGames = _repository.LoadAllFromFile("");
+            var registeredGames = _repository.LoadAllFromFile(path);
             var foundGames = new List<string>();
 
             //System.JsonLibrary.FindAll(term)
