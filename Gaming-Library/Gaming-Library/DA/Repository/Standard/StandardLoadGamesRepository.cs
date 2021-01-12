@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,7 @@ namespace Gaming_Library.DA.Repository.Standard
         }
         public List<GameData> LoadAllFromFile(string path)
         {
-            throw new NotImplementedException();
+            return System.Text.Json.JsonSerializer.Deserialize<List<GameData>>(File.ReadAllText(path));
         }
     }
 }

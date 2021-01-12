@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace Gaming_Library.DA.Repository.Newtonsoft
@@ -20,13 +22,11 @@ namespace Gaming_Library.DA.Repository.Newtonsoft
         }
 
 
-        public List<string> FindGame(string term)
+        public List<App> FindGame(string term, string path)
         {
-            var registeredGames = _repository.LoadAllFromFile("");
-            var foundGames = new List<string>();
+            var applist = JsonConvert.DeserializeObject<SteamGameList>(File.ReadAllText(path));
 
-            //Newtonsoft.Jsonlibarary.FindAll(term)
-            return foundGames;
+            return applist.applist.apps.FindAll(item => item.name.Contains(term));
         }
     }
 }

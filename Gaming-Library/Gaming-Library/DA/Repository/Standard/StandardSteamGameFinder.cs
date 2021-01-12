@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,11 @@ namespace Gaming_Library.DA.Repository.Standard
             _repository = repository;
         }
 
-        public List<string> FindGame(string term)
+        public List<App> FindGame(string term, string FilePath)
         {
-            var registeredGames = _repository.LoadAllFromFile("");
-            var foundGames = new List<string>();
+            var applist = System.Text.Json.JsonSerializer.Deserialize<SteamGameList>(File.ReadAllText(FilePath));
 
-            //System.JsonLibrary.FindAll(term)
-
-            return foundGames;
+            return applist.applist.apps.FindAll(item => item.name.Contains(term));
         }
     }
 }

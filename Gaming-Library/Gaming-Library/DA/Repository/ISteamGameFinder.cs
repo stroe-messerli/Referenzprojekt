@@ -8,6 +8,6 @@ namespace Gaming_Library.DA.Repository
 {
     public interface ISteamGameFinder
     {
-        public List<string> FindGame(string term);
+        List<App> FindGame(string term, string FilePath);
     }
 }

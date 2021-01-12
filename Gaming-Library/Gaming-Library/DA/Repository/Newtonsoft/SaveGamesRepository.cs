@@ -1,8 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Gaming_Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.DA.Repository.Newtonsoft
@@ -21,8 +23,7 @@ namespace Gaming_Library.DA.Repository.Newtonsoft
         }
         public void SaveToFile(List<GameData> itemsToSave, string path)
         {
-            //Newtonsoft.Json.
-            throw new NotImplementedException();
+            File.WriteAllText(path, JsonConvert.SerializeObject(itemsToSave));
         }
     }
 }

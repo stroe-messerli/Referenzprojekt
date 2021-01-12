@@ -1,8 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Gaming_Library.BL.UseCase.Entity;
 
 namespace Gaming_Library.DA.Repository
@@ -20,7 +22,7 @@ namespace Gaming_Library.DA.Repository
         }
         public List<GameData> LoadAllFromFile(string path)
         {
-            throw new NotImplementedException();
+            return JsonConvert.DeserializeObject<List<GameData>>(File.ReadAllText(path));
         }
     }
 }
