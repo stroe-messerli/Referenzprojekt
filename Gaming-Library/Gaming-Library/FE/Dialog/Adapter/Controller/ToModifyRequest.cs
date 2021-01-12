@@ -10,16 +10,16 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
     public class ToModifyRequest
     {
 
-        private View.Model _viewModel;
+        private View.Model.GameData _game;
         private int _gameIndex;
-        public static ToModifyRequest Create(int gameIndex, View.Model viewModel)
+        public static ToModifyRequest Create(int gameIndex, View.Model.GameData game)
         {
-            return new ToModifyRequest(gameIndex, viewModel);
+            return new ToModifyRequest(gameIndex, game);
         }
 
-        private ToModifyRequest(int gameIndex, View.Model viewModel)
+        private ToModifyRequest(int gameIndex, View.Model.GameData game)
         {
-            _viewModel = viewModel;
+            _game = game;
             _gameIndex = gameIndex;
         }
 
@@ -27,14 +27,14 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
         {
             var modifyRequest = new BL.UseCase.InputPort.Requests.Modify(_gameIndex);
 
-            modifyRequest.Game.Attributes = _viewModel.Games.ElementAt(_gameIndex).Attributes;
-            modifyRequest.Game.Genre = _viewModel.Games.ElementAt(_gameIndex).Genre;
-            modifyRequest.Game.Image = _viewModel.Games.ElementAt(_gameIndex).Image;
-            modifyRequest.Game.Location = _viewModel.Games.ElementAt(_gameIndex).Location;
-            modifyRequest.Game.SteamId = _viewModel.Games.ElementAt(_gameIndex).SteamId;
-            modifyRequest.Game.Tags = _viewModel.Games.ElementAt(_gameIndex).Tags;
-            modifyRequest.Game.Title = _viewModel.Games.ElementAt(_gameIndex).Title;
-            modifyRequest.Game.Year = _viewModel.Games.ElementAt(_gameIndex).Year;
+            modifyRequest.Game.Attributes = _game.Attributes;
+            modifyRequest.Game.Genre = _game.Genre;
+            modifyRequest.Game.Image = _game.Image;
+            modifyRequest.Game.Location = _game.Location;
+            modifyRequest.Game.SteamId = _game.SteamId;
+            modifyRequest.Game.Tags = _game.Tags;
+            modifyRequest.Game.Title = _game.Title;
+            modifyRequest.Game.Year = _game.Year;
 
             return modifyRequest;
         }

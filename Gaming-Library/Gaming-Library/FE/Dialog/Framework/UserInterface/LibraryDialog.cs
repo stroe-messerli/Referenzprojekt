@@ -231,7 +231,7 @@ namespace Gaming_Library
         private void eigenschaftenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var propertiesForm = new GameProperties(
-                _controller, ((Model)gameListView.SelectedObject).Games.ElementAt(gameListView.SelectedIndex));
+                _controller, (Model.GameData)gameListView.SelectedObject, gameListView.SelectedIndex);
             propertiesForm.ShowDialog(this);
         }
 

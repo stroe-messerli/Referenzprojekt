@@ -48,6 +48,7 @@ namespace Gaming_Library.BL.UseCase.OutputPort
                 responseGame.Tags = game.Tags;
                 responseGame.Title = game.Title;
                 responseGame.Year = game.Year;
+                responseGame.Attributes = game.Attributes;
 
                 responseModel.Games.Add(responseGame);
             }

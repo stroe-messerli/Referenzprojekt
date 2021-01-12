@@ -30,7 +30,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).Attributes = modifyRequest.Game.Attributes;
             }
             if (modifyRequest.Game.Genre != null) {
-                // _model.Games.ElementAt(modifyRequest.GameIndex).Genres = modifyRequest.Game.Genre;
+                _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new Genre[1] { new Genre(modifyRequest.Game.Genre) };
             }
             if (modifyRequest.Game.Image != null) {
                 _model.Games.ElementAt(modifyRequest.GameIndex).Image = new Image(modifyRequest.Game.Image);
@@ -51,7 +51,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).Title = new Title(modifyRequest.Game.Title);
             }
             if (modifyRequest.Game.Year != null) {
-                _model.Games.ElementAt(modifyRequest.GameIndex).Year = new YearOfPublication(new DateTime(Convert.ToInt32(modifyRequest.Game.Year)));
+                _model.Games.ElementAt(modifyRequest.GameIndex).Year = new YearOfPublication(new DateTime(Convert.ToInt32(modifyRequest.Game.Year), 1, 1));
             }
             _model.IsModified = true;
         }
