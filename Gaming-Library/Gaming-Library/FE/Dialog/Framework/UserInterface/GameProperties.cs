@@ -23,11 +23,28 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         private readonly Adapter.View.Model.GameData _game;
         private readonly int _gameIndex;
 
-        public GameProperties(Adapter.Controller.IController controller, Adapter.View.Model.GameData game)
+        public GameProperties(Adapter.Controller.IController controller, Adapter.View.Model.GameData game, int gameIndex = -1)
         {
+            _gameIndex = gameIndex;
             _game = game;
             _controller = controller;
+
             InitializeComponent();
+
+            if (_gameIndex >= 0) {
+                controllerFull.Checked = _game.Attributes.HasFullControllerSupport;
+                controllerPart.Checked = _game.Attributes.HasPartialControllerSupport;
+                isCoop.Checked = _game.Attributes.IsCooperative;
+                isMultiPlayer.Checked = _game.Attributes.IsMultiPlayer;
+                isSinglePlayer.Checked = _game.Attributes.IsSinglePlayer;
+                isVR.Checked = _game.Attributes.IsVRSupportive;
+                publisher.Text = _game.Publisher;
+                tags.Text = string.Join(',', _game.Tags);
+                genresCombo.Items.Add(_game.Genre);
+                locationPath.Text = _game.Location;
+                title.Text = _game.Title;
+                publicationYear.Text = _game.Year;
+            }
         }
 
         private void cancel_Click(object sender, EventArgs e)
@@ -51,10 +68,11 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             _game.Title = title.Text;
             _game.Year = publicationYear.Text;
 
-            //check if adding or modifying
-            _controller.AddGame(_game);
-            //_controller.ModifyGame(0, _game);
-
+            if (_gameIndex >= 0) {
+                _controller.ModifyGame(_gameIndex, _game);
+            } else {
+                _controller.AddGame(_game);
+            }
             Close();
         }
 

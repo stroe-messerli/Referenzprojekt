@@ -53,9 +53,11 @@ namespace Game_Library.Test.FE.Dialog.Adapter.Presenter
             Assert.IsTrue(viewModel.Games[0].Year == responseModel.Games[0].Year.ToString());
             //TODO: fix this
             Assert.IsTrue(viewModel.Games[0].Genre == responseModel.Games[0].Genres[0].ToString());
+            //
             Assert.IsTrue(viewModel.Games[0].Attributes == responseModel.Games[0].Attributes);
             Assert.IsTrue(viewModel.Games[0].Image == responseModel.Games[0].Image.GameImage);
             Assert.IsTrue(viewModel.Games[0].Location == responseModel.Games[0].Location.ToString());
+            //TODO: fix this
             Assert.IsTrue(viewModel.Games[0].Tags.Length == responseModel.Games[0].Tags.Length);
 
         }

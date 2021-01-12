@@ -32,6 +32,7 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
         public Modify(int gameIndex)
         {
             GameIndex = gameIndex;
+            Game = new GameData();
         }
     }
 }

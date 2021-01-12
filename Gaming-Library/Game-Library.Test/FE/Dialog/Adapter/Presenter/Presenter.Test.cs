@@ -7,10 +7,7 @@ using Gaming_Library.BL.UseCase.Interactor;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using Gaming_Library.BL.UseCase.OutputPort;
-using Gaming_Library.BL.UseCase.Entity;
 using Gaming_Library.FE.Dialog.Adapter.View;
-using Gaming_Library;
 
 namespace Game_Library.FE.Dialog.Adapter.Presenter
 {

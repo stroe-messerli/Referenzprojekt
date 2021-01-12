@@ -64,9 +64,9 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             SendRequest(new BL.UseCase.InputPort.Requests.Save());
         }
 
-        public void ModifyGame(int index, View.Model viewModel)
+        public void ModifyGame(int index, View.Model.GameData game)
         {
-            var toModifyRequest = ToModifyRequest.Create(index, viewModel);
+            var toModifyRequest = ToModifyRequest.Create(index, game);
             var request = toModifyRequest.CreateModifyRequest();
             SendRequest(request);
         }
