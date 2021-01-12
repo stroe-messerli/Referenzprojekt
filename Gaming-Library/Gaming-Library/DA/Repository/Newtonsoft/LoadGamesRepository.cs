@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Gaming_Library.BL.UseCase.Entity;
 
-namespace Gaming_Library.DA.Repository
+namespace Gaming_Library.DA.Repository.Newtonsoft
 {
     public class NewtonsoftLoadGamesRepository : ILoadGamesRepository
     {

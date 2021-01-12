@@ -8,7 +8,7 @@ using Gaming_Library.BL.UseCase.Interactor;
 
 namespace Gaming_Library.BL.UseCase.OutputPort
 {
-    class ToResponseModel : IToResponseModel
+    public class ToResponseModel : IToResponseModel
     {
         public struct Injector
         {
