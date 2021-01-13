@@ -21,6 +21,11 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public string[] Tags;
             public string Genre;
             public GameAttributes Attributes;
+
+            public GameData()
+            {
+                Attributes = new GameAttributes();
+            }
         }
 
         public bool IsInvalidGame;
