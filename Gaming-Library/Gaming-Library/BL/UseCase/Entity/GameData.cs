@@ -13,16 +13,16 @@ namespace Gaming_Library.BL.UseCase.Entity
     public sealed class GameData
     {
 #nullable enable
-        public SteamId? SteamId;
+        public SteamId? SteamId { get; set; }
 #nullable disable
-        public Title Title;
-        public Publisher Publisher;
-        public Location Location;
-        public YearOfPublication Year;
-        public Image Image;
-        public Tag[] Tags;
-        public Genre[] Genres;
-        public GameAttributes Attributes;
+        public Title Title { get; set; }
+        public Publisher Publisher { get; set; }
+        public Location Location { get; set; }
+        public YearOfPublication Year { get; set; }
+        public Image Image { get; set; }
+        public Tag[] Tags { get; set; }
+        public Genre[] Genres { get; set; }
+        public GameAttributes Attributes { get; set; }
 
         public static bool operator ==(GameData left, GameData right) => Operator.Weave(left, right);
         public static bool operator !=(GameData left, GameData right) => Operator.Weave(left, right);
