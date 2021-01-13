@@ -34,9 +34,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
 
         public void Do(IRequest request)
         {
-            createTestObjects();
-            //var games = _repository.LoadAllFromFile("");
-            //_interactorModel.Games = games;
+            //createTestObjects();
+            _interactorModel.Games = _repository.LoadAllFromFile("games.json");
         }
 
         private void createTestObjects()

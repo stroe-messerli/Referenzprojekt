@@ -16,6 +16,11 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
             GameImage = image;
         }
 
+        public override string ToString()
+        {
+            return GameImage.ToString();
+        }
+
         public Bitmap GameImage { get; }
         public static bool operator ==(Image left, Image right) => Operator.Weave(left, right);
         public static bool operator !=(Image left, Image right) => Operator.Weave(left, right);

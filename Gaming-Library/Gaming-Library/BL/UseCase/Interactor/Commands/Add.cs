@@ -14,14 +14,16 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
     public class Add : ICommand
     {
         private Model _model;
+        private DA.Repository.ISaveGamesRepository _repository;
 
-        public static ICommand Create(Model model)
+        public static ICommand Create(Model model, DA.Repository.ISaveGamesRepository repository)
         {
-            return new Add(model);
+            return new Add(model, repository);
         }
-        private Add(Model model)
+        private Add(Model model, DA.Repository.ISaveGamesRepository repository)
         {
             _model = model;
+            _repository = repository;
         }
         public void Do(IRequest request)
         {
@@ -37,14 +39,16 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 Tags = new Tag[0] { },
                 Year = new YearOfPublication(new DateTime(Convert.ToInt32(addRequest.Game.Year), 1, 1)),
                 Genres = new Genre[1] { new Genre(addRequest.Game.Genre) },
+                Attributes = addRequest.Game.Attributes,
             });
             foreach (var tag in addRequest.Game.Tags) {
                 var index = _model.Games.Count - 1;
                 _model.Games[index].Tags = _model.Games[index].Tags.Append(new Tag(tag)).ToArray();
 
             }
+            //_repository.SaveToFile(_model.Games, "games.json");
 
-            //JSON.serialize(bla);
+            _repository.SaveToFile(_model.Games, "games.json");
         }
 
         public int GetId()

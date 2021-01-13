@@ -54,6 +54,9 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games.ElementAt(modifyRequest.GameIndex).Year = new YearOfPublication(new DateTime(Convert.ToInt32(modifyRequest.Game.Year), 1, 1));
             }
             _model.IsModified = true;
+
+            var saveGamesRepository = DA.Repository.Standard.StandardSaveGamesRepository.Create();
+            saveGamesRepository.SaveToFile(_model.Games, "games.json");
         }
 
         public int GetId()

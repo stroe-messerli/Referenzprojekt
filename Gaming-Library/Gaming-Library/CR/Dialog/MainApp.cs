@@ -20,15 +20,17 @@ namespace Gaming_Library
             var interactorModel = new BL.UseCase.Interactor.Model();
             var viewModel = new FE.Dialog.Adapter.View.Model();
 
-            var inputRepository = DA.Repository.Standard.StandardLoadGamesRepository.Create();
-            var outputRepository = DA.Repository.Standard.StandardSaveGamesRepository.Create();
+            //var inputRepository = DA.Repository.Standard.StandardLoadGamesRepository.Create();
+            //var outputRepository = DA.Repository.Standard.StandardSaveGamesRepository.Create();
+            var inputRepository = DA.Repository.Newtonsoft.NewtonsoftLoadGamesRepository.Create();
+            var outputRepository = DA.Repository.Newtonsoft.NewtonsoftSaveGamesRepository.Create();
 
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
             commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel, inputRepository));
             commands.Add(BL.UseCase.Interactor.Commands.Save.Create(interactorModel, outputRepository));
             commands.Add(BL.UseCase.Interactor.Commands.Start.Create(interactorModel));
-            commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel));
-            commands.Add(BL.UseCase.Interactor.Commands.Add.Create(interactorModel));
+            commands.Add(BL.UseCase.Interactor.Commands.Delete.Create(interactorModel, outputRepository));
+            commands.Add(BL.UseCase.Interactor.Commands.Add.Create(interactorModel, outputRepository));
             commands.Add(BL.UseCase.Interactor.Commands.Modify.Create(interactorModel));
 
             var views = new List<FE.Dialog.Adapter.View.IView>();
