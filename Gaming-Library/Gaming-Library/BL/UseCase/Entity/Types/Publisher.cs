@@ -10,9 +10,9 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 
     public sealed class Publisher
     {
-        public Publisher(string publisher)
+        public Publisher(string gamePublisher)
         {
-            GamePublisher = publisher;
+            GamePublisher = gamePublisher;
         }
 
         public string GamePublisher { get; }

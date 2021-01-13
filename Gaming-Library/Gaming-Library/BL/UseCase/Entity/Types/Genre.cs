@@ -9,9 +9,9 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
     [Equals]
     public sealed class Genre
     {
-        public Genre(string genre)
+        public Genre(string gameGenre)
         {
-            GameGenre = genre;
+            GameGenre = gameGenre;
         }
 
         public string GameGenre { get; }

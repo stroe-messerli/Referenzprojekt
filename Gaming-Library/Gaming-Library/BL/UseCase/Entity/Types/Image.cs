@@ -11,9 +11,9 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 
     public sealed class Image
     {
-        public Image(Bitmap image)
+        public Image(Bitmap gameImage)
         {
-            GameImage = image;
+            GameImage = gameImage;
         }
 
         public Bitmap GameImage { get; }

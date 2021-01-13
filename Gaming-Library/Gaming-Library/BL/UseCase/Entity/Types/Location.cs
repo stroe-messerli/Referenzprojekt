@@ -10,9 +10,9 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
 
     public sealed class Location
     {
-        public Location(string location)
+        public Location(string gameLocation)
         {
-            GameLocation = location;
+            GameLocation = gameLocation;
         }
 
         public string GameLocation { get; }

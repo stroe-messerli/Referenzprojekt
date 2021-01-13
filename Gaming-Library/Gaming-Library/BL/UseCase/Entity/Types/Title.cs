@@ -9,9 +9,9 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
     [Equals]
     public sealed class Title
     {
-        public Title(string title)
+        public Title(string gameTitle)
         {
-            GameTitle = title;
+            GameTitle = gameTitle;
         }
 
         public string GameTitle { get; }

@@ -9,12 +9,12 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
     [Equals]
     public sealed class YearOfPublication
     {
-        public YearOfPublication(DateTime year)
+        public YearOfPublication(DateTime publicationYear)
         {
-            PublicationYear = year;
+            PublicationYear = publicationYear;
         }
 
-        private readonly DateTime PublicationYear;
+        private DateTime PublicationYear { get; }
         public static bool operator ==(YearOfPublication left, YearOfPublication right) => Operator.Weave(left, right);
         public static bool operator !=(YearOfPublication left, YearOfPublication right) => Operator.Weave(left, right);
         public override string ToString()
