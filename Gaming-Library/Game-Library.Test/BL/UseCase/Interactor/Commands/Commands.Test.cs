@@ -28,7 +28,8 @@ namespace Game_Library.UseCase.Interactor.Commands.Test
         {
             var request = new Gaming_Library.BL.UseCase.InputPort.Requests.Add();
             var commands = Gaming_Library.BL.UseCase.Interactor.Commands.Commands.Create();
-            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model());
+            var repository = new Mock<Gaming_Library.DA.Repository.ISaveGamesRepository>();
+            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model(), repository.Object);
             commands.Add(command);
 
             Assert.IsNotNull(commands.GetCommand(request));
@@ -47,7 +48,8 @@ namespace Game_Library.UseCase.Interactor.Commands.Test
         {
             var request = new Gaming_Library.BL.UseCase.InputPort.Requests.OpenProperties(6);
             var commands = Gaming_Library.BL.UseCase.Interactor.Commands.Commands.Create();
-            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model());
+            var repository = new Mock<Gaming_Library.DA.Repository.ISaveGamesRepository>();
+            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model(), repository.Object);
             commands.Add(command);
             Assert.IsNull(commands.GetCommand(request));
         }
@@ -58,7 +60,8 @@ namespace Game_Library.UseCase.Interactor.Commands.Test
         {
             var request = new Gaming_Library.BL.UseCase.InputPort.Requests.Add();
             var commands = Gaming_Library.BL.UseCase.Interactor.Commands.Commands.Create();
-            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model());
+            var repository = new Mock<Gaming_Library.DA.Repository.ISaveGamesRepository>();
+            var command = Add.Create(new Gaming_Library.BL.UseCase.Interactor.Model(), repository.Object);
             commands.Add(command);
 
             Assert.IsTrue(commands.GetCommand(request).GetType() == typeof(Add));
