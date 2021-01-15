@@ -14,12 +14,12 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
             PublicationYear = publicationYear;
         }
 
-        private DateTime PublicationYear { get; }
+        public DateTime PublicationYear { get; }
         public static bool operator ==(YearOfPublication left, YearOfPublication right) => Operator.Weave(left, right);
         public static bool operator !=(YearOfPublication left, YearOfPublication right) => Operator.Weave(left, right);
         public override string ToString()
         {
-            return PublicationYear.ToString("yyyy");
+            return PublicationYear.ToString("yyyy-mm-dd");
         }
     }
 }

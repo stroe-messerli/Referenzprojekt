@@ -32,8 +32,8 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
             if (modifyRequest.Game.Genre != null) {
                 _model.Games.ElementAt(modifyRequest.GameIndex).Genres = new Genre[1] { new Genre(modifyRequest.Game.Genre) };
             }
-            if (modifyRequest.Game.Image != null) {
-                _model.Games.ElementAt(modifyRequest.GameIndex).Image = new Image(modifyRequest.Game.Image);
+            if (modifyRequest.Game.ImagePath != null) {
+                _model.Games.ElementAt(modifyRequest.GameIndex).Image = new Image(modifyRequest.Game.ImagePath);
             }
             if (modifyRequest.Game.Location != null) {
                 _model.Games.ElementAt(modifyRequest.GameIndex).Location = new Location(modifyRequest.Game.Location);

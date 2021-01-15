@@ -20,7 +20,7 @@ namespace Gaming_Library.BL.UseCase.InputPort.Requests
             public string? Publisher;
             public string? Location;
             public string? Year;
-            public Bitmap? Image;
+            public string? ImagePath;
             public string[]? Tags;
             public string? Genre;
             public BL.UseCase.Entity.Types.GameAttributes? Attributes;

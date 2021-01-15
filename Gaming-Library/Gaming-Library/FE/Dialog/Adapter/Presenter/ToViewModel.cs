@@ -39,11 +39,12 @@ namespace Gaming_Library.FE.Dialog.Adapter.Presenter
                 viewGame.Attributes = game.Attributes;
                 viewGame.Genre = game.Genres[0].GameGenre;
                 viewGame.Image = game.Image.GameImage;
+                viewGame.ImagePath = game.Image.ImagePath;
                 viewGame.Location = game.Location.GameLocation;
                 viewGame.Publisher = game.Publisher.GamePublisher;
                 viewGame.SteamId = game.SteamId.ToString();
                 viewGame.Title = game.Title.GameTitle;
-                viewGame.Year = game.Year.ToString();
+                viewGame.Year = game.Year.PublicationYear.ToString("yyyy");
                 viewGame.Tags = new string[0];
                 foreach (var tag in game.Tags) {
                     viewGame.Tags = viewGame.Tags.Append(tag.GameTag).ToArray();

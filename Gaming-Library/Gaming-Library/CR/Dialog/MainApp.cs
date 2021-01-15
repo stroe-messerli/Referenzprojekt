@@ -20,10 +20,10 @@ namespace Gaming_Library
             var interactorModel = new BL.UseCase.Interactor.Model();
             var viewModel = new FE.Dialog.Adapter.View.Model();
 
-            //var inputRepository = DA.Repository.Standard.StandardLoadGamesRepository.Create();
-            //var outputRepository = DA.Repository.Standard.StandardSaveGamesRepository.Create();
-            var inputRepository = DA.Repository.Newtonsoft.NewtonsoftLoadGamesRepository.Create();
-            var outputRepository = DA.Repository.Newtonsoft.NewtonsoftSaveGamesRepository.Create();
+            var inputRepository = DA.Repository.Standard.StandardLoadGamesRepository.Create();
+            var outputRepository = DA.Repository.Standard.StandardSaveGamesRepository.Create();
+            //var inputRepository = DA.Repository.Newtonsoft.NewtonsoftLoadGamesRepository.Create();
+            //var outputRepository = DA.Repository.Newtonsoft.NewtonsoftSaveGamesRepository.Create();
 
             var commands = BL.UseCase.Interactor.Commands.Commands.Create();
             commands.Add(BL.UseCase.Interactor.Commands.Load.Create(interactorModel, inputRepository));

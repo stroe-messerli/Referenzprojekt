@@ -35,7 +35,7 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 Title = new Title(addRequest.Game.Title),
                 Publisher = new Publisher(addRequest.Game.Publisher),
                 Location = new Location(addRequest.Game.Location),
-                Image = new Image(addRequest.Game.Image),
+                Image = new Image(addRequest.Game.ImagePath),
                 Tags = new Tag[0] { },
                 Year = new YearOfPublication(new DateTime(Convert.ToInt32(addRequest.Game.Year), 1, 1)),
                 Genres = new Genre[1] { new Genre(addRequest.Game.Genre) },
@@ -46,8 +46,6 @@ namespace Gaming_Library.BL.UseCase.Interactor.Commands
                 _model.Games[index].Tags = _model.Games[index].Tags.Append(new Tag(tag)).ToArray();
 
             }
-            //_repository.SaveToFile(_model.Games, "games.json");
-
             _repository.SaveToFile(_model.Games, "games.json");
         }
 

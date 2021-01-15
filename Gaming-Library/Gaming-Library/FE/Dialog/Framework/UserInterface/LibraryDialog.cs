@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
-using Castle.Components.DictionaryAdapter;
-using Gaming_Library.FE.Dialog.Adapter.Presenter;
 using Gaming_Library.FE.Dialog.Adapter.View;
 using Gaming_Library.FE.Dialog.Framework.UserInterface;
 using Gaming_Library.Properties;

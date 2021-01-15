@@ -27,7 +27,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
 
             addRequest.Game.Attributes = _game.Attributes;
             addRequest.Game.Genre = _game.Genre;
-            addRequest.Game.Image = _game.Image;
+            addRequest.Game.ImagePath = _game.ImagePath;
             addRequest.Game.Location = _game.Location;
             addRequest.Game.SteamId = _game.SteamId;
             addRequest.Game.Tags = _game.Tags;

@@ -30,23 +30,34 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             _controller = controller;
 
             InitializeComponent();
+            SetupTooltips();
 
             if (_gameIndex >= 0) {
-                controllerFull.Checked = _game.Attributes.HasFullControllerSupport;
-                controllerPart.Checked = _game.Attributes.HasPartialControllerSupport;
-                isCoop.Checked = _game.Attributes.IsCooperative;
-                isMultiPlayer.Checked = _game.Attributes.IsMultiPlayer;
-                isSinglePlayer.Checked = _game.Attributes.IsSinglePlayer;
-                isVR.Checked = _game.Attributes.IsVRSupportive;
-                publisher.Text = _game.Publisher;
-                tags.Text = string.Join(',', _game.Tags);
-                genresCombo.Items.Add(_game.Genre);
-                locationPath.Text = _game.Location;
-                title.Text = _game.Title;
-                publicationYear.Text = _game.Year;
+                SetupControls();
             }
         }
 
+        private void SetupTooltips()
+        {
+            toolTip1.SetToolTip(locationPath, "Der lokale Pfad der .exe-Datei");
+        }
+
+        private void SetupControls()
+        {
+            controllerFull.Checked = _game.Attributes.HasFullControllerSupport;
+            controllerPart.Checked = _game.Attributes.HasPartialControllerSupport;
+            isCoop.Checked = _game.Attributes.IsCooperative;
+            isMultiPlayer.Checked = _game.Attributes.IsMultiPlayer;
+            isSinglePlayer.Checked = _game.Attributes.IsSinglePlayer;
+            isVR.Checked = _game.Attributes.IsVRSupportive;
+            publisher.Text = _game.Publisher;
+            tags.Text = string.Join(',', _game.Tags);
+            genresCombo.Items.Add(_game.Genre);
+            locationPath.Text = _game.Location;
+            title.Text = _game.Title;
+            publicationYear.Text = _game.Year;
+            imagePath.Text = Path.GetFileName(_game.ImagePath);
+        }
         private void cancel_Click(object sender, EventArgs e)
         {
             Close();
@@ -95,6 +106,7 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
                     return;
                 }
                 _game.Image = ResizeImage(_game.Image);
+                _game.ImagePath = ofd.FileName;
                 imagePath.Text = Path.GetFileName(ofd.FileName);
             }
         }

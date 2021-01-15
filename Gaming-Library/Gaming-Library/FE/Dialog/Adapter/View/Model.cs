@@ -18,6 +18,7 @@ namespace Gaming_Library.FE.Dialog.Adapter.View
             public string Location;
             public string Year;
             public Bitmap Image;
+            public string ImagePath;
             public string[] Tags;
             public string Genre;
             public GameAttributes Attributes;

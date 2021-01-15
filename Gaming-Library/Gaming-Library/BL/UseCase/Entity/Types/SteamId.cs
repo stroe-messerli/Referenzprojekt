@@ -14,7 +14,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
             Id = id;
         }
 
-        private int? Id {get; }
+        public int? Id { get; }
         public static bool operator ==(SteamId left, SteamId right) => Operator.Weave(left, right);
         public static bool operator !=(SteamId left, SteamId right) => Operator.Weave(left, right);
         public override string ToString()

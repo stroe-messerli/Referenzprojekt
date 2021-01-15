@@ -29,12 +29,13 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
 
             modifyRequest.Game.Attributes = _game.Attributes;
             modifyRequest.Game.Genre = _game.Genre;
-            modifyRequest.Game.Image = _game.Image;
+            modifyRequest.Game.ImagePath = _game.ImagePath;
             modifyRequest.Game.Location = _game.Location;
             modifyRequest.Game.SteamId = _game.SteamId;
             modifyRequest.Game.Tags = _game.Tags;
             modifyRequest.Game.Title = _game.Title;
             modifyRequest.Game.Year = _game.Year;
+            modifyRequest.Game.Publisher = _game.Publisher;
 
             return modifyRequest;
         }
