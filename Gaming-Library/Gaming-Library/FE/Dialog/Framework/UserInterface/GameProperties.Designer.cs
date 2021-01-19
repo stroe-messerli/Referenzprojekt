@@ -76,10 +76,9 @@
             this.saveProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.saveProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveProperties.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.saveProperties.Location = new System.Drawing.Point(528, 451);
-            this.saveProperties.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.saveProperties.Location = new System.Drawing.Point(453, 391);
             this.saveProperties.Name = "saveProperties";
-            this.saveProperties.Size = new System.Drawing.Size(88, 27);
+            this.saveProperties.Size = new System.Drawing.Size(75, 23);
             this.saveProperties.TabIndex = 0;
             this.saveProperties.Text = "Speichern";
             this.saveProperties.UseVisualStyleBackColor = false;
@@ -94,10 +93,9 @@
             this.cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cancel.Location = new System.Drawing.Point(434, 451);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cancel.Location = new System.Drawing.Point(372, 391);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(88, 27);
+            this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 1;
             this.cancel.Text = "Abbrechen";
             this.cancel.UseVisualStyleBackColor = false;
@@ -109,10 +107,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Location = new System.Drawing.Point(0, 445);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(0, 386);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(630, 1);
+            this.label3.Size = new System.Drawing.Size(540, 1);
             this.label3.TabIndex = 6;
             // 
             // buttonProperties
@@ -124,12 +121,11 @@
             this.buttonProperties.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.buttonProperties.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.buttonProperties.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.buttonProperties.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonProperties.Location = new System.Drawing.Point(1, 189);
-            this.buttonProperties.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonProperties.Location = new System.Drawing.Point(1, 164);
             this.buttonProperties.Name = "buttonProperties";
-            this.buttonProperties.Size = new System.Drawing.Size(629, 31);
+            this.buttonProperties.Size = new System.Drawing.Size(539, 27);
             this.buttonProperties.TabIndex = 28;
             this.buttonProperties.Text = "Erweiterte Eigenschaften";
             this.buttonProperties.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -140,10 +136,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(8, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(7, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 26;
@@ -152,10 +147,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(10, 133);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(9, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 25;
@@ -169,10 +163,9 @@
             this.searchForTitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.searchForTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchForTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.searchForTitle.Location = new System.Drawing.Point(252, 43);
-            this.searchForTitle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.searchForTitle.Location = new System.Drawing.Point(216, 37);
             this.searchForTitle.Name = "searchForTitle";
-            this.searchForTitle.Size = new System.Drawing.Size(173, 23);
+            this.searchForTitle.Size = new System.Drawing.Size(231, 20);
             this.searchForTitle.TabIndex = 24;
             this.searchForTitle.Text = "Dieses Spiel auf Steam suchen";
             this.searchForTitle.UseVisualStyleBackColor = false;
@@ -182,10 +175,9 @@
             // 
             this.locationPath.AutoSize = true;
             this.locationPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.locationPath.Location = new System.Drawing.Point(102, 104);
-            this.locationPath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.locationPath.Location = new System.Drawing.Point(87, 90);
             this.locationPath.Name = "locationPath";
-            this.locationPath.Size = new System.Drawing.Size(89, 15);
+            this.locationPath.Size = new System.Drawing.Size(79, 13);
             this.locationPath.TabIndex = 23;
             this.locationPath.Text = "nicht festgelegt";
             // 
@@ -193,10 +185,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(8, 51);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(7, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 16;
@@ -211,10 +202,9 @@
             this.buttonSetFolderPath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSetFolderPath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSetFolderPath.Image = ((System.Drawing.Image)(resources.GetObject("buttonSetFolderPath.Image")));
-            this.buttonSetFolderPath.Location = new System.Drawing.Point(275, 105);
-            this.buttonSetFolderPath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonSetFolderPath.Location = new System.Drawing.Point(236, 91);
             this.buttonSetFolderPath.Name = "buttonSetFolderPath";
-            this.buttonSetFolderPath.Size = new System.Drawing.Size(64, 27);
+            this.buttonSetFolderPath.Size = new System.Drawing.Size(55, 23);
             this.buttonSetFolderPath.TabIndex = 22;
             this.buttonSetFolderPath.UseVisualStyleBackColor = false;
             this.buttonSetFolderPath.Click += new System.EventHandler(this.buttonSetFolderPath_Click);
@@ -222,10 +212,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(8, 105);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(7, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 13);
             this.label6.TabIndex = 21;
@@ -233,19 +222,17 @@
             // 
             // title
             // 
-            this.title.Location = new System.Drawing.Point(102, 43);
-            this.title.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.title.Location = new System.Drawing.Point(87, 37);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(116, 23);
+            this.title.Size = new System.Drawing.Size(100, 20);
             this.title.TabIndex = 18;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(8, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(7, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 17;
@@ -255,10 +242,9 @@
             // 
             this.imagePath.AutoSize = true;
             this.imagePath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.imagePath.Location = new System.Drawing.Point(102, 77);
-            this.imagePath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.imagePath.Location = new System.Drawing.Point(87, 67);
             this.imagePath.Name = "imagePath";
-            this.imagePath.Size = new System.Drawing.Size(89, 15);
+            this.imagePath.Size = new System.Drawing.Size(79, 13);
             this.imagePath.TabIndex = 20;
             this.imagePath.Text = "nicht festgelegt";
             // 
@@ -271,10 +257,9 @@
             this.buttonSetImagePath.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSetImagePath.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSetImagePath.Image = ((System.Drawing.Image)(resources.GetObject("buttonSetImagePath.Image")));
-            this.buttonSetImagePath.Location = new System.Drawing.Point(275, 78);
-            this.buttonSetImagePath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonSetImagePath.Location = new System.Drawing.Point(236, 68);
             this.buttonSetImagePath.Name = "buttonSetImagePath";
-            this.buttonSetImagePath.Size = new System.Drawing.Size(64, 27);
+            this.buttonSetImagePath.Size = new System.Drawing.Size(55, 23);
             this.buttonSetImagePath.TabIndex = 19;
             this.buttonSetImagePath.UseVisualStyleBackColor = false;
             this.buttonSetImagePath.Click += new System.EventHandler(this.buttonSetImagePath_Click);
@@ -300,45 +285,40 @@
             this.panel1.Controls.Add(this.controllerFull);
             this.panel1.Controls.Add(this.isVR);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(0, 220);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.MaximumSize = new System.Drawing.Size(630, 202);
+            this.panel1.Location = new System.Drawing.Point(0, 191);
+            this.panel1.MaximumSize = new System.Drawing.Size(540, 175);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 202);
+            this.panel1.Size = new System.Drawing.Size(540, 175);
             this.panel1.TabIndex = 29;
             this.panel1.Visible = false;
             // 
             // publisher
             // 
-            this.publisher.Location = new System.Drawing.Point(460, 55);
-            this.publisher.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.publisher.Location = new System.Drawing.Point(394, 48);
             this.publisher.Name = "publisher";
-            this.publisher.Size = new System.Drawing.Size(156, 23);
+            this.publisher.Size = new System.Drawing.Size(134, 20);
             this.publisher.TabIndex = 41;
             // 
             // tags
             // 
-            this.tags.Location = new System.Drawing.Point(460, 95);
-            this.tags.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tags.Location = new System.Drawing.Point(394, 82);
             this.tags.Name = "tags";
-            this.tags.Size = new System.Drawing.Size(156, 23);
+            this.tags.Size = new System.Drawing.Size(134, 20);
             this.tags.TabIndex = 40;
             // 
             // publicationYear
             // 
-            this.publicationYear.Location = new System.Drawing.Point(460, 13);
-            this.publicationYear.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.publicationYear.Location = new System.Drawing.Point(394, 11);
             this.publicationYear.Name = "publicationYear";
-            this.publicationYear.Size = new System.Drawing.Size(156, 23);
+            this.publicationYear.Size = new System.Drawing.Size(134, 20);
             this.publicationYear.TabIndex = 39;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label14.Location = new System.Drawing.Point(321, 93);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(275, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 38;
@@ -347,21 +327,19 @@
             // label13
             // 
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label13.Location = new System.Drawing.Point(315, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(270, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1, 200);
+            this.label13.Size = new System.Drawing.Size(1, 173);
             this.label13.TabIndex = 37;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label12.Location = new System.Drawing.Point(321, 53);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(275, 46);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
             this.label12.TabIndex = 36;
@@ -370,10 +348,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label11.Location = new System.Drawing.Point(321, 13);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(275, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(104, 13);
             this.label11.TabIndex = 35;
@@ -383,10 +360,9 @@
             // 
             this.isCoop.AutoSize = true;
             this.isCoop.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.isCoop.Location = new System.Drawing.Point(218, 125);
-            this.isCoop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.isCoop.Location = new System.Drawing.Point(187, 108);
             this.isCoop.Name = "isCoop";
-            this.isCoop.Size = new System.Drawing.Size(83, 19);
+            this.isCoop.Size = new System.Drawing.Size(77, 17);
             this.isCoop.TabIndex = 34;
             this.isCoop.Text = "Kooperativ";
             this.isCoop.UseVisualStyleBackColor = true;
@@ -395,10 +371,9 @@
             // 
             this.isMultiPlayer.AutoSize = true;
             this.isMultiPlayer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.isMultiPlayer.Location = new System.Drawing.Point(117, 125);
-            this.isMultiPlayer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.isMultiPlayer.Location = new System.Drawing.Point(100, 108);
             this.isMultiPlayer.Name = "isMultiPlayer";
-            this.isMultiPlayer.Size = new System.Drawing.Size(88, 19);
+            this.isMultiPlayer.Size = new System.Drawing.Size(80, 17);
             this.isMultiPlayer.TabIndex = 33;
             this.isMultiPlayer.Text = "Mehrspieler";
             this.isMultiPlayer.UseVisualStyleBackColor = true;
@@ -407,10 +382,9 @@
             // 
             this.isSinglePlayer.AutoSize = true;
             this.isSinglePlayer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.isSinglePlayer.Location = new System.Drawing.Point(12, 125);
-            this.isSinglePlayer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.isSinglePlayer.Location = new System.Drawing.Point(10, 108);
             this.isSinglePlayer.Name = "isSinglePlayer";
-            this.isSinglePlayer.Size = new System.Drawing.Size(90, 19);
+            this.isSinglePlayer.Size = new System.Drawing.Size(84, 17);
             this.isSinglePlayer.TabIndex = 32;
             this.isSinglePlayer.Text = "Einzelspieler";
             this.isSinglePlayer.UseVisualStyleBackColor = true;
@@ -418,10 +392,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label10.Location = new System.Drawing.Point(8, 95);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(7, 82);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 31;
@@ -431,10 +404,9 @@
             // 
             this.controllerPart.AutoSize = true;
             this.controllerPart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controllerPart.Location = new System.Drawing.Point(128, 31);
-            this.controllerPart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.controllerPart.Location = new System.Drawing.Point(110, 27);
             this.controllerPart.Name = "controllerPart";
-            this.controllerPart.Size = new System.Drawing.Size(134, 19);
+            this.controllerPart.Size = new System.Drawing.Size(118, 17);
             this.controllerPart.TabIndex = 30;
             this.controllerPart.TabStop = true;
             this.controllerPart.Text = "Controller (teilweise)";
@@ -444,10 +416,9 @@
             // 
             this.controllerFull.AutoSize = true;
             this.controllerFull.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.controllerFull.Location = new System.Drawing.Point(12, 31);
-            this.controllerFull.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.controllerFull.Location = new System.Drawing.Point(10, 27);
             this.controllerFull.Name = "controllerFull";
-            this.controllerFull.Size = new System.Drawing.Size(108, 19);
+            this.controllerFull.Size = new System.Drawing.Size(94, 17);
             this.controllerFull.TabIndex = 29;
             this.controllerFull.TabStop = true;
             this.controllerFull.Text = "Controller (voll)";
@@ -457,10 +428,9 @@
             // 
             this.isVR.AutoSize = true;
             this.isVR.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.isVR.Location = new System.Drawing.Point(12, 58);
-            this.isVR.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.isVR.Location = new System.Drawing.Point(10, 50);
             this.isVR.Name = "isVR";
-            this.isVR.Size = new System.Drawing.Size(40, 19);
+            this.isVR.Size = new System.Drawing.Size(41, 17);
             this.isVR.TabIndex = 27;
             this.isVR.Text = "VR";
             this.isVR.UseVisualStyleBackColor = true;
@@ -468,10 +438,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(8, 13);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(7, 11);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(109, 13);
             this.label9.TabIndex = 26;
@@ -489,10 +458,9 @@
             "Action",
             "Indie",
             "Adventure"});
-            this.genresCombo.Location = new System.Drawing.Point(102, 130);
-            this.genresCombo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.genresCombo.Location = new System.Drawing.Point(87, 113);
             this.genresCombo.Name = "genresCombo";
-            this.genresCombo.Size = new System.Drawing.Size(116, 23);
+            this.genresCombo.Size = new System.Drawing.Size(100, 21);
             this.genresCombo.TabIndex = 30;
             // 
             // button1
@@ -504,19 +472,18 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(275, 132);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Location = new System.Drawing.Point(236, 114);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 27);
+            this.button1.Size = new System.Drawing.Size(55, 23);
             this.button1.TabIndex = 31;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // GameProperties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(630, 492);
+            this.ClientSize = new System.Drawing.Size(540, 426);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.genresCombo);
             this.Controls.Add(this.buttonProperties);
@@ -536,11 +503,10 @@
             this.Controls.Add(this.saveProperties);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(646, 531);
+            this.MaximumSize = new System.Drawing.Size(556, 465);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(464, 306);
+            this.MinimumSize = new System.Drawing.Size(400, 270);
             this.Name = "GameProperties";
             this.Text = "Eigenschaften";
             this.panel1.ResumeLayout(false);

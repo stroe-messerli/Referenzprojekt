@@ -51,7 +51,7 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             isSinglePlayer.Checked = _game.Attributes.IsSinglePlayer;
             isVR.Checked = _game.Attributes.IsVRSupportive;
             publisher.Text = _game.Publisher;
-            tags.Text = string.Join(',', _game.Tags);
+            tags.Text = string.Join(",", _game.Tags);
             genresCombo.Items.Add(_game.Genre);
             locationPath.Text = _game.Location;
             title.Text = _game.Title;

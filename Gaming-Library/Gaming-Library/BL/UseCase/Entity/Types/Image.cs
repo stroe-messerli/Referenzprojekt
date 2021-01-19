@@ -26,7 +26,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
             return ImagePath;
         }
 
-        [System.Text.Json.Serialization.JsonIgnore]
+        [Newtonsoft.Json.JsonIgnore]
         public Bitmap GameImage { get; }
         public string ImagePath { get; }
         public static bool operator ==(Image left, Image right) => Operator.Weave(left, right);

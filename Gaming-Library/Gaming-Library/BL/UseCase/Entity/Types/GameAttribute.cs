@@ -2,7 +2,7 @@
 
 namespace Gaming_Library.BL.UseCase.Entity.Types
 {
-    public record GameAttributes
+    public sealed class GameAttributes
     {
         public bool IsMultiPlayer { get; set; }
         public bool IsSinglePlayer { get; set; }
