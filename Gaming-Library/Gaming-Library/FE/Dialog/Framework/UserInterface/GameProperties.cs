@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using BrightIdeasSoftware;
-using Gaming_Library.BL.UseCase.Entity;
-using Gaming_Library.BL.UseCase.Entity.Types;
 using System.IO;
 
 namespace Gaming_Library.FE.Dialog.Framework.UserInterface
@@ -89,7 +80,7 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         private void searchForTitle_Click(object sender, EventArgs e)
         {
-
+            _controller.SearchForTitle(title.Text);
         }
 
         private void buttonSetImagePath_Click(object sender, EventArgs e)

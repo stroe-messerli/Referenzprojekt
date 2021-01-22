@@ -71,12 +71,16 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
             SendRequest(request);
         }
 
+        public void SearchForTitle(string title)
+        {
+            SendRequest(new BL.UseCase.InputPort.Requests.SearchForGame(title));
+        }
+
         private void SendRequest(IRequest request)
         {
             var requestModel = new RequestModel();
             requestModel.Requests.Add(request);
             _injector.Interactor.Update(requestModel);
         }
-
     }
 }

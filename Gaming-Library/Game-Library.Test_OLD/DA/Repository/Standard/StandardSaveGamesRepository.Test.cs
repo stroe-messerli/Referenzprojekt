@@ -14,7 +14,7 @@ namespace Game_Library.Test.DA.Repository.Standard
     [TestClass]
     public class StandardSaveGamesRepositoryTest
     {
-        private readonly string _fileName = "..\\testGames.json";
+        private readonly string _fileName = "C:/Users/Xhan/Desktop/testGames.json";
 
 
         [TestCategory("Unit Test")]
@@ -54,9 +54,11 @@ namespace Game_Library.Test.DA.Repository.Standard
             {
                 new GameData()
             };
-            fileHandler.SaveToFile(games, _fileName);
+            var filename = "C:/Users/Xhan/Desktop/testGames.json";
+            fileHandler.SaveToFile(games, filename);
+            fileHandler.SaveToFile(null, filename);
 
-            var gamesString = File.ReadAllText(_fileName);
+            var gamesString = File.ReadAllText(filename);
             games = System.Text.Json.JsonSerializer.Deserialize<List<GameData>>(gamesString);
             Assert.IsTrue(games.Count == 1);
         }
@@ -66,11 +68,13 @@ namespace Game_Library.Test.DA.Repository.Standard
         public void SaveAllNoItemsTest()
         {
             var fileHandler = StandardSaveGamesRepository.Create();
-            fileHandler.SaveToFile(null, _fileName);
 
-            var gamesString = File.ReadAllText(_fileName);
+            var filename = "C:/Users/Xhan/Desktop/testGames.json";
+            fileHandler.SaveToFile(null, filename);
+
+            var gamesString = File.ReadAllText(filename);
             var games = System.Text.Json.JsonSerializer.Deserialize<List<GameData>>(gamesString);
-            Assert.IsNull(games);
+            Assert.IsTrue(games.Count == 0);
         }
     }
 }

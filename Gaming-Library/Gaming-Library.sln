@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaming-Library", "Gaming-Library\Gaming-Library.csproj", "{1543C752-C712-410E-9D9F-93BFAED1CBF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game-Library.Test", "Game-Library.Test\Game-Library.Test.csproj", "{F15C9FD3-F831-4D3F-863B-64F79EB6D697}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gaming-Library.Test", "Game-Library.Test\Gaming-Library.Test.csproj", "{F38C438E-9CA3-4CFC-BC7B-A30B3BCD3D7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1543C752-C712-410E-9D9F-93BFAED1CBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1543C752-C712-410E-9D9F-93BFAED1CBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1543C752-C712-410E-9D9F-93BFAED1CBF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F15C9FD3-F831-4D3F-863B-64F79EB6D697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F15C9FD3-F831-4D3F-863B-64F79EB6D697}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F15C9FD3-F831-4D3F-863B-64F79EB6D697}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F15C9FD3-F831-4D3F-863B-64F79EB6D697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38C438E-9CA3-4CFC-BC7B-A30B3BCD3D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38C438E-9CA3-4CFC-BC7B-A30B3BCD3D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38C438E-9CA3-4CFC-BC7B-A30B3BCD3D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38C438E-9CA3-4CFC-BC7B-A30B3BCD3D7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

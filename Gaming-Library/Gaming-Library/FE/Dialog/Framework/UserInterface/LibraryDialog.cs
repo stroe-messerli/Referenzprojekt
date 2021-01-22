@@ -144,6 +144,7 @@ namespace Gaming_Library
         {
             //hide button after action was requested
             timer2.Start();
+
             var propertiesForm = new GameProperties(_controller, new Model.GameData());
             propertiesForm.ShowDialog(this);
         }

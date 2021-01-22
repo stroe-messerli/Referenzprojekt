@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -37,7 +36,7 @@ namespace Game_Library.UseCase.OutputPort
                 Year = new Gaming_Library.BL.UseCase.Entity.Types.YearOfPublication(new DateTime(2021, 1, 1)),
                 Genres = new Gaming_Library.BL.UseCase.Entity.Types.Genre[1] { new Gaming_Library.BL.UseCase.Entity.Types.Genre("Unittest") },
                 Attributes = new Gaming_Library.BL.UseCase.Entity.Types.GameAttributes(),
-                Image = new Gaming_Library.BL.UseCase.Entity.Types.Image("C:\\"),
+                Image = new Gaming_Library.BL.UseCase.Entity.Types.Image(null),
                 Location = new Gaming_Library.BL.UseCase.Entity.Types.Location("here"),
                 Tags = new Gaming_Library.BL.UseCase.Entity.Types.Tag[2] { new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag1"), new Gaming_Library.BL.UseCase.Entity.Types.Tag("tag2") },
             });

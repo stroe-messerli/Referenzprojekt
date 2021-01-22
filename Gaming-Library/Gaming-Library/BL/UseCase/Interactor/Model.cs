@@ -9,6 +9,7 @@ namespace Gaming_Library.BL.UseCase.Interactor
     public sealed class Model
     {
         public List<Entity.GameData> Games { get; set; }
+
         public bool IsModified { get; set; }
 
         public Model()

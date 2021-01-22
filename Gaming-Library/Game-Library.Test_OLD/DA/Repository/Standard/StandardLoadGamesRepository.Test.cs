@@ -14,7 +14,7 @@ namespace Game_Library.Test.DA.Repository.Standard
     [TestClass]
     public class StandardLoadGamesRepositoryTest
     {
-        private readonly string _fileName = "C:\\Users\\haziraj\\Desktop\\testGames.json";
+        private readonly string _fileName = "C:/Users/Xhan/Desktop/testGames.json";
 
         [TestCategory("Unit Test")]
 
@@ -29,8 +29,7 @@ namespace Game_Library.Test.DA.Repository.Standard
         public void LoadAllFromFileNoItemsTest()
         {
             var fileHandler = StandardLoadGamesRepository.Create();
-            File.WriteAllText(_fileName, "");
-            Assert.IsTrue(fileHandler.LoadAllFromFile(_fileName) == null);
+            Assert.IsTrue(fileHandler.LoadAllFromFile(_fileName).Count == 0);
         }
 
         [TestMethod]

@@ -101,6 +101,7 @@
     <Compile Include="BL\UseCase\InputPort\Requests\Delete.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Load.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Modify.cs" />
+    <Compile Include="BL\UseCase\InputPort\Requests\SearchForGame.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\Start.cs" />
     <Compile Include="BL\UseCase\InputPort\Requests\OpenProperties.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Add.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="BL\UseCase\Interactor\Commands\Load.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Modify.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Save.cs" />
+    <Compile Include="BL\UseCase\Interactor\Commands\SearchForGame.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Start.cs" />
     <Compile Include="BL\UseCase\Interactor\Commands\Delete.cs" />
     <Compile Include="BL\UseCase\Interactor\PathComposer\GamePathComposerFactory.cs" />

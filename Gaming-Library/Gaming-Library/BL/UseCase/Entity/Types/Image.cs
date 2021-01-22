@@ -16,7 +16,7 @@ namespace Gaming_Library.BL.UseCase.Entity.Types
             ImagePath = imagePath;
             try {
                 GameImage = new Bitmap(imagePath);
-            } catch (FileNotFoundException ex) {
+            } catch (ArgumentException ex) {
                 //TODO: react appropriately
             }
         }

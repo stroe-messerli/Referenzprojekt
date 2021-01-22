@@ -9,5 +9,6 @@ namespace Gaming_Library.FE.Dialog.Adapter.Controller
         public void DeleteGame(int index);
         public void AddGame(View.Model.GameData game);
         public void ModifyGame(int index, View.Model.GameData game);
+        void SearchForTitle(string title);
     }
 }

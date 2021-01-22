@@ -21,7 +21,11 @@ namespace Gaming_Library.DA.Repository.Standard
         }
         public List<GameData> LoadAllFromFile(string path)
         {
-            return System.Text.Json.JsonSerializer.Deserialize<List<GameData>>(File.ReadAllText(path));
+            try {
+                return System.Text.Json.JsonSerializer.Deserialize<List<GameData>>(File.ReadAllText(path));
+            } catch (Exception ex) {
+                return null;
+            }
         }
     }
 }
