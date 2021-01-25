@@ -17,6 +17,12 @@ namespace Gaming_Library.DA.Repository
 
     public class App
     {
+        public App(int appid, string name)
+        {
+            this.appid = appid;
+            this.name = name;
+        }
+
         public int appid { get; set; }
         public string name { get; set; }
     }

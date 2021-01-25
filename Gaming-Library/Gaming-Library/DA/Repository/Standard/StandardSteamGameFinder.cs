@@ -9,16 +9,13 @@ namespace Gaming_Library.DA.Repository.Standard
 {
     public class StandardSteamGameFinder : ISteamGameFinder
     {
-        private ILoadGamesRepository _repository;
 
-
-        public static ISteamGameFinder Create(ILoadGamesRepository repository)
+        public static ISteamGameFinder Create()
         {
-            return new StandardSteamGameFinder(repository);
+            return new StandardSteamGameFinder();
         }
-        private StandardSteamGameFinder(ILoadGamesRepository repository)
+        private StandardSteamGameFinder()
         {
-            _repository = repository;
         }
 
         public List<App> FindGame(string term, string FilePath)

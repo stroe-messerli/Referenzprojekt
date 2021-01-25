@@ -35,7 +35,7 @@
             this.buttonProperties = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.searchForTitle = new System.Windows.Forms.Button();
+            this.buttonSearchForTitle = new System.Windows.Forms.Button();
             this.locationPath = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSetFolderPath = new System.Windows.Forms.Button();
@@ -62,8 +62,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.genresCombo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonEditGenres = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.steamID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             this.saveProperties.Location = new System.Drawing.Point(453, 391);
             this.saveProperties.Name = "saveProperties";
             this.saveProperties.Size = new System.Drawing.Size(75, 23);
-            this.saveProperties.TabIndex = 0;
+            this.saveProperties.TabIndex = 9;
             this.saveProperties.Text = "Speichern";
             this.saveProperties.UseVisualStyleBackColor = false;
             this.saveProperties.Click += new System.EventHandler(this.saveProperties_Click);
@@ -96,7 +97,7 @@
             this.cancel.Location = new System.Drawing.Point(372, 391);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
-            this.cancel.TabIndex = 1;
+            this.cancel.TabIndex = 8;
             this.cancel.Text = "Abbrechen";
             this.cancel.UseVisualStyleBackColor = false;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
@@ -126,7 +127,7 @@
             this.buttonProperties.Location = new System.Drawing.Point(1, 164);
             this.buttonProperties.Name = "buttonProperties";
             this.buttonProperties.Size = new System.Drawing.Size(539, 27);
-            this.buttonProperties.TabIndex = 28;
+            this.buttonProperties.TabIndex = 6;
             this.buttonProperties.Text = "Erweiterte Eigenschaften";
             this.buttonProperties.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonProperties.UseVisualStyleBackColor = false;
@@ -155,21 +156,21 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Genre(s)";
             // 
-            // searchForTitle
+            // buttonSearchForTitle
             // 
-            this.searchForTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.searchForTitle.FlatAppearance.BorderSize = 0;
-            this.searchForTitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.searchForTitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.searchForTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchForTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.searchForTitle.Location = new System.Drawing.Point(216, 37);
-            this.searchForTitle.Name = "searchForTitle";
-            this.searchForTitle.Size = new System.Drawing.Size(231, 20);
-            this.searchForTitle.TabIndex = 24;
-            this.searchForTitle.Text = "Dieses Spiel auf Steam suchen";
-            this.searchForTitle.UseVisualStyleBackColor = false;
-            this.searchForTitle.Click += new System.EventHandler(this.searchForTitle_Click);
+            this.buttonSearchForTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonSearchForTitle.FlatAppearance.BorderSize = 0;
+            this.buttonSearchForTitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonSearchForTitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonSearchForTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchForTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSearchForTitle.Location = new System.Drawing.Point(216, 37);
+            this.buttonSearchForTitle.Name = "buttonSearchForTitle";
+            this.buttonSearchForTitle.Size = new System.Drawing.Size(231, 20);
+            this.buttonSearchForTitle.TabIndex = 1;
+            this.buttonSearchForTitle.Text = "Dieses Spiel auf Steam suchen";
+            this.buttonSearchForTitle.UseVisualStyleBackColor = false;
+            this.buttonSearchForTitle.Click += new System.EventHandler(this.buttonSearchForTitle_Click);
             // 
             // locationPath
             // 
@@ -205,7 +206,7 @@
             this.buttonSetFolderPath.Location = new System.Drawing.Point(236, 91);
             this.buttonSetFolderPath.Name = "buttonSetFolderPath";
             this.buttonSetFolderPath.Size = new System.Drawing.Size(55, 23);
-            this.buttonSetFolderPath.TabIndex = 22;
+            this.buttonSetFolderPath.TabIndex = 3;
             this.buttonSetFolderPath.UseVisualStyleBackColor = false;
             this.buttonSetFolderPath.Click += new System.EventHandler(this.buttonSetFolderPath_Click);
             // 
@@ -225,7 +226,7 @@
             this.title.Location = new System.Drawing.Point(87, 37);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(100, 20);
-            this.title.TabIndex = 18;
+            this.title.TabIndex = 0;
             // 
             // label2
             // 
@@ -260,7 +261,7 @@
             this.buttonSetImagePath.Location = new System.Drawing.Point(236, 68);
             this.buttonSetImagePath.Name = "buttonSetImagePath";
             this.buttonSetImagePath.Size = new System.Drawing.Size(55, 23);
-            this.buttonSetImagePath.TabIndex = 19;
+            this.buttonSetImagePath.TabIndex = 2;
             this.buttonSetImagePath.UseVisualStyleBackColor = false;
             this.buttonSetImagePath.Click += new System.EventHandler(this.buttonSetImagePath_Click);
             // 
@@ -289,7 +290,7 @@
             this.panel1.MaximumSize = new System.Drawing.Size(540, 175);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(540, 175);
-            this.panel1.TabIndex = 29;
+            this.panel1.TabIndex = 7;
             this.panel1.Visible = false;
             // 
             // publisher
@@ -297,21 +298,22 @@
             this.publisher.Location = new System.Drawing.Point(394, 48);
             this.publisher.Name = "publisher";
             this.publisher.Size = new System.Drawing.Size(134, 20);
-            this.publisher.TabIndex = 41;
+            this.publisher.TabIndex = 7;
             // 
             // tags
             // 
             this.tags.Location = new System.Drawing.Point(394, 82);
             this.tags.Name = "tags";
             this.tags.Size = new System.Drawing.Size(134, 20);
-            this.tags.TabIndex = 40;
+            this.tags.TabIndex = 8;
             // 
             // publicationYear
             // 
             this.publicationYear.Location = new System.Drawing.Point(394, 11);
             this.publicationYear.Name = "publicationYear";
             this.publicationYear.Size = new System.Drawing.Size(134, 20);
-            this.publicationYear.TabIndex = 39;
+            this.publicationYear.TabIndex = 6;
+            this.publicationYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.publicationYear_KeyPress);
             // 
             // label14
             // 
@@ -363,7 +365,7 @@
             this.isCoop.Location = new System.Drawing.Point(187, 108);
             this.isCoop.Name = "isCoop";
             this.isCoop.Size = new System.Drawing.Size(77, 17);
-            this.isCoop.TabIndex = 34;
+            this.isCoop.TabIndex = 5;
             this.isCoop.Text = "Kooperativ";
             this.isCoop.UseVisualStyleBackColor = true;
             // 
@@ -374,7 +376,7 @@
             this.isMultiPlayer.Location = new System.Drawing.Point(100, 108);
             this.isMultiPlayer.Name = "isMultiPlayer";
             this.isMultiPlayer.Size = new System.Drawing.Size(80, 17);
-            this.isMultiPlayer.TabIndex = 33;
+            this.isMultiPlayer.TabIndex = 4;
             this.isMultiPlayer.Text = "Mehrspieler";
             this.isMultiPlayer.UseVisualStyleBackColor = true;
             // 
@@ -385,7 +387,7 @@
             this.isSinglePlayer.Location = new System.Drawing.Point(10, 108);
             this.isSinglePlayer.Name = "isSinglePlayer";
             this.isSinglePlayer.Size = new System.Drawing.Size(84, 17);
-            this.isSinglePlayer.TabIndex = 32;
+            this.isSinglePlayer.TabIndex = 3;
             this.isSinglePlayer.Text = "Einzelspieler";
             this.isSinglePlayer.UseVisualStyleBackColor = true;
             // 
@@ -407,7 +409,7 @@
             this.controllerPart.Location = new System.Drawing.Point(110, 27);
             this.controllerPart.Name = "controllerPart";
             this.controllerPart.Size = new System.Drawing.Size(118, 17);
-            this.controllerPart.TabIndex = 30;
+            this.controllerPart.TabIndex = 1;
             this.controllerPart.TabStop = true;
             this.controllerPart.Text = "Controller (teilweise)";
             this.controllerPart.UseVisualStyleBackColor = true;
@@ -419,7 +421,7 @@
             this.controllerFull.Location = new System.Drawing.Point(10, 27);
             this.controllerFull.Name = "controllerFull";
             this.controllerFull.Size = new System.Drawing.Size(94, 17);
-            this.controllerFull.TabIndex = 29;
+            this.controllerFull.TabIndex = 0;
             this.controllerFull.TabStop = true;
             this.controllerFull.Text = "Controller (voll)";
             this.controllerFull.UseVisualStyleBackColor = true;
@@ -431,7 +433,7 @@
             this.isVR.Location = new System.Drawing.Point(10, 50);
             this.isVR.Name = "isVR";
             this.isVR.Size = new System.Drawing.Size(41, 17);
-            this.isVR.TabIndex = 27;
+            this.isVR.TabIndex = 2;
             this.isVR.Text = "VR";
             this.isVR.UseVisualStyleBackColor = true;
             // 
@@ -461,22 +463,33 @@
             this.genresCombo.Location = new System.Drawing.Point(87, 113);
             this.genresCombo.Name = "genresCombo";
             this.genresCombo.Size = new System.Drawing.Size(100, 21);
-            this.genresCombo.TabIndex = 30;
+            this.genresCombo.TabIndex = 4;
             // 
-            // button1
+            // buttonEditGenres
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(236, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 23);
-            this.button1.TabIndex = 31;
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonEditGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.buttonEditGenres.FlatAppearance.BorderSize = 0;
+            this.buttonEditGenres.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.buttonEditGenres.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.buttonEditGenres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditGenres.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEditGenres.Image = ((System.Drawing.Image)(resources.GetObject("buttonEditGenres.Image")));
+            this.buttonEditGenres.Location = new System.Drawing.Point(236, 114);
+            this.buttonEditGenres.Name = "buttonEditGenres";
+            this.buttonEditGenres.Size = new System.Drawing.Size(55, 23);
+            this.buttonEditGenres.TabIndex = 5;
+            this.buttonEditGenres.UseVisualStyleBackColor = false;
+            // 
+            // steamID
+            // 
+            this.steamID.AutoSize = true;
+            this.steamID.BackColor = System.Drawing.Color.Black;
+            this.steamID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.steamID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.steamID.Location = new System.Drawing.Point(84, 22);
+            this.steamID.Name = "steamID";
+            this.steamID.Size = new System.Drawing.Size(0, 13);
+            this.steamID.TabIndex = 32;
             // 
             // GameProperties
             // 
@@ -484,12 +497,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(540, 426);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.steamID);
+            this.Controls.Add(this.buttonEditGenres);
             this.Controls.Add(this.genresCombo);
             this.Controls.Add(this.buttonProperties);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.searchForTitle);
+            this.Controls.Add(this.buttonSearchForTitle);
             this.Controls.Add(this.locationPath);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSetFolderPath);
@@ -524,7 +538,7 @@
         private System.Windows.Forms.Button buttonProperties;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button searchForTitle;
+        private System.Windows.Forms.Button buttonSearchForTitle;
         private System.Windows.Forms.Label locationPath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSetFolderPath;
@@ -551,7 +565,8 @@
         private System.Windows.Forms.TextBox tags;
         private System.Windows.Forms.TextBox publicationYear;
         private System.Windows.Forms.ComboBox genresCombo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonEditGenres;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label steamID;
     }
 }

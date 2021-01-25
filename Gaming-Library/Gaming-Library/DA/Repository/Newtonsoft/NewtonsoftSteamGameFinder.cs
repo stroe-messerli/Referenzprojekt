@@ -10,15 +10,13 @@ namespace Gaming_Library.DA.Repository.Newtonsoft
 {
     public class NewtonsoftSteamGameFinder : ISteamGameFinder
     {
-        private ILoadGamesRepository _repository;
 
-        public static ISteamGameFinder Create(ILoadGamesRepository repository)
+        public static ISteamGameFinder Create()
         {
-            return new NewtonsoftSteamGameFinder(repository);
+            return new NewtonsoftSteamGameFinder();
         }
-        private NewtonsoftSteamGameFinder(ILoadGamesRepository repository)
+        private NewtonsoftSteamGameFinder()
         {
-            _repository = repository;
         }
 
 

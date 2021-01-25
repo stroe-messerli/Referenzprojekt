@@ -30,7 +30,12 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
 
         private void SetupTooltips()
         {
-            toolTip1.SetToolTip(locationPath, "Der lokale Pfad der .exe-Datei");
+            toolTip1.SetToolTip(buttonSetFolderPath, "Wähle hier den lokalen Pfad der .exe-Datei");
+            toolTip1.SetToolTip(genresCombo, "Wähle hier das Haupt-Genre dieses Spieles aus.");
+            toolTip1.SetToolTip(buttonEditGenres, "Passe hier die für dieses Spiel zutreffenden Genres an.");
+            toolTip1.SetToolTip(buttonSetImagePath, "Wähle hier das anzuzeigende Bild aus.");
+            toolTip1.SetToolTip(buttonSearchForTitle, "Es werden die zu dem eingegebenen Titel passenden Spiele auf Steam gesucht");
+            toolTip1.SetToolTip(tags, "Durch Kommas (',') separierte Tags, zur Erleichterung von Suche/Filtern");
         }
 
         private void SetupControls()
@@ -44,7 +49,7 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             publisher.Text = _game.Publisher;
             tags.Text = string.Join(",", _game.Tags);
             genresCombo.Items.Add(_game.Genre);
-            locationPath.Text = _game.Location;
+            locationPath.Text = Path.GetFileName(_game.Location);
             title.Text = _game.Title;
             publicationYear.Text = _game.Year;
             imagePath.Text = Path.GetFileName(_game.ImagePath);
@@ -66,7 +71,6 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             _game.Publisher = publisher.Text;
             _game.Tags = tags.Text.Split(',').ToArray();
             _game.Genre = (string)genresCombo.SelectedItem;
-            _game.Location = locationPath.Text;
             _game.Title = title.Text;
             _game.Year = publicationYear.Text;
 
@@ -78,7 +82,7 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
             Close();
         }
 
-        private void searchForTitle_Click(object sender, EventArgs e)
+        private void buttonSearchForTitle_Click(object sender, EventArgs e)
         {
             _controller.SearchForTitle(title.Text);
         }
@@ -110,8 +114,20 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         private void buttonSetFolderPath_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+
             if (ofd.ShowDialog() == DialogResult.OK) {
-                locationPath.Text = ofd.FileName;
+                if (ofd.FileName.EndsWith(".exe")) {
+                    _game.Location = ofd.FileName;
+                    locationPath.Text = Path.GetFileName(ofd.FileName);
+                    buttonSearchForTitle.Visible = false;
+                    buttonSearchForTitle.Enabled = false;
+                    return;
+                }
+
+                MessageBox.Show(this,
+                  "Die ausgewählte Datei entspricht nicht dem benötigten Format (.exe)",
+                  "Information",
+                  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -156,6 +172,13 @@ namespace Gaming_Library.FE.Dialog.Framework.UserInterface
         {
             Height += adjustment;
             Width += adjustment;
+        }
+
+        private void publicationYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
+                e.Handled = true;
+            }
         }
     }
 }

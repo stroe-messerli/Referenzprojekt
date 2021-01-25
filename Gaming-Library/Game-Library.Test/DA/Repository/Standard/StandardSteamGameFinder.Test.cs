@@ -14,7 +14,7 @@ namespace Game_Library.Test.DA.Repository.Standard
     [TestClass]
     public class StandardSteamGameFinderTest
     {
-        private readonly string _fileName = "C:/Users/Xhan/Desktop/testGames.json";
+        private readonly string _fileName = "C:\\Users\\haziraj\\Documents\\Referenzprojekt\\Gaming-Library\\Game-Library.Test\\v0002.json";
 
 
         [TestCategory("Unit Test")]
@@ -22,25 +22,23 @@ namespace Game_Library.Test.DA.Repository.Standard
         [TestMethod]
         public void CreateTest()
         {
-            var repMock = new Mock<Gaming_Library.DA.Repository.ILoadGamesRepository>();
-            var finder = StandardSteamGameFinder.Create(repMock.Object);
+            var finder = StandardSteamGameFinder.Create();
             Assert.IsNotNull(finder);
         }
 
         [TestMethod]
         public void FindGameOneMatchingTest()
         {
-            var game = new GameData();
-            game.Title = new Gaming_Library.BL.UseCase.Entity.Types.Title("Game1");
-            var games = new List<GameData>()
+            var games = new Gaming_Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
             {
-                game,
+                new Gaming_Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.DA.Repository.App(2,"fghfgh"),
+                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
             };
-
-            var repMock = new Mock<Gaming_Library.DA.Repository.ILoadGamesRepository>();
-            repMock.Setup(x => x.LoadAllFromFile(_fileName)).Returns(games);
-
-            var finder = StandardSteamGameFinder.Create(repMock.Object);
+            File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
+            var finder = StandardSteamGameFinder.Create();
 
             var result = finder.FindGame("Game1", _fileName);
             Assert.IsTrue(result.Count == 1);
@@ -49,41 +47,39 @@ namespace Game_Library.Test.DA.Repository.Standard
         [TestMethod]
         public void FindGameNoneMatchingTest()
         {
-            var games = new List<GameData>()
+            var games = new Gaming_Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
             {
+                new Gaming_Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.DA.Repository.App(2,"Gam"),
+                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
             };
+            File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
+            var finder = StandardSteamGameFinder.Create();
 
-            var repMock = new Mock<Gaming_Library.DA.Repository.ILoadGamesRepository>();
-            repMock.Setup(x => x.LoadAllFromFile(_fileName)).Returns(games);
-
-            var finder = StandardSteamGameFinder.Create(repMock.Object);
-
-            var result = finder.FindGame("Game2", _fileName);
+            var result = finder.FindGame("CSGO2", _fileName);
             Assert.IsTrue(result.Count == 0);
         }
 
         [TestMethod]
         public void FindGameMultipleMatchingTest()
         {
-            var game = new GameData();
-            game.Title = new Gaming_Library.BL.UseCase.Entity.Types.Title("Game1");
-
-            var partialMatchingGame = new GameData();
-            partialMatchingGame.Title = new Gaming_Library.BL.UseCase.Entity.Types.Title("Gam1");
-
-            var games = new List<GameData>()
+            var games = new Gaming_Library.DA.Repository.SteamGameList();
+            games.applist = new Gaming_Library.DA.Repository.AppList();
+            games.applist.apps = new List<Gaming_Library.DA.Repository.App>()
             {
-                game,
-                partialMatchingGame,
-                new GameData(),
+                new Gaming_Library.DA.Repository.App(1,"Game1"),
+                new Gaming_Library.DA.Repository.App(2,"Gam"),
+                new Gaming_Library.DA.Repository.App(3,"otherStuff"),
             };
 
-            var repMock = new Mock<Gaming_Library.DA.Repository.ILoadGamesRepository>();
-            repMock.Setup(x => x.LoadAllFromFile(_fileName)).Returns(games);
+            File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
 
-            var finder = StandardSteamGameFinder.Create(repMock.Object);
 
-            var result = finder.FindGame("Game1", _fileName);
+            var finder = Gaming_Library.DA.Repository.Standard.StandardSteamGameFinder.Create();
+
+            var result = finder.FindGame("Gam", _fileName);
             Assert.IsTrue(result.Count == 2);
         }
     }
