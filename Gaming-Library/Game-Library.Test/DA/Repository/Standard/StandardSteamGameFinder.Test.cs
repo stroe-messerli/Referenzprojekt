@@ -77,7 +77,7 @@ namespace Game_Library.Test.DA.Repository.Standard
             File.WriteAllText(_fileName, System.Text.Json.JsonSerializer.Serialize(games));
 
 
-            var finder = Gaming_Library.DA.Repository.Standard.StandardSteamGameFinder.Create();
+            var finder = StandardSteamGameFinder.Create();
 
             var result = finder.FindGame("Gam", _fileName);
             Assert.IsTrue(result.Count == 2);

@@ -79,101 +79,126 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\UseCase\Entity\IGameEntity.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\GameAttribute.cs" />
-    <Compile Include="BL\UseCase\Entity\GameData.cs" />
-    <Compile Include="BL\UseCase\Entity\GameEntity.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Genre.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Location.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Tag.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\YearOfPublication.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Publisher.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Image.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\Title.cs" />
-    <Compile Include="BL\UseCase\Entity\Types\SteamId.cs" />
-    <Compile Include="BL\UseCase\InputPort\IInteractor.cs" />
-    <Compile Include="BL\UseCase\InputPort\RequestModel.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Add.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\IProcessor.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\IRequest.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Processor.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Save.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Delete.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Load.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Modify.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\SearchForGame.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\Start.cs" />
-    <Compile Include="BL\UseCase\InputPort\Requests\OpenProperties.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Add.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Commands.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\ICommands.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Load.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Modify.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Save.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\SearchForGame.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Start.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\Delete.cs" />
-    <Compile Include="BL\UseCase\Interactor\PathComposer\GamePathComposerFactory.cs" />
-    <Compile Include="BL\UseCase\Interactor\PathComposer\IGamePathComposer.cs" />
-    <Compile Include="BL\UseCase\Interactor\PathComposer\SteamGamePathComposer.cs" />
-    <Compile Include="BL\UseCase\Interactor\PathComposer\PathTypes.cs" />
-    <Compile Include="BL\UseCase\Interactor\Commands\ICommand.cs" />
-    <Compile Include="BL\UseCase\Interactor\Interactor.cs" />
-    <Compile Include="BL\UseCase\Interactor\Model.cs" />
-    <Compile Include="BL\UseCase\OutputPort\IPresenter.cs" />
-    <Compile Include="BL\UseCase\OutputPort\ResponseModel.cs" />
-    <Compile Include="BL\UseCase\OutputPort\AbstractPresenter.cs" />
-    <Compile Include="BL\UseCase\OutputPort\IToResponseModel.cs" />
-    <Compile Include="BL\UseCase\OutputPort\ToResponseModel.cs" />
-    <Compile Include="DA\Adapter\RepositoryModel.cs" />
-    <Compile Include="DA\Repository\Newtonsoft\LoadGamesRepository.cs" />
-    <Compile Include="DA\Repository\Newtonsoft\SaveGamesRepository.cs" />
-    <Compile Include="DA\Repository\Newtonsoft\NewtonsoftSteamGameFinder.cs" />
-    <Compile Include="DA\Repository\Standard\StandardSaveGamesRepository.cs" />
-    <Compile Include="DA\Repository\Standard\StandardLoadGamesRepository.cs" />
-    <Compile Include="DA\Repository\Standard\StandardSteamGameFinder.cs" />
-    <Compile Include="DA\Repository\ILoadGamesRepository.cs" />
-    <Compile Include="DA\Repository\ISaveGamesRepository.cs" />
-    <Compile Include="DA\Repository\ISteamGameFinder.cs" />
-    <Compile Include="DA\Repository\SteamFileExtractionClasses.cs" />
-    <Compile Include="FE\Dialog\Adapter\Controller\Controller.cs" />
-    <Compile Include="FE\Dialog\Adapter\Controller\IController.cs" />
-    <Compile Include="FE\Dialog\Adapter\Controller\ToAddRequest.cs" />
-    <Compile Include="FE\Dialog\Adapter\Controller\ToModifyRequest.cs" />
-    <Compile Include="FE\Dialog\Adapter\Presenter\Presenter.cs" />
-    <Compile Include="FE\Dialog\Adapter\Presenter\IToViewModel.cs" />
-    <Compile Include="FE\Dialog\Adapter\Presenter\ToViewModel.cs" />
-    <Compile Include="FE\Dialog\Adapter\View\IView.cs" />
-    <Compile Include="FE\Dialog\Adapter\View\Model.cs" />
-    <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.cs">
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Entity\GenreData.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\IInteractor.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\RequestModel.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\Requests\IProcessor.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\Requests\IRequest.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\Requests\Processor.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\InputPort\Requests\Save.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Commands\Commands.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Commands\ICommand.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Commands\Save.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Interactor.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\Interactor\Model.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\IPresenter.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\IToResponseModel.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\ResponseModel.cs" />
+    <Compile Include="GenresPropertyDialog\BL\UseCase\OutputPort\ToResponseModel.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\Controller.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\IController.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Controller\ToSaveRequest.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Presenter\IToViewModel.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Presenter\Presenter.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\Presenter\ToViewModel.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\View\IView.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Adapter\View\Model.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\IGameEntity.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\GameAttribute.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\GameData.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\GameEntity.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Genre.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Location.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Tag.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\YearOfPublication.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Publisher.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Image.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\Title.cs" />
+    <Compile Include="Library\BL\UseCase\Entity\Types\SteamId.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\IInteractor.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\RequestModel.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Add.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\IProcessor.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\IRequest.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Processor.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Save.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Delete.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Load.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Modify.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\SearchForGame.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\Start.cs" />
+    <Compile Include="Library\BL\UseCase\InputPort\Requests\OpenProperties.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Add.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Commands.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\ICommands.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Load.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Modify.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Save.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\SearchForGame.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Start.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\Delete.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\PathComposer\GamePathComposerFactory.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\PathComposer\IGamePathComposer.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\PathComposer\SteamGamePathComposer.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\PathComposer\PathTypes.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Commands\ICommand.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Interactor.cs" />
+    <Compile Include="Library\BL\UseCase\Interactor\Model.cs" />
+    <Compile Include="Library\BL\UseCase\OutputPort\IPresenter.cs" />
+    <Compile Include="Library\BL\UseCase\OutputPort\IResponseModel.cs" />
+    <Compile Include="Library\BL\UseCase\OutputPort\ResponseModel.cs" />
+    <Compile Include="Library\BL\UseCase\OutputPort\IToResponseModel.cs" />
+    <Compile Include="Library\BL\UseCase\OutputPort\ToResponseModel.cs" />
+    <Compile Include="Library\DA\Adapter\RepositoryModel.cs" />
+    <Compile Include="Library\DA\Repository\Newtonsoft\LoadGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\Newtonsoft\SaveGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\Newtonsoft\NewtonsoftSteamGameFinder.cs" />
+    <Compile Include="Library\DA\Repository\Standard\StandardSaveGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\Standard\StandardLoadGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\Standard\StandardSteamGameFinder.cs" />
+    <Compile Include="Library\DA\Repository\ILoadGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\ISaveGamesRepository.cs" />
+    <Compile Include="Library\DA\Repository\ISteamGameFinder.cs" />
+    <Compile Include="Library\DA\Repository\SteamFileExtractionClasses.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Controller\Controller.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Controller\IController.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Controller\ToAddRequest.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Controller\ToModifyRequest.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Presenter\Presenter.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Presenter\IToViewModel.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\Presenter\ToViewModel.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\View\IView.cs" />
+    <Compile Include="Library\FE\Dialog\Adapter\View\Model.cs" />
+    <Compile Include="Library\FE\Dialog\Framework\UserInterface\GameProperties.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FE\Dialog\Framework\UserInterface\GameProperties.Designer.cs">
+    <Compile Include="Library\FE\Dialog\Framework\UserInterface\GameProperties.Designer.cs">
       <DependentUpon>GameProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="FE\Dialog\Framework\UserInterface\LibraryDialog.cs">
+    <Compile Include="Library\FE\Dialog\Framework\UserInterface\LibraryDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FE\Dialog\Framework\UserInterface\LibraryDialog.Designer.cs">
+    <Compile Include="Library\FE\Dialog\Framework\UserInterface\LibraryDialog.Designer.cs">
       <DependentUpon>LibraryDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="CR\Dialog\MainApp.cs" />
-    <Compile Include="FE\Dialog\Framework\UserInterface\UserControl1.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Library\CR\Dialog\MainApp.cs" />
+    <Compile Include="GenresPropertyDialog\FE\Framework\UserInterface\ListOfGenres.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FE\Dialog\Framework\UserInterface\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="GenresPropertyDialog\FE\Framework\UserInterface\ListOfGenres.Designer.cs">
+      <DependentUpon>ListOfGenres.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\GameProperties.resx">
+    <EmbeddedResource Include="Library\FE\Dialog\Framework\UserInterface\GameProperties.resx">
       <DependentUpon>GameProperties.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\LibraryDialog.resx">
+    <EmbeddedResource Include="Library\FE\Dialog\Framework\UserInterface\LibraryDialog.resx">
       <DependentUpon>LibraryDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FE\Dialog\Framework\UserInterface\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="GenresPropertyDialog\FE\Framework\UserInterface\ListOfGenres.resx">
+      <DependentUpon>ListOfGenres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -200,9 +225,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BL\Domain Entity\" />
-    <Folder Include="BL\UseCase\Gateway\" />
-    <Folder Include="DA\Framework\" />
+    <Folder Include="Library\BL\UseCase\Gateway\" />
+    <Folder Include="Library\DA\Framework\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -221,9 +245,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\expand-button.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Icons\image%281%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\shrink-button.png" />
